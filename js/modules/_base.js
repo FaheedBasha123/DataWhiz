@@ -1,0 +1,162 @@
+// js/modules/_base.js — shared HTML builders + utilities for all modules
+
+export const SUBJECTS = ["Mathematics", "Physics", "Chemistry", "English", "Computer Science"];
+export const GRADE_BANDS = [
+  { letter: "S", min: 90 }, { letter: "A", min: 80 },
+  { letter: "B", min: 70 }, { letter: "C", min: 60 },
+  { letter: "D", min: 50 }, { letter: "E", min: 0  },
+];
+
+// ============================================================
+//  HTML builders
+// ============================================================
+export function kpiHTML({ label, value, delta = "", icon = "", featured = false, negative = false }) {
+  return `
+    <div class="kpi-card ${featured ? "featured" : ""} fade-in">
+      ${icon ? `<div class="kpi-icon">${icon}</div>` : ""}
+      <div class="kpi-label">${label}</div>
+      <div class="kpi-value">${value}</div>
+      ${delta ? `<div class="kpi-delta ${negative ? "negative" : ""}">${delta}</div>` : ""}
+    </div>`;
+}
+
+export function sectionRule(label, sub = "") {
+  return `
+    <div class="section-rule">
+      <span class="section-rule-label">${label}</span>
+      ${sub ? `<span class="section-rule-sub">${sub}</span>` : ""}
+    </div>`;
+}
+
+export function chartCard(title, sub, canvasId) {
+  return `
+    <div class="chart-card fade-in">
+      <div class="chart-heading">${title}</div>
+      <div class="chart-sub">${sub}</div>
+      <div class="chart-wrap"><canvas id="${canvasId}"></canvas></div>
+    </div>`;
+}
+
+export function articleCard(eyebrow, title, body) {
+  return `
+    <div class="article-card fade-in">
+      <div class="article-eyebrow">${eyebrow}</div>
+      <div class="article-title">${title}</div>
+      <div class="article-body">${body}</div>
+    </div>`;
+}
+
+export function callout(title, body) {
+  return `
+    <div class="callout fade-in">
+      <div class="callout-title">${title}</div>
+      <div class="callout-body">${body}</div>
+    </div>`;
+}
+
+export function mastheadHTML({ eyebrow = "", title = "", sub = "" }) {
+  return `
+    <div class="masthead fade-in">
+      <div class="masthead-eyebrow">${eyebrow}</div>
+      <h1>${title}</h1>
+      <div class="masthead-rule"></div>
+      <div class="masthead-sub">${sub}</div>
+    </div>`;
+}
+
+export function footerHTML(moduleLabel = "") {
+  return `
+    <div class="app-footer">
+      <div>Crafted with vanilla JavaScript, Chart.js &amp; PapaParse</div>
+      <div class="meta">© ${new Date().getFullYear()} · DataWhiz${moduleLabel ? " · " + moduleLabel : ""}</div>
+    </div>`;
+}
+
+export function filterBar(filters) {
+  // filters = [{ id, label, control: HTML string }]
+  return `<div class="filter-bar">${filters.map(f => `
+    <div class="filter">
+      <label for="${f.id}">${f.label}</label>
+      ${f.control}
+    </div>`).join("")}</div>`;
+}
+
+export function tableHTML(headers, rows, { top = -1 } = {}) {
+  return `
+    <table class="data-table">
+      <thead><tr>${headers.map(h => `<th>${h}</th>`).join("")}</tr></thead>
+      <tbody>${rows.map((r, i) =>
+        `<tr class="${i === top ? "top" : ""}">${r.map(c => `<td>${c}</td>`).join("")}</tr>`
+      ).join("")}</tbody>
+    </table>`;
+}
+
+// ============================================================
+//  Stats helpers
+// ============================================================
+export function mean(arr) {
+  const nums = arr.filter(v => typeof v === "number" && !isNaN(v));
+  return nums.length ? nums.reduce((s, v) => s + v, 0) / nums.length : 0;
+}
+export function median(arr) {
+  const nums = arr.filter(v => typeof v === "number" && !isNaN(v));
+  if (!nums.length) return 0;
+  const s = [...nums].sort((a, b) => a - b);
+  const m = Math.floor(s.length / 2);
+  return s.length % 2 ? s[m] : (s[m - 1] + s[m]) / 2;
+}
+export function unique(arr) { return [...new Set(arr.filter(v => v != null))].sort(); }
+export function gradeFor(avg) {
+  if (avg == null || isNaN(avg)) return "N/A";
+  for (const g of GRADE_BANDS) if (avg >= g.min) return g.letter;
+  return "E";
+}
+export function groupSum(rows, key, value = "Sales") {
+  const out = {};
+  rows.forEach(r => { out[r[key]] = (out[r[key]] || 0) + (r[value] || 0); });
+  return Object.entries(out).map(([k, v]) => ({ label: k, value: v }));
+}
+export function corrPearson(xs, ys) {
+  if (xs.length < 2) return 0;
+  const mx = mean(xs), my = mean(ys);
+  let num = 0, dx = 0, dy = 0;
+  for (let i = 0; i < xs.length; i++) {
+    const a = xs[i] - mx, b = ys[i] - my;
+    num += a * b; dx += a * a; dy += b * b;
+  }
+  return num / Math.sqrt(dx * dy || 1);
+}
+
+// ============================================================
+//  Formatters
+// ============================================================
+export function fmtINR(n) {
+  if (n == null || isNaN(n)) return "—";
+  const abs = Math.abs(n);
+  if (abs >= 1e7) return `\u20B9${(n/1e7).toFixed(2)}Cr`;
+  if (abs >= 1e5) return `\u20B9${(n/1e5).toFixed(2)}L`;
+  if (abs >= 1e3) return `\u20B9${(n/1e3).toFixed(1)}K`;
+  return `\u20B9${Math.round(n)}`;
+}
+export function fmtNum(n, d = 1) { return n == null ? "—" : Number(n).toFixed(d); }
+export function fmtInt(n) { return n == null ? "—" : Math.round(n).toLocaleString("en-IN"); }
+
+// ============================================================
+//  CSV download
+// ============================================================
+export function downloadCSV(name, rows) {
+  if (!rows.length) return;
+  const headers = Object.keys(rows[0]);
+  const esc = v => {
+    if (v == null) return "";
+    const s = String(v);
+    return /[",\n]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s;
+  };
+  const csv = [headers.join(","), ...rows.map(r => headers.map(h => esc(r[h])).join(","))].join("\n");
+  const blob = new Blob([csv], { type: "text/csv;charset=utf-8;" });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url; a.download = name;
+  document.body.appendChild(a); a.click();
+  setTimeout(() => { document.body.removeChild(a); URL.revokeObjectURL(url); }, 100);
+}
