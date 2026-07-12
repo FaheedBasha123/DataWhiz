@@ -3,7 +3,8 @@ import { register } from "../registry.js";
 import { bar, pie, scatter, heatmap } from "../charts.js";
 import {
   SUBJECTS, kpiHTML, sectionRule, chartCard, callout, articleCard,
-  mastheadHTML, footerHTML, filterBar, tableHTML,
+  mastheadHTML, footerHTML, tableHTML,
+  chipsHTML, rangeDualHTML,
   mean, median, unique, gradeFor, corrPearson,
   fmtNum, fmtInt,
 } from "./_base.js";
@@ -38,11 +39,9 @@ function draw() {
       sub: "Marks across five subjects, grade distribution, and how attendance correlates with results — cleaned, analysed, and visualised."
     })}
 
-    ${filterBar([
-      { id: "st-class", label: "Class", control: `<select id="st-class" multiple size="3">${state.allClasses.map(c => `<option value="${c}" ${state.classes.has(c) ? "selected" : ""}>${c}</option>`).join("")}</select>` },
-      { id: "st-grade", label: "Grade", control: `<select id="st-grade" multiple size="3">${["S","A","B","C","D","E"].map(g => `<option value="${g}" ${state.grades.has(g) ? "selected" : ""}>${g}</option>`).join("")}</select>` },
-      { id: "st-range", label: `Score Range (${state.range[0]} – ${state.range[1]})`, control: `<input id="st-range" type="range" min="${state.minAvg}" max="${state.maxAvg}" value="${state.range[1]}" />` },
-    ])}
+    ${chipsHTML("st-class", "Class", state.allClasses, state.classes)}
+    ${chipsHTML("st-grade", "Grade", ["S","A","B","C","D","E"], state.grades)}
+    ${rangeDualHTML("st-range", "Score Range", [state.minAvg, state.maxAvg], state.range)}
 
     <div class="kpi-grid kpi-grid-5">
       ${kpiHTML({ label: "Students",  value: f.length,                     icon: "🎓" })}
@@ -125,18 +124,48 @@ function draw() {
   `;
 
   // Wire up filter handlers (re-bind because we just rewrote innerHTML)
-  currentRoot.querySelector("#st-class")?.addEventListener("change", e => {
-    state.classes = new Set(Array.from(e.target.selectedOptions).map(o => o.value));
+  // Chip toggles: Class + Grade
+  currentRoot.querySelector('[data-filter="st-class"]')?.addEventListener("click", e => {
+    const chip = e.target.closest(".chip");
+    if (!chip) return;
+    chip.classList.toggle("checked");
+    chip.setAttribute("aria-pressed", chip.classList.contains("checked") ? "true" : "false");
+    state.classes = new Set(
+      [...currentRoot.querySelectorAll('[data-filter="st-class"] .chip.checked')].map(c => c.dataset.value)
+    );
     draw();
   });
-  currentRoot.querySelector("#st-grade")?.addEventListener("change", e => {
-    state.grades = new Set(Array.from(e.target.selectedOptions).map(o => o.value));
+  currentRoot.querySelector('[data-filter="st-grade"]')?.addEventListener("click", e => {
+    const chip = e.target.closest(".chip");
+    if (!chip) return;
+    chip.classList.toggle("checked");
+    chip.setAttribute("aria-pressed", chip.classList.contains("checked") ? "true" : "false");
+    state.grades = new Set(
+      [...currentRoot.querySelectorAll('[data-filter="st-grade"] .chip.checked')].map(c => c.dataset.value)
+    );
     draw();
   });
-  currentRoot.querySelector("#st-range")?.addEventListener("input", e => {
-    state.range = [state.minAvg, +e.target.value];
-    draw();
-  });
+
+  // Dual number range: Score Range
+  const rangeEl = currentRoot.querySelector('[data-filter="st-range"]');
+  if (rangeEl) {
+    const minInp = rangeEl.querySelector('[data-role="min"]');
+    const maxInp = rangeEl.querySelector('[data-role="max"]');
+    const applyRange = () => {
+      let mn = parseInt(minInp.value, 10);
+      let mx = parseInt(maxInp.value, 10);
+      if (Number.isNaN(mn) || Number.isNaN(mx)) { draw(); return; }
+      // clamp to domain
+      mn = Math.max(state.minAvg, Math.min(state.maxAvg, mn));
+      mx = Math.max(state.minAvg, Math.min(state.maxAvg, mx));
+      // auto-swap if reversed
+      if (mn > mx) { const t = mn; mn = mx; mx = t; minInp.value = mn; maxInp.value = mx; }
+      state.range = [mn, mx];
+      draw();
+    };
+    minInp?.addEventListener("change", applyRange);
+    maxInp?.addEventListener("change", applyRange);
+  }
 
   if (f.length === 0) return;
 

@@ -3,7 +3,8 @@ import { register } from "../registry.js";
 import { bar, pie, line, heatmap } from "../charts.js";
 import {
   kpiHTML, sectionRule, chartCard, callout, articleCard,
-  mastheadHTML, footerHTML, filterBar, tableHTML,
+  mastheadHTML, footerHTML, tableHTML,
+  chipsHTML, dateRangeHTML,
   unique, groupSum, fmtINR, fmtInt,
 } from "./_base.js";
 
@@ -37,11 +38,9 @@ function draw() {
       sub: `An end-to-end business intelligence report covering <b>${fmtINR(totalRev)}</b> in transactions across ${productRev.length} products and ${regRev.length} regions.`
     })}
 
-    ${filterBar([
-      { id: "sa-reg", label: "Region", control: `<select id="sa-reg" multiple size="3">${state.allRegions.map(r => `<option value="${r}" ${state.regions.has(r) ? "selected" : ""}>${r}</option>`).join("")}</select>` },
-      { id: "sa-cat", label: "Category", control: `<select id="sa-cat" multiple size="3">${state.allCats.map(c => `<option value="${c}" ${state.cats.has(c) ? "selected" : ""}>${c}</option>`).join("")}</select>` },
-      { id: "sa-date", label: `Date Range (${state.range[0]} → ${state.range[1]})`, control: `<input id="sa-from" type="date" value="${state.range[0]}" /><input id="sa-to" type="date" value="${state.range[1]}" style="margin-top:0.4rem" />` },
-    ])}
+    ${chipsHTML("sa-reg", "Region", state.allRegions, state.regions)}
+    ${chipsHTML("sa-cat", "Category", state.allCats, state.cats)}
+    ${dateRangeHTML("sa-date", "Date Range", state.range[0], state.range[1])}
 
     <div class="kpi-grid">
       ${kpiHTML({ label: "Total Revenue", value: fmtINR(totalRev), delta: `${fmtInt(f.length)} orders`, icon: "💰", featured: true })}
@@ -112,17 +111,47 @@ function draw() {
     ${footerHTML("Sales Analysis")}
   `;
 
-  // Filter handlers
-  currentRoot.querySelector("#sa-reg")?.addEventListener("change", e => {
-    state.regions = new Set(Array.from(e.target.selectedOptions).map(o => o.value));
+  // Filter handlers — chip toggles for Region + Category
+  currentRoot.querySelector('[data-filter="sa-reg"]')?.addEventListener("click", e => {
+    const chip = e.target.closest(".chip");
+    if (!chip) return;
+    chip.classList.toggle("checked");
+    chip.setAttribute("aria-pressed", chip.classList.contains("checked") ? "true" : "false");
+    state.regions = new Set(
+      [...currentRoot.querySelectorAll('[data-filter="sa-reg"] .chip.checked')].map(c => c.dataset.value)
+    );
     draw();
   });
-  currentRoot.querySelector("#sa-cat")?.addEventListener("change", e => {
-    state.cats = new Set(Array.from(e.target.selectedOptions).map(o => o.value));
+  currentRoot.querySelector('[data-filter="sa-cat"]')?.addEventListener("click", e => {
+    const chip = e.target.closest(".chip");
+    if (!chip) return;
+    chip.classList.toggle("checked");
+    chip.setAttribute("aria-pressed", chip.classList.contains("checked") ? "true" : "false");
+    state.cats = new Set(
+      [...currentRoot.querySelectorAll('[data-filter="sa-cat"] .chip.checked')].map(c => c.dataset.value)
+    );
     draw();
   });
-  currentRoot.querySelector("#sa-from")?.addEventListener("change", e => { state.range[0] = e.target.value; draw(); });
-  currentRoot.querySelector("#sa-to")?.addEventListener("change",   e => { state.range[1] = e.target.value; draw(); });
+
+  // Date range
+  const dateEl = currentRoot.querySelector('[data-filter="sa-date"]');
+  if (dateEl) {
+    const fromInp = dateEl.querySelector('[data-role="from"]');
+    const toInp   = dateEl.querySelector('[data-role="to"]');
+    const applyDate = () => {
+      if (fromInp.value && toInp.value) {
+        if (fromInp.value > toInp.value) {
+          // auto-swap if reversed
+          const t = fromInp.value; fromInp.value = toInp.value; toInp.value = t;
+        }
+        state.range[0] = fromInp.value;
+        state.range[1] = toInp.value;
+        draw();
+      }
+    };
+    fromInp?.addEventListener("change", applyDate);
+    toInp?.addEventListener("change", applyDate);
+  }
 
   if (f.length === 0) return;
 

@@ -81,6 +81,68 @@ export function filterBar(filters) {
     </div>`).join("")}</div>`;
 }
 
+// ============================================================
+//  Filter controls — chips + dual range
+// ============================================================
+function escAttr(s) {
+  return String(s).replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/'/g, "&#39;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+}
+
+/**
+ * Pill toggle chips — always-visible multi-select.
+ * `name` is the filter key; `options` is an array of values; `selected` is the Set of currently-picked ones.
+ * Returns the wrapper HTML; consumer wires click handlers that read .chip.checked inside.
+ */
+export function chipsHTML(name, label, options, selected) {
+  const chips = options.map(o => {
+    const isOn = selected && selected.has(o);
+    return `<button type="button" class="chip ${isOn ? "checked" : ""}" data-name="${escAttr(name)}" data-value="${escAttr(o)}" aria-pressed="${isOn}">${escAttr(o)}</button>`;
+  }).join("");
+  return `
+    <div class="filter">
+      <label>${label}</label>
+      <div class="filter-chips" data-filter="${escAttr(name)}">${chips}</div>
+    </div>`;
+}
+
+/**
+ * Two-side number range — type exact min and max values, no scratching a slider.
+ * `[min, max]` is the absolute domain, `[curMin, curMax]` is current selection.
+ */
+export function rangeDualHTML(name, label, [absMin, absMax], [curMin, curMax]) {
+  const fillPct = ((curMax - curMin) / (absMax - absMin)) * 100;
+  const leftPct  = ((curMin - absMin) / (absMax - absMin)) * 100;
+  return `
+    <div class="filter">
+      <label>${label}</label>
+      <div class="filter-range" data-filter="${escAttr(name)}">
+        <input type="number" inputmode="numeric" min="${absMin}" max="${absMax}" value="${curMin}" data-role="min" aria-label="${escAttr(label)} minimum">
+        <span class="range-sep">—</span>
+        <input type="number" inputmode="numeric" min="${absMin}" max="${absMax}" value="${curMax}" data-role="max" aria-label="${escAttr(label)} maximum">
+      </div>
+      <div class="range-track" aria-hidden="true"><div class="range-fill" style="left:${leftPct}%;width:${fillPct}%"></div></div>
+    </div>`;
+}
+
+export function resetButtonHTML() {
+  return `<div class="filter-actions"><button type="button" class="filter-reset" data-action="reset-filters">Reset</button></div>`;
+}
+
+/**
+ * Two-side date range — two native date inputs side-by-side.
+ */
+export function dateRangeHTML(name, label, fromVal, toVal) {
+  return `
+    <div class="filter">
+      <label>${label}</label>
+      <div class="filter-range" data-filter="${escAttr(name)}">
+        <input type="date" data-role="from" value="${escAttr(fromVal)}" aria-label="From date">
+        <span class="range-sep">→</span>
+        <input type="date" data-role="to" value="${escAttr(toVal)}" aria-label="To date">
+      </div>
+    </div>`;
+}
+
 export function tableHTML(headers, rows, { top = -1 } = {}) {
   return `
     <table class="data-table">

@@ -154,3 +154,39 @@ I had been blaming file corruption. The actual issue was an architectural race c
 - `js/app.js` — full rewrite (3.8 KB → 5.1 KB), boot order fixed, error handling added
 
 **User still needs to verify in browser.** Hopefully now they see Overview + Students + Sales + Insights in the sidebar nav and the default Overview page rendering.
+
+### 2026-07-11 — Replace bad filter UI: multi-select dropdowns + bare range slider (Session 5)
+
+**User report:** "Score Range (50 – 99) this one isnt UI friendly, like hard to scroll and use, fix this. these things - Class, Grade, make them like checkboxes or smtg.....the current ones are bad. same for sales one too. FIX them"
+
+**Diagnosis:** Three filter widgets were hostile to use:
+1. `<select multiple>` for Class / Grade / Region / Category — required Cmd+click, no visual feedback, small click targets, looked like default browser widgets
+2. `<input type="range">` for Score Range — single thumb only sets the MAX, no way to set a precise minimum, hard to scratch to a specific value
+3. Two stacked date inputs for sales Date Range — cramped with `margin-top: 0.4rem`, looked broken
+
+**Fix (new patterns):**
+
+**Pill chips** (Class / Grade / Region / Category): always-visible pill buttons that toggle on click. Selected = navy (or teal in dark mode) with sun-yellow text. Click to add/remove from filter set. No more Cmd+click gymnastics. Implemented in `js/modules/_base.js` `chipsHTML()` helper.
+
+**Dual number range** (Score Range): two number inputs side-by-side with `—` between, plus a visual gradient track underneath showing the active range as a horizontal bar. Type exact values, clamped to domain, auto-swapped if reversed. Implemented in `rangeDualHTML()`.
+
+**Dual date range** (Sales): two native date inputs side-by-side with `→` between, auto-swapped if from > to. Implemented in `dateRangeHTML()`.
+
+**CSS additions in `css/styles.css`:**
+- `.filter-chips` flex-wrap pill container
+- `.chip` button with border + checked state (navy bg + sun text in light mode, teal bg in dark mode)
+- `.filter-range` flex row for number/date inputs
+- `.range-track` + `.range-fill` visual gradient bar showing active range
+- `.filter-reset` small ghost button for future reset-filters button
+
+**Wiring changes:**
+- `students.js`: removed 3 event listeners (select change × 2, range input), added 3 new (chip click × 2 with delegated handler + range number input change)
+- `sales.js`: removed 4 event listeners (select change × 2, 2 date inputs), added 3 new (chip click × 2 + date range change with auto-swap)
+- Removed `filterBar` import from both modules (now using individual helpers)
+
+**Verified:**
+- `node --check` passes on all 11 JS files
+- All 5 critical endpoints return HTTP 200
+- File sizes confirm changes applied (`students.js`: 9447 → 10324 bytes; `sales.js`: 10147 → 10700 bytes; `_base.js`: 5938 → 8742 bytes)
+
+**Awaiting user to verify in browser.**

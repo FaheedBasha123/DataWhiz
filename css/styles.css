@@ -587,8 +587,129 @@ code, pre { font-family: 'JetBrains Mono', monospace; }
   border-color: var(--teal);
   box-shadow: 0 0 0 3px rgba(33,131,128,0.18);
 }
-.filter select[multiple] { padding: 0.3rem; }
-.filter select[multiple] option { padding: 0.3rem 0.5rem; }
+
+/* ----- PILL CHIPS (Class / Grade / Region / Category) ----- */
+.filter-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-top: 0.3rem;
+}
+.chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.4rem 0.75rem;
+  background: var(--bg-card);
+  border: 1.5px solid var(--line);
+  border-radius: 999px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--fg-muted);
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.15s ease;
+  background-clip: padding-box;
+}
+.chip:hover {
+  border-color: var(--teal);
+  color: var(--fg-primary);
+}
+.chip:focus-visible {
+  outline: 2px solid var(--teal);
+  outline-offset: 2px;
+}
+.chip.checked {
+  background: var(--berr);
+  border-color: var(--berr);
+  color: var(--sun);
+}
+.chip.checked:hover {
+  background: var(--berr-deep);
+  border-color: var(--berr-deep);
+}
+[data-theme="dark"] .chip { background: var(--bg-input); border-color: var(--line); }
+[data-theme="dark"] .chip.checked { background: var(--teal); border-color: var(--teal); color: var(--bg-app); }
+[data-theme="dark"] .chip.checked:hover { background: var(--teal-soft); border-color: var(--teal-soft); }
+
+/* ----- DUAL NUMBER RANGE (Score / etc.) ----- */
+.filter-range {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.3rem;
+}
+.filter-range input[type="number"] {
+  width: 100%;
+  padding: 0.55rem 0.6rem;
+  background: var(--bg-input);
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--fg-primary);
+  text-align: center;
+  -moz-appearance: textfield;
+}
+.filter-range input[type="number"]::-webkit-outer-spin-button,
+.filter-range input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.filter-range input[type="number"]:focus {
+  outline: none;
+  border-color: var(--teal);
+  box-shadow: 0 0 0 3px rgba(33,131,128,0.18);
+}
+.range-sep {
+  color: var(--fg-muted);
+  font-weight: 300;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+.range-track {
+  position: relative;
+  height: 6px;
+  background: var(--line);
+  border-radius: 3px;
+  margin-top: 0.6rem;
+  overflow: hidden;
+}
+.range-track .range-fill {
+  position: absolute;
+  top: 0; bottom: 0;
+  background: linear-gradient(to right, var(--berr), var(--rasp));
+  border-radius: 3px;
+}
+[data-theme="dark"] .range-track .range-fill {
+  background: linear-gradient(to right, var(--teal), var(--sun));
+}
+
+.filter-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.6rem;
+  justify-content: flex-end;
+}
+.filter-reset {
+  background: transparent;
+  border: 1px solid var(--line);
+  color: var(--fg-muted);
+  padding: 0.4rem 0.8rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+.filter-reset:hover {
+  border-color: var(--rasp);
+  color: var(--rasp);
+}
 
 /* ============================================================
    TABLE
