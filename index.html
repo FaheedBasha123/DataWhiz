@@ -22,13 +22,6 @@
 
       <div class="nav-section">Modules</div>
       <nav class="nav" id="nav"><!-- populated by app.js from registry --></nav>
-
-      <div class="sidebar-footer">
-        <div class="sidebar-meta">
-          Using <b>mock data</b><br>
-          Real CSVs in <code>/data</code>
-        </div>
-      </div>
     </aside>
 
     <!-- Main content -->
@@ -43,6 +36,18 @@
       </div>
     </main>
 
+  </div>
+
+  <!-- Chart fullscreen modal (single global instance) -->
+  <div id="chart-modal" class="chart-modal" aria-hidden="true">
+    <div class="chart-modal-backdrop" data-action="close-modal"></div>
+    <div class="chart-modal-content">
+      <div class="chart-modal-header">
+        <h3 id="chart-modal-title">Chart</h3>
+        <button type="button" class="chart-modal-close" data-action="close-modal" aria-label="Close">✕</button>
+      </div>
+      <div class="chart-modal-body" id="chart-modal-body"><!-- chart cloned here --></div>
+    </div>
   </div>
 
   <script type="module" src="js/app.js"></script>

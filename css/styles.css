@@ -60,28 +60,31 @@
   --bg-featured: #1a0a14;
   --bg-featured-hover: #100610;
 
+  --teal:      #5dc8c3;          /* brighter teal for dark mode */
+  --frost:     #a8e3eb;          /* slightly brighter frost */
+
   --fg-primary:   var(--sun);
   --fg-secondary: #f0e0d8;
-  --fg-muted:     #a89898;
+  --fg-muted:     #c2b3b3;
   --fg-on-dark:   #fdf7ec;
   --fg-on-featured: var(--sun);
 
   --border:    #2d1828;
   --line:      #3d1c2e;
-  --accent:    var(--frost);
+  --accent:    var(--teal);
   --accent-2:  var(--sun);
 
   --c-paper: #1d1019;
   --c-grid:  #2d1828;
   --c-text:  #f0e0d8;
   --c-axis:  #f0e0d8;
-  --c-muted: #a89898;
+  --c-muted: #c2b3b3;
   --seq-1: #ffbc42;
   --seq-2: #73d2de;
-  --seq-3: #d81159;
-  --seq-4: #3aa8a4;
+  --seq-3: #ff6b9c;            /* brighter raspberry */
+  --seq-4: #5dc8c3;            /* brighter teal */
   --seq-5: #ffd57a;
-  --seq-6: #8b9bb0;
+  --seq-6: #a8b5c4;
   --seq-7: #e85a8f;
 }
 
@@ -710,6 +713,76 @@ code, pre { font-family: 'JetBrains Mono', monospace; }
   border-color: var(--rasp);
   color: var(--rasp);
 }
+[data-theme="dark"] .filter-reset:hover {
+  border-color: var(--sun);
+  color: var(--sun);
+}
+
+/* ----- SEARCH INPUT ----- */
+.filter-search {
+  width: 100%;
+  padding: 0.55rem 0.75rem;
+  background: var(--bg-input);
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.86rem;
+  color: var(--fg-secondary);
+  margin-top: 0.3rem;
+}
+.filter-search:focus {
+  outline: none;
+  border-color: var(--teal);
+  box-shadow: 0 0 0 3px rgba(33,131,128,0.18);
+}
+.filter-search::placeholder { color: var(--fg-muted); opacity: 0.7; }
+.filter-search::-webkit-search-cancel-button { cursor: pointer; }
+
+/* ----- SORT SELECT ----- */
+.filter-sort {
+  width: 100%;
+  padding: 0.55rem 0.75rem;
+  background: var(--bg-input);
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.86rem;
+  color: var(--fg-secondary);
+  margin-top: 0.3rem;
+  cursor: pointer;
+}
+.filter-sort:focus {
+  outline: none;
+  border-color: var(--teal);
+  box-shadow: 0 0 0 3px rgba(33,131,128,0.18);
+}
+
+/* ----- FILTER META BAR (showing X of Y + reset) ----- */
+.filter-bar-meta {
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 0 1rem !important;
+  gap: 1rem;
+}
+.filter-meta {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.82rem;
+}
+.filter-meta-label { color: var(--fg-muted); letter-spacing: 0.05em; }
+.filter-meta-value {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--fg-primary);
+  line-height: 1;
+}
 
 /* ============================================================
    TABLE
@@ -852,3 +925,138 @@ code, pre { font-family: 'JetBrains Mono', monospace; }
 ::-webkit-scrollbar-thumb:hover { background: var(--berr); }
 [data-theme="dark"] ::-webkit-scrollbar-thumb { background: var(--sun); }
 [data-theme="dark"] ::-webkit-scrollbar-thumb:hover { background: var(--frost); }
+
+/* Lock page scroll while a modal is open (used by chart-modal) */
+body.modal-open { overflow: hidden; }
+
+/* When a chart-card is inside the modal, hide its own toolbar (no point
+   fullscreening from inside the modal — the modal IS already fullscreen). */
+.chart-modal-body .chart-toolbar { display: none; }
+
+/* ============================================================
+   CHART TOOLBAR — fullscreen + download buttons on hover
+   ============================================================ */
+.chart-card { position: relative; }
+.chart-toolbar {
+  position: absolute;
+  top: 0.6rem;
+  right: 0.6rem;
+  display: flex;
+  gap: 0.25rem;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  z-index: 2;
+}
+.chart-card:hover .chart-toolbar,
+.chart-toolbar:focus-within { opacity: 1; }
+.chart-btn {
+  width: 26px;
+  height: 26px;
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  color: var(--fg-muted);
+  border-radius: 2px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.78rem;
+  padding: 0;
+  transition: all 0.15s ease;
+  line-height: 1;
+}
+.chart-btn:hover {
+  color: var(--berr);
+  border-color: var(--berr);
+  background: var(--cream);
+}
+[data-theme="dark"] .chart-btn:hover {
+  color: var(--sun);
+  border-color: var(--sun);
+  background: var(--bg-featured-hover);
+}
+.chart-btn:focus-visible {
+  outline: 2px solid var(--teal);
+  outline-offset: 2px;
+}
+
+/* ============================================================
+   CHART MODAL — fullscreen view
+   ============================================================ */
+.chart-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+.chart-modal[aria-hidden="false"] { display: flex; }
+.chart-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 7, 16, 0.78);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+.chart-modal-content {
+  position: relative;
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  width: min(90vw, 1200px);
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+}
+.chart-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--line);
+  background: var(--bg-featured);
+  color: var(--fg-on-dark);
+}
+.chart-modal-header h3 {
+  margin: 0;
+  color: var(--sun) !important;
+  font-size: 1.2rem;
+}
+.chart-modal-close {
+  background: transparent;
+  border: 1px solid var(--sun);
+  color: var(--sun);
+  width: 32px;
+  height: 32px;
+  border-radius: 2px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  line-height: 1;
+  transition: all 0.15s ease;
+}
+.chart-modal-close:hover {
+  background: var(--sun);
+  color: var(--berr);
+}
+.chart-modal-body {
+  padding: 1.5rem;
+  overflow: auto;
+  flex: 1;
+}
+.chart-modal-body .chart-card {
+  background: var(--bg-app);
+  border: 1px solid var(--line);
+  min-height: 70vh;
+}
+.chart-modal-body .chart-wrap {
+  height: 60vh;
+  min-height: 500px;
+}

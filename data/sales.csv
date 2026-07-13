@@ -1,501 +1,501 @@
 OrderID,OrderDate,Product,Category,Quantity,UnitPrice,Sales,Region,SalesRep,Channel,CustomerSegment
-1001,2025-05-27,Smartphone,Electronics,1,28000,28000.0,Central,Aarav Mehta,Retail Store,B2C
-1002,2024-03-13,Headphones,Electronics,6,3500,21000.0,South,Aarav Mehta,Distributor,B2B
-1003,2024-04-16,Smartwatch,Electronics,6,12000,72000.0,Central,Aarav Mehta,Retail Store,B2B
-1004,2024-09-09,Laptop,Electronics,3,55000,165000.0,West,Vikram Joshi,Distributor,Enterprise
-1005,2024-01-28,Notebook,Stationery,11,250,2750.0,South,Karan Reddy,Retail Store,B2C
-1006,2024-01-07,Laptop,Electronics,3,55000,165000.0,East,Vikram Joshi,Distributor,B2C
-1007,2024-09-30,Office Chair,Furniture,4,8500,34000.0,South,Priya Nair,Distributor,Enterprise
-1008,2025-04-29,Smartphone,Electronics,1,28000,28000.0,West,Diya Kapoor,Distributor,B2B
-1009,2025-04-18,Bookshelf,Furniture,6,6500,39000.0,West,Aarav Mehta,Online,B2B
-1010,2024-03-07,Tablet,Electronics,2,32000,64000.0,North,Karan Reddy,Retail Store,Enterprise
-1011,2024-02-03,Tablet,Electronics,2,32000,64000.0,North,Sneha Bose,Distributor,B2C
-1012,2024-10-08,Smartphone,Electronics,2,28000,56000.0,South,Rohan Iyer,Distributor,B2B
-1013,2024-10-15,Smartphone,Electronics,1,28000,28000.0,Central,Priya Nair,Online,B2C
-1014,2024-12-15,Headphones,Electronics,4,3500,16183.0,North,Vikram Joshi,Distributor,Enterprise
-1015,2024-08-10,Laptop,Electronics,1,55000,55000.0,South,Sneha Bose,Distributor,Enterprise
-1016,2025-05-18,Desk,Furniture,1,15000,15000.0,East,Priya Nair,Online,B2C
-1017,2025-03-10,Tablet,Electronics,2,32000,64000.0,Central,Sneha Bose,Online,B2C
-1018,2024-08-12,Pen Set,Stationery,5,450,2250.0,West,Aarav Mehta,Distributor,B2B
-1019,2024-05-18,Smartwatch,Electronics,6,12000,72000.0,West,Karan Reddy,Distributor,Enterprise
-1020,2024-01-10,Laptop,Electronics,2,55000,110000.0,Central,Vikram Joshi,Retail Store,B2C
-1021,2024-11-16,Smartphone,Electronics,2,28000,63932.0,North,Aarav Mehta,Online,Enterprise
-1022,2025-02-22,Headphones,Electronics,6,3500,21000.0,North,Karan Reddy,Retail Store,B2C
-1023,2024-05-16,Laptop,Electronics,3,55000,165000.0,South,Sneha Bose,Distributor,Enterprise
-1024,2024-12-14,Notebook,Stationery,7,250,1998.0,North,Karan Reddy,Retail Store,B2C
-1025,2024-01-05,Desk,Furniture,5,15000,75000.0,East,Rohan Iyer,Retail Store,B2C
-1026,2024-02-11,Notebook,Stationery,10,250,2500.0,North,Diya Kapoor,Distributor,B2C
-1027,2025-02-25,Notebook,Stationery,14,250,3500.0,North,Vikram Joshi,Distributor,Enterprise
-1028,2024-08-12,Tablet,Electronics,1,32000,32000.0,South,Priya Nair,Online,Enterprise
-1029,2025-01-25,Tablet,Electronics,2,32000,64000.0,East,Ananya Sharma,Retail Store,Enterprise
-1030,2025-04-22,Notebook,Stationery,2,250,500.0,East,Sneha Bose,Online,B2C
-1031,2025-02-14,Office Chair,Furniture,5,8500,42500.0,North,Priya Nair,Retail Store,B2C
-1032,2024-04-27,Office Chair,Furniture,3,8500,25500.0,Central,Vikram Joshi,Distributor,B2B
-1033,2024-06-05,Laptop,Electronics,3,55000,165000.0,Central,Karan Reddy,Distributor,B2B
-1034,2024-10-18,Office Chair,Furniture,7,8500,59500.0,South,Rohan Iyer,Distributor,B2B
-1035,2024-05-13,Desk,Furniture,6,15000,90000.0,South,Priya Nair,Distributor,B2C
-1036,2024-07-28,Tablet,Electronics,2,32000,64000.0,North,Aarav Mehta,Distributor,Enterprise
-1037,2024-11-19,Pen Set,Stationery,5,450,3008.0,Central,Ananya Sharma,Distributor,B2C
-1038,2025-01-12,Office Chair,Furniture,7,8500,59500.0,North,Priya Nair,Distributor,B2B
-1039,2025-02-10,Laptop,Electronics,1,55000,55000.0,North,Priya Nair,Online,B2B
-1040,2024-01-01,Smartphone,Electronics,2,28000,56000.0,East,Ananya Sharma,Distributor,B2B
-1041,2024-05-16,Headphones,Electronics,5,3500,17500.0,South,Sneha Bose,Online,B2B
-1042,2024-08-31,Tablet,Electronics,3,32000,96000.0,North,Diya Kapoor,Distributor,B2C
-1043,2025-04-19,Smartphone,Electronics,2,28000,56000.0,South,Rohan Iyer,Online,Enterprise
-1044,2024-06-27,Laptop,Electronics,3,55000,165000.0,North,Vikram Joshi,Retail Store,B2B
-1045,2024-10-11,Notebook,Stationery,2,250,500.0,East,Priya Nair,Retail Store,B2C
-1046,2024-03-24,Smartwatch,Electronics,7,12000,84000.0,North,Aarav Mehta,Retail Store,B2C
-1047,2024-12-25,Laptop,Electronics,1,55000,68786.0,North,Ananya Sharma,Online,B2C
-1048,2024-11-13,Office Chair,Furniture,3,8500,29619.0,Central,Aarav Mehta,Online,B2B
-1049,2024-01-18,Headphones,Electronics,3,3500,10500.0,North,Priya Nair,Distributor,Enterprise
-1050,2024-04-22,Headphones,Electronics,6,3500,21000.0,South,Priya Nair,Retail Store,Enterprise
-1051,2024-09-20,Smartphone,Electronics,1,28000,28000.0,Central,Vikram Joshi,Distributor,Enterprise
-1052,2024-06-10,Headphones,Electronics,2,3500,7000.0,West,Aarav Mehta,Distributor,Enterprise
-1053,2025-01-25,Smartphone,Electronics,2,28000,56000.0,Central,Ananya Sharma,Online,B2B
-1054,2025-03-18,Smartphone,Electronics,3,28000,84000.0,Central,Ananya Sharma,Retail Store,B2B
-1055,2024-02-20,Desk,Furniture,3,15000,45000.0,North,Sneha Bose,Distributor,B2C
-1056,2024-10-14,Desk,Furniture,6,15000,90000.0,East,Ananya Sharma,Online,B2C
-1057,2024-01-07,Smartphone,Electronics,3,28000,84000.0,South,Vikram Joshi,Online,Enterprise
-1058,2024-10-11,Bookshelf,Furniture,5,6500,32500.0,West,Diya Kapoor,Retail Store,B2B
-1059,2025-06-06,Desk,Furniture,4,15000,60000.0,South,Vikram Joshi,Retail Store,Enterprise
-1060,2024-09-12,Tablet,Electronics,1,32000,32000.0,North,Diya Kapoor,Online,Enterprise
-1061,2024-12-29,Pen Set,Stationery,7,450,3597.0,South,Priya Nair,Distributor,B2C
-1062,2024-04-24,Headphones,Electronics,1,3500,3500.0,North,Priya Nair,Online,B2C
-1063,2024-07-19,Smartwatch,Electronics,7,12000,84000.0,East,Priya Nair,Retail Store,B2C
-1064,2024-03-15,Notebook,Stationery,3,250,750.0,South,Ananya Sharma,Online,B2C
-1065,2024-02-03,Tablet,Electronics,2,32000,64000.0,North,Karan Reddy,Online,B2C
-1066,2024-12-07,Desk,Furniture,7,15000,119811.0,North,Vikram Joshi,Retail Store,Enterprise
-1067,2025-03-30,Tablet,Electronics,1,32000,32000.0,South,Karan Reddy,Online,B2C
-1068,2024-05-09,Headphones,Electronics,6,3500,21000.0,West,Priya Nair,Distributor,B2B
-1069,2024-01-29,Laptop,Electronics,3,55000,165000.0,Central,Rohan Iyer,Distributor,B2B
-1070,2024-11-05,Office Chair,Furniture,3,8500,31691.0,Central,Ananya Sharma,Online,B2C
-1071,2024-08-31,Laptop,Electronics,3,55000,165000.0,East,Aarav Mehta,Retail Store,Enterprise
-1072,2024-07-19,Tablet,Electronics,2,32000,64000.0,South,Diya Kapoor,Online,B2B
-1073,2024-08-04,Laptop,Electronics,1,55000,55000.0,Central,Rohan Iyer,Retail Store,B2B
-1074,2025-05-12,Smartphone,Electronics,3,28000,84000.0,Central,Sneha Bose,Distributor,B2C
-1075,2024-02-13,Laptop,Electronics,3,55000,165000.0,East,Rohan Iyer,Online,B2B
-1076,2025-05-11,Desk,Furniture,1,15000,15000.0,West,Priya Nair,Distributor,Enterprise
-1077,2025-04-29,Desk,Furniture,7,15000,105000.0,North,Diya Kapoor,Online,Enterprise
-1078,2025-06-21,Smartwatch,Electronics,1,12000,12000.0,South,Ananya Sharma,Distributor,B2B
-1079,2024-03-26,Smartphone,Electronics,1,28000,28000.0,South,Vikram Joshi,Retail Store,Enterprise
-1080,2025-05-12,Smartwatch,Electronics,1,12000,12000.0,East,Vikram Joshi,Online,B2C
-1081,2025-02-05,Office Chair,Furniture,4,8500,34000.0,East,Diya Kapoor,Distributor,B2B
-1082,2024-07-06,Smartwatch,Electronics,3,12000,36000.0,Central,Diya Kapoor,Distributor,B2B
-1083,2024-07-01,Tablet,Electronics,2,32000,64000.0,West,Vikram Joshi,Distributor,B2B
-1084,2025-01-31,Tablet,Electronics,2,32000,64000.0,South,Aarav Mehta,Online,B2C
-1085,2024-11-06,Notebook,Stationery,3,250,928.0,South,Priya Nair,Distributor,Enterprise
-1086,2025-02-19,Smartphone,Electronics,2,28000,56000.0,East,Rohan Iyer,Distributor,B2C
-1087,2025-04-21,Headphones,Electronics,6,3500,21000.0,Central,Sneha Bose,Online,Enterprise
-1088,2024-12-24,Headphones,Electronics,6,3500,26391.0,North,Priya Nair,Online,Enterprise
-1089,2024-11-19,Headphones,Electronics,6,3500,27607.0,Central,Aarav Mehta,Online,B2B
-1090,2025-02-02,Backpack,Accessories,1,1800,1800.0,North,Aarav Mehta,Distributor,B2C
-1091,2025-01-14,Desk,Furniture,5,15000,75000.0,East,Priya Nair,Online,B2C
-1092,2024-11-05,Smartphone,Electronics,3,28000,107714.0,Central,Priya Nair,Retail Store,Enterprise
-1093,2025-05-20,Smartphone,Electronics,2,28000,56000.0,East,Ananya Sharma,Retail Store,B2B
-1094,2025-06-04,Laptop,Electronics,3,55000,165000.0,East,Sneha Bose,Retail Store,B2B
-1095,2025-02-22,Smartphone,Electronics,2,28000,56000.0,South,Diya Kapoor,Retail Store,B2B
-1096,2024-04-29,Smartphone,Electronics,3,28000,84000.0,Central,Vikram Joshi,Online,B2B
-1097,2024-09-23,Notebook,Stationery,6,250,1500.0,North,Ananya Sharma,Distributor,Enterprise
-1098,2024-07-13,Laptop,Electronics,1,55000,55000.0,North,Diya Kapoor,Retail Store,B2B
-1099,2024-09-17,Smartphone,Electronics,1,28000,28000.0,East,Rohan Iyer,Retail Store,Enterprise
-1100,2024-06-24,Laptop,Electronics,3,55000,165000.0,South,Diya Kapoor,Retail Store,B2B
-1101,2024-04-23,Smartphone,Electronics,1,28000,28000.0,Central,Ananya Sharma,Retail Store,B2B
-1102,2024-02-09,Notebook,Stationery,4,250,1000.0,South,Ananya Sharma,Distributor,B2B
-1103,2024-08-03,Smartphone,Electronics,2,28000,56000.0,East,Ananya Sharma,Online,Enterprise
-1104,2024-12-28,Bookshelf,Furniture,1,6500,7615.0,Central,Diya Kapoor,Distributor,Enterprise
-1105,2024-05-12,Office Chair,Furniture,7,8500,59500.0,East,Karan Reddy,Retail Store,B2B
-1106,2025-03-01,Laptop,Electronics,3,55000,165000.0,South,Ananya Sharma,Distributor,B2B
-1107,2024-03-22,Office Chair,Furniture,7,8500,59500.0,West,Diya Kapoor,Retail Store,B2B
-1108,2024-08-11,Headphones,Electronics,7,3500,24500.0,Central,Priya Nair,Distributor,B2B
-1109,2025-03-23,Tablet,Electronics,3,32000,96000.0,Central,Rohan Iyer,Retail Store,Enterprise
-1110,2024-08-20,Office Chair,Furniture,2,8500,17000.0,South,Vikram Joshi,Distributor,B2C
-1111,2024-07-14,Office Chair,Furniture,6,8500,51000.0,West,Ananya Sharma,Retail Store,Enterprise
-1112,2025-02-04,Smartphone,Electronics,2,28000,56000.0,South,Priya Nair,Online,B2C
-1113,2024-07-28,Smartwatch,Electronics,3,12000,36000.0,South,Priya Nair,Distributor,B2B
-1114,2024-08-14,Headphones,Electronics,3,3500,10500.0,West,Karan Reddy,Distributor,B2B
-1115,2024-03-19,Laptop,Electronics,2,55000,110000.0,East,Rohan Iyer,Retail Store,Enterprise
-1116,2024-10-11,Headphones,Electronics,6,3500,21000.0,West,Aarav Mehta,Distributor,B2B
-1117,2024-06-05,Bookshelf,Furniture,7,6500,45500.0,East,Sneha Bose,Retail Store,Enterprise
-1118,2025-04-03,Smartwatch,Electronics,6,12000,72000.0,East,Rohan Iyer,Online,B2C
-1119,2024-01-21,Smartphone,Electronics,1,28000,28000.0,Central,Rohan Iyer,Retail Store,Enterprise
-1120,2025-05-21,Smartphone,Electronics,3,28000,84000.0,North,Diya Kapoor,Retail Store,Enterprise
-1121,2025-06-07,Office Chair,Furniture,3,8500,25500.0,South,Vikram Joshi,Distributor,B2C
-1122,2024-11-04,Smartphone,Electronics,1,28000,32090.0,East,Priya Nair,Retail Store,Enterprise
-1123,2025-06-19,Smartwatch,Electronics,4,12000,48000.0,West,Diya Kapoor,Distributor,B2C
-1124,2024-07-24,Headphones,Electronics,6,3500,21000.0,North,Priya Nair,Online,B2C
-1125,2025-05-15,Smartphone,Electronics,3,28000,84000.0,Central,Diya Kapoor,Distributor,B2B
-1126,2024-09-30,Laptop,Electronics,1,55000,55000.0,South,Priya Nair,Distributor,Enterprise
-1127,2024-10-27,Office Chair,Furniture,3,8500,25500.0,North,Aarav Mehta,Retail Store,B2B
-1128,2024-03-28,Laptop,Electronics,2,55000,110000.0,North,Aarav Mehta,Online,B2C
-1129,2024-03-26,Laptop,Electronics,2,55000,110000.0,West,Sneha Bose,Online,B2C
-1130,2024-01-02,Office Chair,Furniture,2,8500,17000.0,North,Aarav Mehta,Online,B2B
-1131,2024-04-25,Laptop,Electronics,1,55000,55000.0,South,Priya Nair,Distributor,B2C
-1132,2024-05-01,Backpack,Accessories,2,1800,3600.0,South,Vikram Joshi,Retail Store,B2C
-1133,2024-11-12,Smartphone,Electronics,1,28000,36734.0,North,Priya Nair,Online,Enterprise
-1134,2025-01-04,Smartwatch,Electronics,1,12000,12000.0,West,Ananya Sharma,Retail Store,B2C
-1135,2024-09-07,Desk,Furniture,7,15000,105000.0,East,Sneha Bose,Retail Store,B2C
-1136,2025-05-29,Desk,Furniture,7,15000,105000.0,North,Sneha Bose,Retail Store,B2C
-1137,2024-01-12,Laptop,Electronics,2,55000,110000.0,West,Karan Reddy,Online,B2B
-1138,2024-12-21,Smartwatch,Electronics,3,12000,47638.0,Central,Vikram Joshi,Online,Enterprise
-1139,2024-12-17,Laptop,Electronics,2,55000,138901.0,East,Rohan Iyer,Retail Store,Enterprise
-1140,2024-07-25,Smartwatch,Electronics,5,12000,60000.0,North,Vikram Joshi,Online,B2C
-1141,2024-01-24,Pen Set,Stationery,11,450,,West,Karan Reddy,Retail Store,B2C
-1142,2025-02-23,Bookshelf,Furniture,1,6500,6500.0,South,Karan Reddy,Retail Store,B2C
-1143,2024-10-21,Tablet,Electronics,2,32000,64000.0,South,Rohan Iyer,Distributor,B2C
-1144,2024-08-24,Notebook,Stationery,13,250,3250.0,South,Ananya Sharma,Online,Enterprise
-1145,2025-06-03,Smartphone,Electronics,2,28000,56000.0,West,Ananya Sharma,Retail Store,Enterprise
-1146,2024-11-29,Smartwatch,Electronics,6,12000,90272.0,Central,Karan Reddy,Retail Store,B2B
-1147,2025-01-15,Headphones,Electronics,6,3500,21000.0,North,Sneha Bose,Retail Store,Enterprise
-1148,2024-01-28,Smartphone,Electronics,3,28000,84000.0,South,Rohan Iyer,Online,B2B
-1149,2024-10-29,Smartphone,Electronics,1,28000,28000.0,East,Diya Kapoor,Distributor,B2C
-1150,2024-12-26,Smartphone,Electronics,2,28000,68838.0,West,Ananya Sharma,Distributor,B2B
-1151,2024-10-10,Smartphone,Electronics,2,28000,56000.0,North,Rohan Iyer,Online,Enterprise
-1152,2024-10-31,Smartwatch,Electronics,5,12000,60000.0,North,Ananya Sharma,Distributor,Enterprise
-1153,2024-11-29,Tablet,Electronics,3,32000,107244.0,Central,Sneha Bose,Retail Store,B2B
-1154,2024-07-16,Smartwatch,Electronics,3,12000,36000.0,Central,Karan Reddy,Distributor,B2B
-1155,2024-07-24,Laptop,Electronics,3,55000,165000.0,West,Diya Kapoor,Online,B2C
-1156,2024-05-05,Pen Set,Stationery,12,450,5400.0,South,Aarav Mehta,Retail Store,B2B
-1157,2024-07-02,Bookshelf,Furniture,7,6500,45500.0,East,Diya Kapoor,Distributor,B2C
-1158,2024-11-03,Laptop,Electronics,2,55000,144254.0,South,Sneha Bose,Distributor,B2C
-1159,2024-12-17,Smartphone,Electronics,3,28000,98310.0,South,Aarav Mehta,Distributor,Enterprise
-1160,2025-02-17,Pen Set,Stationery,11,450,4950.0,South,Diya Kapoor,Online,B2C
-1161,2024-12-10,Bookshelf,Furniture,1,6500,8494.0,North,Aarav Mehta,Distributor,Enterprise
-1162,2024-10-30,Smartwatch,Electronics,5,12000,60000.0,Central,Aarav Mehta,Retail Store,B2C
-1163,2024-06-09,Smartwatch,Electronics,2,12000,24000.0,North,Aarav Mehta,Online,B2B
-1164,2025-05-03,Laptop,Electronics,3,55000,165000.0,East,Sneha Bose,Retail Store,B2B
-1165,2024-01-19,Office Chair,Furniture,4,8500,34000.0,South,Diya Kapoor,Online,B2B
-1166,2024-11-26,Smartphone,Electronics,1,28000,33955.0,North,Karan Reddy,Distributor,B2B
-1167,2024-05-22,Headphones,Electronics,7,3500,24500.0,Central,Rohan Iyer,Online,B2B
-1168,2024-10-17,Tablet,Electronics,1,32000,32000.0,West,Priya Nair,Retail Store,Enterprise
-1169,2024-01-03,Tablet,Electronics,2,32000,64000.0,Central,Diya Kapoor,Retail Store,B2C
-1170,2024-06-02,Notebook,Stationery,14,250,3500.0,North,Sneha Bose,Online,B2C
-1171,2024-10-26,Headphones,Electronics,7,3500,24500.0,West,Vikram Joshi,Distributor,Enterprise
-1172,2024-12-29,Desk,Furniture,2,15000,41599.0,Central,Karan Reddy,Distributor,Enterprise
-1173,2024-04-26,Laptop,Electronics,3,55000,165000.0,West,Vikram Joshi,Online,Enterprise
-1174,2024-05-20,Headphones,Electronics,4,3500,14000.0,East,Diya Kapoor,Retail Store,B2B
-1175,2025-05-08,Smartwatch,Electronics,5,12000,60000.0,East,Karan Reddy,Distributor,Enterprise
-1176,2025-02-23,Tablet,Electronics,2,32000,64000.0,South,Diya Kapoor,Online,B2B
-1177,2024-12-15,Headphones,Electronics,1,3500,4040.0,West,Diya Kapoor,Distributor,B2B
-1178,2024-11-07,Smartphone,Electronics,3,28000,112393.0,Central,Diya Kapoor,Retail Store,Enterprise
-1179,2025-01-10,Desk,Furniture,4,15000,60000.0,Central,Diya Kapoor,Distributor,Enterprise
-1180,2024-04-27,Laptop,Electronics,2,55000,110000.0,Central,Priya Nair,Online,B2C
-1181,2025-01-12,Smartphone,Electronics,2,28000,56000.0,North,Karan Reddy,Retail Store,B2B
-1182,2024-02-19,Smartphone,Electronics,1,28000,28000.0,East,Sneha Bose,Distributor,B2C
-1183,2025-03-14,Desk,Furniture,3,15000,45000.0,South,Karan Reddy,Distributor,B2B
-1184,2025-03-07,Office Chair,Furniture,2,8500,17000.0,Central,Vikram Joshi,Distributor,Enterprise
-1185,2024-03-17,Tablet,Electronics,2,32000,64000.0,Central,Aarav Mehta,Retail Store,B2B
-1186,2024-09-19,Backpack,Accessories,3,1800,5400.0,Central,Diya Kapoor,Distributor,B2C
-1187,2025-04-03,Headphones,Electronics,7,3500,24500.0,West,Priya Nair,Distributor,B2C
-1188,2024-02-05,Smartphone,Electronics,3,28000,84000.0,Central,Aarav Mehta,Distributor,B2B
-1189,2024-03-10,Smartphone,Electronics,3,28000,84000.0,North,Vikram Joshi,Online,B2B
-1190,2025-05-31,Bookshelf,Furniture,4,6500,26000.0,West,Rohan Iyer,Online,B2C
-1191,2025-01-15,Tablet,Electronics,3,32000,96000.0,South,Rohan Iyer,Retail Store,B2C
-1192,2024-07-27,Laptop,Electronics,2,55000,110000.0,East,Diya Kapoor,Distributor,B2C
-1193,2025-03-17,Smartphone,Electronics,2,28000,56000.0,West,Karan Reddy,Online,B2B
-1194,2024-11-06,Smartwatch,Electronics,1,12000,15128.0,North,Vikram Joshi,Online,Enterprise
-1195,2024-10-05,Notebook,Stationery,14,250,3500.0,West,Rohan Iyer,Retail Store,B2B
-1196,2024-11-16,Office Chair,Furniture,4,8500,45988.0,Central,Sneha Bose,Retail Store,B2C
-1197,2024-06-09,Laptop,Electronics,3,55000,165000.0,Central,Ananya Sharma,Retail Store,B2C
-1198,2024-04-23,Laptop,Electronics,1,55000,55000.0,Central,Diya Kapoor,Online,B2B
-1199,2025-03-24,Smartphone,Electronics,1,28000,28000.0,East,Rohan Iyer,Retail Store,Enterprise
-1200,2024-11-06,Pen Set,Stationery,3,450,1550.0,East,Vikram Joshi,Retail Store,B2B
-1201,2024-08-26,Headphones,Electronics,4,3500,14000.0,North,Diya Kapoor,Retail Store,B2C
-1202,2024-08-03,Smartwatch,Electronics,6,12000,72000.0,South,Priya Nair,Retail Store,B2C
-1203,2025-06-09,Laptop,Electronics,3,55000,165000.0,North,Vikram Joshi,Online,Enterprise
-1204,2025-04-10,Smartphone,Electronics,2,28000,56000.0,West,Diya Kapoor,Retail Store,B2B
-1205,2024-10-15,Tablet,Electronics,1,32000,32000.0,West,Vikram Joshi,Retail Store,B2B
-1206,2024-08-25,Tablet,Electronics,2,32000,64000.0,Central,Sneha Bose,Distributor,Enterprise
-1207,2024-04-26,Headphones,Electronics,1,3500,3500.0,South,Ananya Sharma,Online,B2C
-1208,2024-06-21,Headphones,Electronics,7,3500,24500.0,West,Sneha Bose,Online,Enterprise
-1209,2025-03-22,Headphones,Electronics,2,3500,7000.0,Central,Rohan Iyer,Retail Store,B2C
-1210,2024-10-13,Smartwatch,Electronics,3,12000,36000.0,East,Karan Reddy,Distributor,B2C
-1211,2025-01-16,Headphones,Electronics,2,3500,7000.0,East,Diya Kapoor,Online,Enterprise
-1212,2024-03-23,Smartwatch,Electronics,1,12000,12000.0,North,Rohan Iyer,Online,B2B
-1213,2024-09-19,Desk,Furniture,6,15000,90000.0,West,Aarav Mehta,Distributor,B2B
-1214,2025-02-23,Smartphone,Electronics,1,28000,28000.0,West,Priya Nair,Distributor,B2C
-1215,2025-04-27,Laptop,Electronics,3,55000,165000.0,East,Sneha Bose,Retail Store,B2C
-1216,2025-05-24,Smartphone,Electronics,1,28000,28000.0,South,Priya Nair,Distributor,B2B
-1217,2025-04-15,Laptop,Electronics,3,55000,165000.0,South,Ananya Sharma,Distributor,B2B
-1218,2024-08-29,Smartphone,Electronics,1,28000,28000.0,Central,Karan Reddy,Online,B2C
-1219,2025-05-11,Laptop,Electronics,1,55000,55000.0,West,Rohan Iyer,Distributor,B2B
-1220,2025-05-24,Bookshelf,Furniture,7,6500,45500.0,West,Diya Kapoor,Retail Store,Enterprise
-1221,2025-02-25,Headphones,Electronics,4,3500,14000.0,South,Karan Reddy,Retail Store,B2B
-1222,2024-04-29,Laptop,Electronics,1,55000,55000.0,North,Aarav Mehta,Online,B2C
-1223,2024-04-06,Headphones,Electronics,5,3500,17500.0,South,Diya Kapoor,Retail Store,B2B
-1224,2024-07-18,Desk,Furniture,7,15000,105000.0,North,Vikram Joshi,Online,Enterprise
-1225,2025-02-19,Headphones,Electronics,3,3500,10500.0,West,Aarav Mehta,Distributor,B2B
-1226,2024-03-27,Laptop,Electronics,1,55000,55000.0,East,Aarav Mehta,Online,Enterprise
-1227,2024-05-27,Laptop,Electronics,1,55000,55000.0,Central,Ananya Sharma,Retail Store,Enterprise
-1228,2025-03-11,Smartphone,Electronics,3,28000,84000.0,East,Vikram Joshi,Distributor,Enterprise
-1229,2024-12-15,Smartphone,Electronics,1,28000,37776.0,South,Priya Nair,Distributor,B2B
-1230,2024-11-24,Smartphone,Electronics,1,28000,34008.0,South,Rohan Iyer,Online,B2C
-1231,2024-06-17,Smartphone,Electronics,1,28000,28000.0,North,Diya Kapoor,Distributor,B2C
-1232,2024-05-28,Notebook,Stationery,11,250,2750.0,West,Sneha Bose,Distributor,B2C
-1233,2024-06-08,Tablet,Electronics,1,32000,32000.0,West,Diya Kapoor,Distributor,B2C
-1234,2024-07-01,Smartphone,Electronics,2,28000,56000.0,North,Aarav Mehta,Distributor,B2C
-1235,2025-02-17,Headphones,Electronics,1,3500,3500.0,West,Karan Reddy,Distributor,B2C
-1236,2024-05-01,Laptop,Electronics,1,55000,55000.0,North,Sneha Bose,Online,Enterprise
-1237,2024-10-28,Smartphone,Electronics,1,28000,28000.0,West,Ananya Sharma,Distributor,B2C
-1238,2025-06-17,Office Chair,Furniture,1,8500,8500.0,West,Karan Reddy,Online,B2C
-1239,2025-04-07,Laptop,Electronics,1,55000,55000.0,West,Rohan Iyer,Retail Store,Enterprise
-1240,2024-03-28,Headphones,Electronics,7,3500,24500.0,West,Karan Reddy,Retail Store,Enterprise
-1241,2025-05-29,Office Chair,Furniture,1,8500,8500.0,East,Vikram Joshi,Online,B2C
-1242,2024-05-07,Notebook,Stationery,10,250,2500.0,Central,Vikram Joshi,Retail Store,B2C
-1243,2024-09-17,Laptop,Electronics,1,55000,55000.0,East,Aarav Mehta,Distributor,B2C
-1244,2024-01-10,Smartwatch,Electronics,1,12000,12000.0,Central,Ananya Sharma,Retail Store,Enterprise
-1245,2024-04-21,Smartwatch,Electronics,2,12000,24000.0,Central,Aarav Mehta,Retail Store,B2C
-1246,2024-01-12,Office Chair,Furniture,6,8500,51000.0,,Priya Nair,Retail Store,B2B
-1247,2024-01-20,Pen Set,Stationery,10,450,4500.0,East,Ananya Sharma,Distributor,Enterprise
-1248,2024-04-10,Smartphone,Electronics,3,28000,84000.0,South,Sneha Bose,Distributor,B2B
-1249,2025-06-19,Smartwatch,Electronics,2,12000,24000.0,East,Diya Kapoor,Online,B2C
-1250,2025-02-08,Headphones,Electronics,7,3500,24500.0,South,Priya Nair,Retail Store,B2B
-1251,2024-04-28,Headphones,Electronics,1,3500,3500.0,West,Karan Reddy,Retail Store,Enterprise
-1252,2024-02-24,Laptop,Electronics,2,55000,110000.0,West,Sneha Bose,Retail Store,B2C
-1253,2024-06-07,Tablet,Electronics,3,32000,96000.0,West,Sneha Bose,Distributor,B2B
-1254,2025-02-09,Smartwatch,Electronics,3,12000,36000.0,Central,Sneha Bose,Retail Store,B2C
-1255,2024-01-19,Smartwatch,Electronics,7,12000,84000.0,Central,Sneha Bose,Retail Store,Enterprise
-1256,2024-05-25,Office Chair,Furniture,1,8500,8500.0,West,Aarav Mehta,Distributor,Enterprise
-1257,2024-04-27,Office Chair,Furniture,1,8500,8500.0,Central,Aarav Mehta,Online,B2C
-1258,2025-02-02,Smartwatch,Electronics,7,12000,84000.0,West,Rohan Iyer,Distributor,B2B
-1259,2025-05-19,Pen Set,Stationery,6,450,2700.0,West,Karan Reddy,Retail Store,B2C
-1260,2024-09-10,Smartphone,Electronics,3,28000,84000.0,Central,Priya Nair,Online,Enterprise
-1261,2025-03-01,Smartphone,Electronics,1,28000,28000.0,East,Priya Nair,Retail Store,Enterprise
-1262,2024-02-18,Headphones,Electronics,5,3500,17500.0,Central,Diya Kapoor,Online,B2C
-1263,2024-10-21,Smartwatch,Electronics,6,12000,72000.0,South,Rohan Iyer,Online,B2B
-1264,2024-06-30,Laptop,Electronics,1,55000,55000.0,West,Sneha Bose,Online,Enterprise
-1265,2025-02-11,Notebook,Stationery,10,250,2500.0,West,Diya Kapoor,Retail Store,B2C
-1266,2024-08-07,Smartphone,Electronics,3,28000,84000.0,South,Ananya Sharma,Retail Store,Enterprise
-1267,2024-08-15,Headphones,Electronics,5,3500,17500.0,East,Sneha Bose,Retail Store,B2C
-1268,2024-07-14,Tablet,Electronics,1,32000,32000.0,South,Aarav Mehta,Distributor,Enterprise
-1269,2024-07-21,Laptop,Electronics,3,55000,165000.0,West,Ananya Sharma,Distributor,Enterprise
-1270,2025-05-06,Headphones,Electronics,2,3500,7000.0,North,Karan Reddy,Retail Store,B2B
-1271,2024-10-31,Smartphone,Electronics,3,28000,84000.0,East,Rohan Iyer,Online,B2B
-1272,2025-03-20,Tablet,Electronics,1,32000,32000.0,North,Aarav Mehta,Retail Store,B2B
-1273,2024-11-22,Smartphone,Electronics,2,28000,73087.0,North,Aarav Mehta,Online,B2B
-1274,2024-02-12,Bookshelf,Furniture,2,6500,13000.0,North,Vikram Joshi,Retail Store,B2B
-1275,2025-05-08,Tablet,Electronics,2,32000,64000.0,South,Aarav Mehta,Retail Store,B2B
-1276,2024-04-21,Laptop,Electronics,2,55000,110000.0,North,Diya Kapoor,Retail Store,B2C
-1277,2024-03-26,Bookshelf,Furniture,3,6500,19500.0,West,Ananya Sharma,Distributor,B2C
-1278,2024-08-30,Desk,Furniture,2,15000,30000.0,North,Ananya Sharma,Distributor,B2B
-1279,2024-03-08,Smartphone,Electronics,3,28000,84000.0,West,Priya Nair,Distributor,B2B
-1280,2025-01-15,Smartwatch,Electronics,4,12000,48000.0,North,Ananya Sharma,Retail Store,B2C
-1281,2024-09-10,Tablet,Electronics,2,32000,64000.0,East,Ananya Sharma,Online,B2C
-1282,2025-03-11,Headphones,Electronics,6,3500,21000.0,North,Rohan Iyer,Retail Store,Enterprise
-1283,2025-05-18,Office Chair,Furniture,3,8500,25500.0,West,Diya Kapoor,Online,B2B
-1284,2024-08-25,Smartwatch,Electronics,7,12000,84000.0,South,Diya Kapoor,Retail Store,B2C
-1285,2024-09-15,Smartphone,Electronics,3,28000,84000.0,East,Diya Kapoor,Distributor,B2C
-1286,2025-06-03,Laptop,Electronics,1,55000,55000.0,Central,Ananya Sharma,Distributor,B2B
-1287,2024-12-31,Headphones,Electronics,6,3500,23625.0,North,Sneha Bose,Distributor,B2C
-1288,2024-04-18,Smartphone,Electronics,1,28000,28000.0,Central,Karan Reddy,Retail Store,B2B
-1289,2025-05-20,Smartphone,Electronics,2,28000,56000.0,East,Vikram Joshi,Distributor,B2B
-1290,2024-07-14,Tablet,Electronics,1,32000,32000.0,North,Sneha Bose,Retail Store,B2C
-1291,2024-08-14,Laptop,Electronics,1,55000,55000.0,Central,Sneha Bose,Online,B2B
-1292,2024-07-29,Desk,Furniture,2,15000,30000.0,West,Sneha Bose,Online,Enterprise
-1293,2025-04-01,Notebook,Stationery,13,250,3250.0,Central,Ananya Sharma,Retail Store,B2C
-1294,2024-10-03,Desk,Furniture,4,15000,60000.0,West,Ananya Sharma,Retail Store,B2C
-1295,2025-06-29,Office Chair,Furniture,3,8500,25500.0,North,Rohan Iyer,Distributor,B2C
-1296,2024-10-05,Office Chair,Furniture,1,8500,8500.0,North,Karan Reddy,Distributor,B2C
-1297,2024-10-15,Backpack,Accessories,3,1800,5400.0,West,Karan Reddy,Retail Store,B2C
-1298,2025-03-29,Smartphone,Electronics,3,28000,84000.0,North,Sneha Bose,Online,Enterprise
-1299,2025-05-30,Smartphone,Electronics,3,28000,84000.0,South,Aarav Mehta,Distributor,B2C
-1300,2024-08-14,Headphones,Electronics,5,3500,17500.0,North,Karan Reddy,Online,B2C
-1301,2025-04-04,Office Chair,Furniture,4,8500,34000.0,North,Vikram Joshi,Online,Enterprise
-1302,2024-07-28,Laptop,Electronics,3,55000,165000.0,East,Aarav Mehta,Retail Store,Enterprise
-1303,2024-12-19,Laptop,Electronics,3,55000,203629.0,West,Karan Reddy,Retail Store,Enterprise
-1304,2025-05-21,Headphones,Electronics,7,3500,24500.0,West,Aarav Mehta,Online,B2C
-1305,2024-03-23,Notebook,Stationery,8,250,2000.0,East,Rohan Iyer,Retail Store,Enterprise
-1306,2024-06-21,Desk,Furniture,4,15000,60000.0,North,Rohan Iyer,Distributor,B2B
-1307,2025-02-01,Smartphone,Electronics,3,28000,84000.0,Central,Karan Reddy,Online,B2C
-1308,2025-01-10,Laptop,Electronics,1,55000,55000.0,West,Aarav Mehta,Retail Store,Enterprise
-1309,2024-11-29,Laptop,Electronics,1,55000,72762.0,West,Rohan Iyer,Retail Store,B2B
-1310,2024-05-06,Smartphone,Electronics,2,28000,56000.0,Central,Priya Nair,Online,B2C
-1311,2025-05-08,Headphones,Electronics,3,3500,10500.0,South,Karan Reddy,Distributor,B2B
-1312,2024-07-19,Laptop,Electronics,1,55000,55000.0,Central,Aarav Mehta,Distributor,B2B
-1313,2024-01-08,Laptop,Electronics,1,55000,55000.0,Central,Vikram Joshi,Distributor,B2C
-1314,2025-06-10,Headphones,Electronics,7,3500,24500.0,North,Rohan Iyer,Retail Store,B2B
-1315,2025-05-19,Smartphone,Electronics,1,28000,28000.0,Central,Rohan Iyer,Distributor,Enterprise
-1316,2024-03-16,Laptop,Electronics,2,55000,110000.0,Central,Rohan Iyer,Retail Store,B2C
-1317,2024-12-26,Smartphone,Electronics,3,28000,105157.0,North,Diya Kapoor,Online,B2B
-1318,2024-10-09,Headphones,Electronics,2,3500,7000.0,East,Sneha Bose,Retail Store,B2B
-1319,2025-02-27,Headphones,Electronics,5,3500,17500.0,East,Ananya Sharma,Online,B2B
-1320,2024-02-18,Headphones,Electronics,6,3500,21000.0,North,Priya Nair,Distributor,B2B
-1321,2024-11-13,Smartphone,Electronics,1,28000,34133.0,North,Aarav Mehta,Online,B2B
-1322,2024-07-01,Smartwatch,Electronics,5,12000,60000.0,North,Vikram Joshi,Online,Enterprise
-1323,2024-11-28,Laptop,Electronics,3,55000,227506.0,Central,Aarav Mehta,Distributor,B2B
-1324,2025-03-20,Office Chair,Furniture,4,8500,34000.0,North,Karan Reddy,Retail Store,Enterprise
-1325,2025-06-03,Pen Set,Stationery,6,450,2700.0,North,Rohan Iyer,Retail Store,Enterprise
-1326,2024-11-19,Office Chair,Furniture,7,8500,72301.0,West,Diya Kapoor,Online,Enterprise
-1327,2024-11-27,Tablet,Electronics,1,32000,35969.0,North,Vikram Joshi,Retail Store,Enterprise
-1328,2025-03-25,Smartwatch,Electronics,2,12000,24000.0,East,Rohan Iyer,Online,B2C
-1329,2024-04-27,Headphones,Electronics,3,3500,10500.0,North,Aarav Mehta,Distributor,Enterprise
-1330,2025-05-28,Office Chair,Furniture,3,8500,25500.0,Central,Priya Nair,Distributor,B2C
-1331,2024-09-24,Laptop,Electronics,1,55000,55000.0,East,Rohan Iyer,Online,Enterprise
-1332,2024-12-22,Tablet,Electronics,2,32000,72761.0,North,Vikram Joshi,Distributor,B2B
-1333,2024-10-20,Office Chair,Furniture,1,8500,8500.0,West,Karan Reddy,Retail Store,Enterprise
-1334,2025-03-04,Headphones,Electronics,3,3500,10500.0,North,Karan Reddy,Retail Store,B2C
-1335,2025-03-26,Tablet,Electronics,2,32000,64000.0,East,Sneha Bose,Distributor,B2B
-1336,2024-04-27,Headphones,Electronics,3,3500,10500.0,West,Sneha Bose,Online,Enterprise
-1337,2024-01-07,Headphones,Electronics,4,3500,14000.0,West,Karan Reddy,Online,B2B
-1338,2024-07-20,Pen Set,Stationery,4,450,1800.0,West,Diya Kapoor,Distributor,Enterprise
-1339,2024-05-05,Headphones,Electronics,3,3500,10500.0,East,Aarav Mehta,Online,B2C
-1340,2025-03-15,Bookshelf,Furniture,2,6500,13000.0,West,Priya Nair,Online,Enterprise
-1341,2025-03-09,Smartwatch,Electronics,5,12000,60000.0,Central,Priya Nair,Distributor,Enterprise
-1342,2024-06-03,Pen Set,Stationery,5,450,2250.0,East,Ananya Sharma,Distributor,B2C
-1343,2024-05-04,Headphones,Electronics,6,3500,21000.0,Central,Priya Nair,Retail Store,B2B
-1344,2024-06-18,Bookshelf,Furniture,5,6500,32500.0,West,Karan Reddy,Distributor,Enterprise
-1345,2024-07-19,Headphones,Electronics,2,3500,7000.0,North,Karan Reddy,Online,Enterprise
-1346,2024-04-18,Pen Set,Stationery,5,450,2250.0,West,Karan Reddy,Online,B2B
-1347,2024-12-30,Tablet,Electronics,2,32000,85028.0,East,Vikram Joshi,Distributor,Enterprise
-1348,2025-05-11,Smartphone,Electronics,1,28000,28000.0,Central,Priya Nair,Distributor,B2B
-1349,2025-05-13,Pen Set,Stationery,8,450,3600.0,North,Sneha Bose,Distributor,B2B
-1350,2024-05-18,Headphones,Electronics,7,3500,24500.0,West,Rohan Iyer,Online,B2B
-1351,2024-04-13,Office Chair,Furniture,2,8500,17000.0,North,Ananya Sharma,Retail Store,Enterprise
-1352,2025-06-03,Smartphone,Electronics,1,28000,28000.0,West,Karan Reddy,Online,B2B
-1353,2024-03-04,Tablet,Electronics,3,32000,96000.0,East,Karan Reddy,Retail Store,Enterprise
-1354,2024-05-19,Headphones,Electronics,7,3500,24500.0,Central,Priya Nair,Distributor,Enterprise
-1355,2024-07-02,Laptop,Electronics,1,55000,55000.0,West,Aarav Mehta,Retail Store,B2C
-1356,2024-05-26,Pen Set,Stationery,2,450,900.0,South,Ananya Sharma,Retail Store,Enterprise
-1357,2025-02-20,Smartphone,Electronics,2,28000,56000.0,East,Rohan Iyer,Online,Enterprise
-1358,2024-03-22,Tablet,Electronics,3,32000,96000.0,West,Rohan Iyer,Distributor,Enterprise
-1359,2024-12-30,Tablet,Electronics,3,32000,119322.0,North,Ananya Sharma,Online,B2B
-1360,2024-05-26,Smartwatch,Electronics,1,12000,12000.0,East,Rohan Iyer,Online,B2B
-1361,2024-10-13,Backpack,Accessories,5,1800,9000.0,South,Ananya Sharma,Retail Store,B2B
-1362,2024-11-15,Laptop,Electronics,3,55000,196320.0,West,Diya Kapoor,Online,Enterprise
-1363,2024-10-29,Smartphone,Electronics,1,28000,28000.0,East,Rohan Iyer,Retail Store,B2C
-1364,2025-06-25,Desk,Furniture,7,15000,105000.0,East,Aarav Mehta,Online,B2B
-1365,2024-05-20,Office Chair,Furniture,5,8500,42500.0,Central,Sneha Bose,Online,Enterprise
-1366,2024-07-12,Notebook,Stationery,4,250,1000.0,North,Diya Kapoor,Retail Store,B2C
-1367,2024-12-23,Headphones,Electronics,6,3500,25028.0,East,Priya Nair,Online,B2B
-1368,2024-03-23,Smartwatch,Electronics,5,12000,60000.0,East,Priya Nair,Retail Store,B2B
-1369,2025-01-14,Headphones,Electronics,2,3500,7000.0,West,Diya Kapoor,Retail Store,B2C
-1370,2025-05-22,Headphones,Electronics,7,3500,24500.0,South,Vikram Joshi,Distributor,Enterprise
-1371,2024-01-27,Notebook,Stationery,8,250,2000.0,Central,Vikram Joshi,Online,Enterprise
-1372,2025-03-12,Smartphone,Electronics,1,28000,28000.0,Central,Karan Reddy,Distributor,B2B
-1373,2024-01-31,Headphones,Electronics,1,3500,3500.0,North,Vikram Joshi,Distributor,B2C
-1374,2025-03-31,Headphones,Electronics,4,3500,14000.0,West,Sneha Bose,Retail Store,B2C
-1375,2024-02-22,Headphones,Electronics,6,3500,21000.0,West,Karan Reddy,Distributor,Enterprise
-1376,2024-10-16,Office Chair,Furniture,4,8500,34000.0,South,Ananya Sharma,Retail Store,Enterprise
-1377,2025-03-16,Laptop,Electronics,1,55000,55000.0,North,Diya Kapoor,Online,B2C
-1378,2024-10-20,Office Chair,Furniture,6,8500,51000.0,North,Vikram Joshi,Retail Store,B2B
-1379,2024-06-05,Smartphone,Electronics,1,28000,28000.0,West,Rohan Iyer,Online,B2B
-1380,2025-03-03,Laptop,Electronics,1,55000,55000.0,West,Sneha Bose,Retail Store,Enterprise
-1381,2024-06-25,Pen Set,Stationery,4,450,1800.0,West,Rohan Iyer,Online,B2B
-1382,2024-06-23,Smartwatch,Electronics,2,12000,24000.0,Central,Karan Reddy,Distributor,B2B
-1383,2025-03-27,Smartphone,Electronics,3,28000,84000.0,North,Priya Nair,Online,B2B
-1384,2024-10-19,Headphones,Electronics,3,3500,10500.0,South,Aarav Mehta,Online,B2C
-1385,2024-12-20,Pen Set,Stationery,13,450,7238.0,South,Ananya Sharma,Retail Store,Enterprise
-1386,2025-03-30,Headphones,Electronics,4,3500,14000.0,North,Karan Reddy,Retail Store,B2B
-1387,2025-06-11,Desk,Furniture,7,15000,105000.0,North,Aarav Mehta,Retail Store,Enterprise
-1388,2024-04-09,Office Chair,Furniture,6,8500,51000.0,Central,Vikram Joshi,Online,B2B
-1389,2024-09-30,Smartphone,Electronics,3,28000,84000.0,East,Sneha Bose,Retail Store,B2B
-1390,2025-03-13,Smartwatch,Electronics,6,12000,72000.0,North,Sneha Bose,Online,Enterprise
-1391,2024-02-18,Headphones,Electronics,1,3500,3500.0,South,Karan Reddy,Distributor,B2B
-1392,2024-04-11,Smartwatch,Electronics,5,12000,60000.0,South,Priya Nair,Online,B2C
-1393,2025-01-21,Headphones,Electronics,1,3500,3500.0,North,Sneha Bose,Retail Store,B2B
-1394,2025-01-12,Headphones,Electronics,4,3500,14000.0,West,Diya Kapoor,Retail Store,B2B
-1395,2025-04-09,Smartphone,Electronics,3,28000,84000.0,West,Diya Kapoor,Distributor,B2C
-1396,2024-06-23,Laptop,Electronics,3,55000,165000.0,North,Diya Kapoor,Online,B2C
-1397,2024-02-02,Headphones,Electronics,5,3500,17500.0,South,Vikram Joshi,Online,B2C
-1398,2025-01-07,Tablet,Electronics,3,32000,96000.0,West,Karan Reddy,Distributor,Enterprise
-1399,2024-08-12,Smartwatch,Electronics,3,12000,36000.0,North,Ananya Sharma,Online,B2C
-1400,2025-05-03,Smartphone,Electronics,3,28000,84000.0,Central,Diya Kapoor,Retail Store,B2B
-1401,2024-08-05,Office Chair,Furniture,7,8500,59500.0,West,Diya Kapoor,Online,Enterprise
-1402,2025-03-09,Desk,Furniture,4,15000,60000.0,East,Vikram Joshi,Retail Store,B2B
-1403,2025-05-06,Smartphone,Electronics,2,28000,56000.0,South,Aarav Mehta,Retail Store,B2B
-1404,2024-12-04,Desk,Furniture,5,15000,85806.0,Central,Ananya Sharma,Distributor,Enterprise
-1405,2024-02-18,Smartwatch,Electronics,3,12000,36000.0,West,Priya Nair,Retail Store,B2B
-1406,2024-08-29,Notebook,Stationery,10,250,2500.0,South,Aarav Mehta,Retail Store,B2B
-1407,2025-04-03,Headphones,Electronics,1,3500,3500.0,North,Diya Kapoor,Retail Store,Enterprise
-1408,2024-05-01,Office Chair,Furniture,5,8500,42500.0,Central,Priya Nair,Online,B2C
-1409,2025-03-21,Smartphone,Electronics,2,28000,56000.0,South,Priya Nair,Retail Store,B2C
-1410,2024-01-03,Headphones,Electronics,6,3500,21000.0,Central,Ananya Sharma,Online,Enterprise
-1411,2024-11-26,Smartwatch,Electronics,1,12000,16055.0,East,Vikram Joshi,Retail Store,B2B
-1412,2024-09-08,Smartphone,Electronics,3,28000,84000.0,East,Diya Kapoor,Retail Store,B2B
-1413,2024-09-30,Smartphone,Electronics,1,28000,28000.0,East,Vikram Joshi,Distributor,B2C
-1414,2025-01-24,Smartwatch,Electronics,2,12000,24000.0,West,Sneha Bose,Distributor,B2B
-1415,2024-09-29,Notebook,Stationery,3,250,750.0,East,Rohan Iyer,Online,B2C
-1416,2024-05-20,Pen Set,Stationery,9,450,4050.0,South,Ananya Sharma,Retail Store,Enterprise
-1417,2024-02-08,Smartphone,Electronics,3,28000,84000.0,North,Rohan Iyer,Retail Store,B2C
-1418,2024-05-16,Bookshelf,Furniture,4,6500,26000.0,Central,Diya Kapoor,Online,B2C
-1419,2024-06-18,Desk,Furniture,5,15000,75000.0,West,Ananya Sharma,Retail Store,Enterprise
-1420,2024-06-03,Office Chair,Furniture,3,8500,25500.0,North,Karan Reddy,Distributor,B2B
-1421,2025-03-13,Laptop,Electronics,1,55000,55000.0,East,Diya Kapoor,Distributor,B2B
-1422,2024-11-22,Laptop,Electronics,1,55000,66633.0,West,Sneha Bose,Online,B2C
-1423,2024-12-24,Notebook,Stationery,2,250,636.0,North,Diya Kapoor,Online,B2B
-1424,2024-03-22,Tablet,Electronics,3,32000,96000.0,West,Aarav Mehta,Retail Store,B2B
-1425,2025-02-07,Smartphone,Electronics,1,28000,28000.0,West,Vikram Joshi,Retail Store,Enterprise
-1426,2024-07-11,Smartphone,Electronics,1,28000,28000.0,North,Priya Nair,Retail Store,B2B
-1427,2024-09-12,Smartphone,Electronics,1,28000,28000.0,East,Ananya Sharma,Distributor,B2B
-1428,2025-02-06,Headphones,Electronics,2,3500,7000.0,Central,Sneha Bose,Distributor,Enterprise
-1429,2025-02-08,Notebook,Stationery,11,250,2750.0,West,Vikram Joshi,Retail Store,Enterprise
-1430,2024-08-08,Tablet,Electronics,1,32000,32000.0,North,Ananya Sharma,Distributor,Enterprise
-1431,2025-05-19,Laptop,Electronics,2,55000,110000.0,East,Sneha Bose,Retail Store,Enterprise
-1432,2025-01-01,Notebook,Stationery,2,250,500.0,East,Ananya Sharma,Distributor,B2B
-1433,2025-06-19,Office Chair,Furniture,5,8500,42500.0,South,Sneha Bose,Distributor,B2C
-1434,2024-06-29,Notebook,Stationery,8,250,2000.0,West,Vikram Joshi,Online,B2B
-1435,2025-05-23,Headphones,Electronics,5,3500,17500.0,North,Sneha Bose,Retail Store,B2C
-1436,2025-01-25,Laptop,Electronics,2,55000,110000.0,Central,Karan Reddy,Distributor,Enterprise
-1437,2025-05-25,Laptop,Electronics,2,55000,110000.0,West,Vikram Joshi,Online,B2B
-1438,2024-11-01,Office Chair,Furniture,2,8500,23269.0,Central,Aarav Mehta,Distributor,Enterprise
-1439,2025-05-10,Smartphone,Electronics,2,28000,56000.0,East,Vikram Joshi,Retail Store,Enterprise
-1440,2024-07-31,Smartphone,Electronics,2,28000,56000.0,Central,Ananya Sharma,Online,Enterprise
-1441,2024-07-20,Headphones,Electronics,2,3500,7000.0,East,Diya Kapoor,Distributor,B2C
-1442,2025-04-24,Tablet,Electronics,3,32000,96000.0,South,Priya Nair,Online,B2B
-1443,2024-06-01,Tablet,Electronics,3,32000,96000.0,East,Karan Reddy,Online,B2C
-1444,2024-03-21,Desk,Furniture,7,15000,105000.0,North,Vikram Joshi,Retail Store,Enterprise
-1445,2024-07-16,Office Chair,Furniture,3,8500,25500.0,North,Vikram Joshi,Distributor,B2C
-1446,2024-11-08,Office Chair,Furniture,6,8500,60293.0,East,Aarav Mehta,Online,B2B
-1447,2024-12-05,Smartphone,Electronics,2,28000,78039.0,East,Aarav Mehta,Distributor,B2B
-1448,2024-04-18,Office Chair,Furniture,7,8500,59500.0,North,Aarav Mehta,Distributor,B2C
-1449,2025-01-03,Smartphone,Electronics,2,28000,56000.0,East,Rohan Iyer,Distributor,B2C
-1450,2024-11-10,Smartwatch,Electronics,6,12000,90023.0,North,Aarav Mehta,Online,Enterprise
-1451,2024-10-09,Headphones,Electronics,5,3500,17500.0,Central,Ananya Sharma,Retail Store,Enterprise
-1452,2025-04-02,Pen Set,Stationery,12,450,5400.0,North,Sneha Bose,Distributor,Enterprise
-1453,2024-11-08,Smartphone,Electronics,2,28000,74984.0,East,Diya Kapoor,Distributor,Enterprise
-1454,2025-04-08,Smartwatch,Electronics,4,12000,48000.0,West,Aarav Mehta,Online,B2C
-1455,2024-10-09,Headphones,Electronics,5,3500,17500.0,West,Aarav Mehta,Retail Store,B2B
-1456,2024-03-09,Headphones,Electronics,4,3500,14000.0,East,Aarav Mehta,Retail Store,B2C
-1457,2024-07-15,Headphones,Electronics,3,3500,10500.0,East,Diya Kapoor,Retail Store,Enterprise
-1458,2024-05-20,Headphones,Electronics,1,3500,3500.0,West,Priya Nair,Distributor,Enterprise
-1459,2025-02-06,Laptop,Electronics,3,55000,165000.0,Central,Ananya Sharma,Online,B2C
-1460,2025-01-26,Pen Set,Stationery,10,450,4500.0,South,Priya Nair,Online,B2C
-1461,2024-11-20,Smartphone,Electronics,2,28000,78046.0,North,Karan Reddy,Retail Store,B2C
-1462,2024-07-22,Tablet,Electronics,1,32000,32000.0,East,Rohan Iyer,Retail Store,B2C
-1463,2024-06-14,Headphones,Electronics,2,3500,7000.0,South,Rohan Iyer,Distributor,Enterprise
-1464,2024-08-17,Smartphone,Electronics,3,28000,84000.0,West,Rohan Iyer,Online,B2C
-1465,2025-04-27,Smartwatch,Electronics,3,12000,36000.0,South,Priya Nair,Online,B2C
-1466,2024-10-09,Smartwatch,Electronics,6,12000,72000.0,South,Aarav Mehta,Online,B2C
-1467,2025-05-22,Smartphone,Electronics,3,28000,84000.0,South,Karan Reddy,Online,Enterprise
-1468,2024-03-19,Laptop,Electronics,2,55000,110000.0,East,Priya Nair,Distributor,B2B
-1469,2025-02-17,Smartphone,Electronics,2,28000,56000.0,North,Karan Reddy,Online,B2B
-1470,2024-05-16,Headphones,Electronics,7,3500,24500.0,West,Rohan Iyer,Online,B2C
-1471,2024-02-15,Headphones,Electronics,5,3500,17500.0,South,Ananya Sharma,Retail Store,B2C
-1472,2024-02-23,Laptop,Electronics,2,55000,110000.0,South,Rohan Iyer,Distributor,B2B
-1473,2025-01-01,Notebook,Stationery,13,250,3250.0,West,Karan Reddy,Distributor,B2B
-1474,2024-09-04,Headphones,Electronics,3,3500,10500.0,West,Aarav Mehta,Distributor,B2B
-1475,2024-07-30,Smartwatch,Electronics,2,12000,24000.0,Central,Ananya Sharma,Distributor,B2B
-1476,2025-04-24,Desk,Furniture,7,15000,105000.0,West,Vikram Joshi,Distributor,B2B
-1477,2024-10-25,Smartphone,Electronics,1,28000,28000.0,South,Ananya Sharma,Distributor,B2B
-1478,2024-11-09,Headphones,Electronics,6,3500,26861.0,South,Priya Nair,Distributor,B2C
-1479,2024-06-12,Notebook,Stationery,4,250,1000.0,East,Vikram Joshi,Online,B2C
-1480,2025-05-08,Headphones,Electronics,6,3500,21000.0,South,Aarav Mehta,Online,B2B
-1481,2024-10-21,Tablet,Electronics,1,32000,32000.0,North,Sneha Bose,Online,B2C
-1482,2024-07-05,Bookshelf,Furniture,2,6500,13000.0,Central,Diya Kapoor,Online,B2C
-1483,2025-02-23,Smartphone,Electronics,2,28000,56000.0,South,Sneha Bose,Distributor,B2B
-1484,2024-03-03,Desk,Furniture,2,15000,30000.0,East,Diya Kapoor,Online,B2B
-1485,2024-03-28,Smartphone,Electronics,3,28000,84000.0,West,Sneha Bose,Distributor,B2B
-1486,2024-04-30,Office Chair,Furniture,6,8500,51000.0,North,Priya Nair,Retail Store,B2B
-1487,2024-01-21,Smartphone,Electronics,1,28000,28000.0,South,Vikram Joshi,Distributor,B2B
-1488,2024-03-09,Desk,Furniture,3,15000,45000.0,North,Sneha Bose,Distributor,B2C
-1489,2024-03-01,Tablet,Electronics,1,32000,32000.0,South,Sneha Bose,Online,B2B
-1490,2025-01-23,Smartphone,Electronics,3,28000,84000.0,West,Priya Nair,Retail Store,B2B
-1491,2024-04-06,Headphones,Electronics,7,3500,24500.0,North,Karan Reddy,Online,B2B
-1492,2024-02-08,Laptop,Electronics,1,55000,55000.0,North,Priya Nair,Online,B2C
-1493,2025-04-15,Notebook,Stationery,13,250,3250.0,East,Priya Nair,Online,Enterprise
-1494,2024-08-26,Smartwatch,Electronics,5,12000,60000.0,Central,Vikram Joshi,Online,B2C
-1495,2024-02-14,Headphones,Electronics,7,3500,24500.0,North,Vikram Joshi,Online,B2C
-1496,2024-10-15,Tablet,Electronics,2,32000,64000.0,North,Priya Nair,Distributor,B2C
-1497,2024-04-24,Notebook,Stationery,11,250,2750.0,West,Diya Kapoor,Online,B2C
-1498,2024-09-03,Tablet,Electronics,2,32000,64000.0,East,Priya Nair,Distributor,B2C
-1499,2024-12-28,Pen Set,Stationery,9,450,5131.0,North,Priya Nair,Online,Enterprise
-1500,2025-03-24,Smartwatch,Electronics,7,12000,84000.0,Central,Diya Kapoor,Retail Store,Enterprise
+1001,2025-01-15,Notebook,Stationery,12,250,3000.0,North,Ananya Sharma,Retail Store,B2C
+1002,2024-09-10,Tablet,Electronics,2,32000,64000.0,East,Ananya Sharma,Online,B2C
+1003,2025-03-11,Headphones,Electronics,6,3500,21000.0,North,Rohan Iyer,Retail Store,Enterprise
+1004,2025-05-18,Office Chair,Furniture,3,8500,25500.0,West,Diya Kapoor,Online,B2B
+1005,2024-08-25,Smartwatch,Electronics,7,12000,84000.0,South,Diya Kapoor,Retail Store,B2C
+1006,2024-09-15,Smartphone,Electronics,3,28000,84000.0,East,Diya Kapoor,Distributor,B2C
+1007,2025-06-03,Laptop,Electronics,1,55000,55000.0,Central,Ananya Sharma,Distributor,B2B
+1008,2024-12-31,Headphones,Electronics,6,3500,23625.0,North,Sneha Bose,Distributor,B2C
+1009,2024-04-18,Smartphone,Electronics,1,28000,28000.0,Central,Karan Reddy,Retail Store,B2B
+1010,2025-05-20,Smartphone,Electronics,2,28000,56000.0,East,Vikram Joshi,Distributor,B2B
+1011,2024-07-14,Tablet,Electronics,1,32000,32000.0,North,Sneha Bose,Retail Store,B2C
+1012,2024-08-14,Laptop,Electronics,1,55000,55000.0,Central,Sneha Bose,Online,B2B
+1013,2024-07-29,Desk,Furniture,2,15000,30000.0,West,Sneha Bose,Online,Enterprise
+1014,2025-04-01,Notebook,Stationery,13,250,3250.0,Central,Ananya Sharma,Retail Store,B2C
+1015,2024-10-03,Desk,Furniture,4,15000,60000.0,West,Ananya Sharma,Retail Store,B2C
+1016,2025-06-29,Office Chair,Furniture,3,8500,25500.0,North,Rohan Iyer,Distributor,B2C
+1017,2024-10-05,Office Chair,Furniture,1,8500,8500.0,North,Karan Reddy,Distributor,B2C
+1018,2024-10-15,Backpack,Accessories,3,1800,5400.0,West,Karan Reddy,Retail Store,B2C
+1019,2025-03-29,Smartphone,Electronics,3,28000,84000.0,North,Sneha Bose,Online,Enterprise
+1020,2025-05-30,Smartphone,Electronics,3,28000,84000.0,South,Aarav Mehta,Distributor,B2C
+1021,2024-08-14,Headphones,Electronics,5,3500,17500.0,North,Karan Reddy,Online,B2C
+1022,2025-04-04,Office Chair,Furniture,4,8500,34000.0,North,Vikram Joshi,Online,Enterprise
+1023,2024-07-28,Laptop,Electronics,3,55000,165000.0,East,Aarav Mehta,Retail Store,Enterprise
+1024,2024-12-19,Laptop,Electronics,3,55000,203629.0,West,Karan Reddy,Retail Store,Enterprise
+1025,2025-05-21,Headphones,Electronics,7,3500,24500.0,West,Aarav Mehta,Online,B2C
+1026,2024-03-23,Notebook,Stationery,8,250,2000.0,East,Rohan Iyer,Retail Store,Enterprise
+1027,2024-06-21,Desk,Furniture,4,15000,60000.0,North,Rohan Iyer,Distributor,B2B
+1028,2025-02-01,Smartphone,Electronics,3,28000,84000.0,Central,Karan Reddy,Online,B2C
+1029,2025-01-10,Laptop,Electronics,1,55000,55000.0,West,Aarav Mehta,Retail Store,Enterprise
+1030,2024-11-29,Laptop,Electronics,1,55000,72762.0,West,Rohan Iyer,Retail Store,B2B
+1031,2024-05-06,Smartphone,Electronics,2,28000,56000.0,Central,Priya Nair,Online,B2C
+1032,2025-05-08,Headphones,Electronics,3,3500,10500.0,South,Karan Reddy,Distributor,B2B
+1033,2024-07-19,Laptop,Electronics,1,55000,55000.0,Central,Aarav Mehta,Distributor,B2B
+1034,2024-01-08,Laptop,Electronics,1,55000,55000.0,Central,Vikram Joshi,Distributor,B2C
+1035,2025-06-10,Headphones,Electronics,7,3500,24500.0,North,Rohan Iyer,Retail Store,B2B
+1036,2025-05-19,Smartphone,Electronics,1,28000,28000.0,Central,Rohan Iyer,Distributor,Enterprise
+1037,2024-03-16,Laptop,Electronics,2,55000,110000.0,Central,Rohan Iyer,Retail Store,B2C
+1038,2024-12-26,Smartphone,Electronics,3,28000,105157.0,North,Diya Kapoor,Online,B2B
+1039,2024-10-09,Headphones,Electronics,2,3500,7000.0,East,Sneha Bose,Retail Store,B2B
+1040,2025-02-27,Headphones,Electronics,5,3500,17500.0,East,Ananya Sharma,Online,B2B
+1041,2024-02-18,Headphones,Electronics,6,3500,21000.0,North,Priya Nair,Distributor,B2B
+1042,2024-11-13,Smartphone,Electronics,1,28000,34133.0,North,Aarav Mehta,Online,B2B
+1043,2024-07-01,Smartwatch,Electronics,5,12000,60000.0,North,Vikram Joshi,Online,Enterprise
+1044,2024-11-28,Laptop,Electronics,3,55000,227506.0,Central,Aarav Mehta,Distributor,B2B
+1045,2025-03-20,Office Chair,Furniture,4,8500,34000.0,North,Karan Reddy,Retail Store,Enterprise
+1046,2025-06-03,Pen Set,Stationery,6,450,2700.0,North,Rohan Iyer,Retail Store,Enterprise
+1047,2024-11-19,Office Chair,Furniture,7,8500,72301.0,West,Diya Kapoor,Online,Enterprise
+1048,2024-11-27,Tablet,Electronics,1,32000,35969.0,North,Vikram Joshi,Retail Store,Enterprise
+1049,2025-03-25,Smartwatch,Electronics,2,12000,24000.0,East,Rohan Iyer,Online,B2C
+1050,2024-04-27,Headphones,Electronics,3,3500,10500.0,North,Aarav Mehta,Distributor,Enterprise
+1051,2025-05-28,Office Chair,Furniture,3,8500,25500.0,Central,Priya Nair,Distributor,B2C
+1052,2024-09-24,Laptop,Electronics,1,55000,55000.0,East,Rohan Iyer,Online,Enterprise
+1053,2024-12-22,Tablet,Electronics,2,32000,72761.0,North,Vikram Joshi,Distributor,B2B
+1054,2024-10-20,Office Chair,Furniture,1,8500,8500.0,West,Karan Reddy,Retail Store,Enterprise
+1055,2025-03-04,Headphones,Electronics,3,3500,10500.0,North,Karan Reddy,Retail Store,B2C
+1056,2025-03-26,Tablet,Electronics,2,32000,64000.0,East,Sneha Bose,Distributor,B2B
+1057,2024-04-27,Headphones,Electronics,3,3500,10500.0,West,Sneha Bose,Online,Enterprise
+1058,2024-01-07,Headphones,Electronics,4,3500,14000.0,West,Karan Reddy,Online,B2B
+1059,2024-07-20,Pen Set,Stationery,4,450,1800.0,West,Diya Kapoor,Distributor,Enterprise
+1060,2024-05-05,Headphones,Electronics,3,3500,10500.0,East,Aarav Mehta,Online,B2C
+1061,2025-03-15,Bookshelf,Furniture,2,6500,13000.0,West,Priya Nair,Online,Enterprise
+1062,2025-03-09,Smartwatch,Electronics,5,12000,60000.0,Central,Priya Nair,Distributor,Enterprise
+1063,2024-06-03,Pen Set,Stationery,5,450,2250.0,East,Ananya Sharma,Distributor,B2C
+1064,2024-05-04,Headphones,Electronics,6,3500,21000.0,Central,Priya Nair,Retail Store,B2B
+1065,2024-06-18,Bookshelf,Furniture,5,6500,32500.0,West,Karan Reddy,Distributor,Enterprise
+1066,2024-07-19,Headphones,Electronics,2,3500,7000.0,North,Karan Reddy,Online,Enterprise
+1067,2024-04-18,Pen Set,Stationery,5,450,2250.0,West,Karan Reddy,Online,B2B
+1068,2024-12-30,Tablet,Electronics,2,32000,85028.0,East,Vikram Joshi,Distributor,Enterprise
+1069,2025-05-11,Smartphone,Electronics,1,28000,28000.0,Central,Priya Nair,Distributor,B2B
+1070,2025-05-13,Pen Set,Stationery,8,450,3600.0,North,Sneha Bose,Distributor,B2B
+1071,2024-05-18,Headphones,Electronics,7,3500,24500.0,West,Rohan Iyer,Online,B2B
+1072,2024-04-13,Office Chair,Furniture,2,8500,17000.0,North,Ananya Sharma,Retail Store,Enterprise
+1073,2025-06-03,Smartphone,Electronics,1,28000,28000.0,West,Karan Reddy,Online,B2B
+1074,2024-03-04,Tablet,Electronics,3,32000,96000.0,East,Karan Reddy,Retail Store,Enterprise
+1075,2024-05-19,Headphones,Electronics,7,3500,24500.0,Central,Priya Nair,Distributor,Enterprise
+1076,2024-07-02,Laptop,Electronics,1,55000,55000.0,West,Aarav Mehta,Retail Store,B2C
+1077,2024-05-26,Pen Set,Stationery,2,450,900.0,South,Ananya Sharma,Retail Store,Enterprise
+1078,2025-02-20,Smartphone,Electronics,2,28000,56000.0,East,Rohan Iyer,Online,Enterprise
+1079,2024-03-22,Tablet,Electronics,3,32000,96000.0,West,Rohan Iyer,Distributor,Enterprise
+1080,2024-12-30,Tablet,Electronics,3,32000,119322.0,North,Ananya Sharma,Online,B2B
+1081,2024-05-26,Smartwatch,Electronics,1,12000,12000.0,East,Rohan Iyer,Online,B2B
+1082,2024-10-13,Backpack,Accessories,5,1800,9000.0,South,Ananya Sharma,Retail Store,B2B
+1083,2024-11-15,Laptop,Electronics,3,55000,196320.0,West,Diya Kapoor,Online,Enterprise
+1084,2024-10-29,Smartphone,Electronics,1,28000,28000.0,East,Rohan Iyer,Retail Store,B2C
+1085,2025-06-25,Desk,Furniture,7,15000,105000.0,East,Aarav Mehta,Online,B2B
+1086,2024-05-20,Office Chair,Furniture,5,8500,42500.0,Central,Sneha Bose,Online,Enterprise
+1087,2024-07-12,Notebook,Stationery,4,250,1000.0,North,Diya Kapoor,Retail Store,B2C
+1088,2024-12-23,Headphones,Electronics,6,3500,25028.0,East,Priya Nair,Online,B2B
+1089,2024-03-23,Smartwatch,Electronics,5,12000,60000.0,East,Priya Nair,Retail Store,B2B
+1090,2025-01-14,Headphones,Electronics,2,3500,7000.0,West,Diya Kapoor,Retail Store,B2C
+1091,2025-05-22,Headphones,Electronics,7,3500,24500.0,South,Vikram Joshi,Distributor,Enterprise
+1092,2024-01-27,Notebook,Stationery,8,250,2000.0,Central,Vikram Joshi,Online,Enterprise
+1093,2025-03-12,Smartphone,Electronics,1,28000,28000.0,Central,Karan Reddy,Distributor,B2B
+1094,2024-01-31,Headphones,Electronics,1,3500,3500.0,North,Vikram Joshi,Distributor,B2C
+1095,2025-03-31,Headphones,Electronics,4,3500,14000.0,West,Sneha Bose,Retail Store,B2C
+1096,2024-02-22,Headphones,Electronics,6,3500,21000.0,West,Karan Reddy,Distributor,Enterprise
+1097,2024-10-16,Office Chair,Furniture,4,8500,34000.0,South,Ananya Sharma,Retail Store,Enterprise
+1098,2025-03-16,Laptop,Electronics,1,55000,55000.0,North,Diya Kapoor,Online,B2C
+1099,2024-10-20,Office Chair,Furniture,6,8500,51000.0,North,Vikram Joshi,Retail Store,B2B
+1100,2024-06-05,Smartphone,Electronics,1,28000,28000.0,West,Rohan Iyer,Online,B2B
+1101,2025-03-03,Laptop,Electronics,1,55000,55000.0,West,Sneha Bose,Retail Store,Enterprise
+1102,2024-06-25,Pen Set,Stationery,4,450,1800.0,West,Rohan Iyer,Online,B2B
+1103,2024-06-23,Smartwatch,Electronics,2,12000,24000.0,Central,Karan Reddy,Distributor,B2B
+1104,2025-03-27,Smartphone,Electronics,3,28000,84000.0,North,Priya Nair,Online,B2B
+1105,2024-10-19,Headphones,Electronics,3,3500,10500.0,South,Aarav Mehta,Online,B2C
+1106,2024-12-20,Pen Set,Stationery,13,450,7238.0,South,Ananya Sharma,Retail Store,Enterprise
+1107,2025-03-30,Headphones,Electronics,4,3500,14000.0,North,Karan Reddy,Retail Store,B2B
+1108,2025-06-11,Desk,Furniture,7,15000,105000.0,North,Aarav Mehta,Retail Store,Enterprise
+1109,2024-04-09,Office Chair,Furniture,6,8500,51000.0,Central,Vikram Joshi,Online,B2B
+1110,2024-09-30,Smartphone,Electronics,3,28000,84000.0,East,Sneha Bose,Retail Store,B2B
+1111,2025-03-13,Smartwatch,Electronics,6,12000,72000.0,North,Sneha Bose,Online,Enterprise
+1112,2024-02-18,Headphones,Electronics,1,3500,3500.0,South,Karan Reddy,Distributor,B2B
+1113,2024-04-11,Smartwatch,Electronics,5,12000,60000.0,South,Priya Nair,Online,B2C
+1114,2025-01-21,Headphones,Electronics,1,3500,3500.0,North,Sneha Bose,Retail Store,B2B
+1115,2025-01-12,Headphones,Electronics,4,3500,14000.0,West,Diya Kapoor,Retail Store,B2B
+1116,2025-04-09,Smartphone,Electronics,3,28000,84000.0,West,Diya Kapoor,Distributor,B2C
+1117,2024-06-23,Laptop,Electronics,3,55000,165000.0,North,Diya Kapoor,Online,B2C
+1118,2024-02-02,Headphones,Electronics,5,3500,17500.0,South,Vikram Joshi,Online,B2C
+1119,2025-01-07,Tablet,Electronics,3,32000,96000.0,West,Karan Reddy,Distributor,Enterprise
+1120,2024-08-12,Smartwatch,Electronics,3,12000,36000.0,North,Ananya Sharma,Online,B2C
+1121,2025-05-03,Smartphone,Electronics,3,28000,84000.0,Central,Diya Kapoor,Retail Store,B2B
+1122,2024-08-05,Office Chair,Furniture,7,8500,59500.0,West,Diya Kapoor,Online,Enterprise
+1123,2025-03-09,Desk,Furniture,4,15000,60000.0,East,Vikram Joshi,Retail Store,B2B
+1124,2025-05-06,Smartphone,Electronics,2,28000,56000.0,South,Aarav Mehta,Retail Store,B2B
+1125,2024-12-04,Desk,Furniture,5,15000,85806.0,Central,Ananya Sharma,Distributor,Enterprise
+1126,2024-02-18,Smartwatch,Electronics,3,12000,36000.0,West,Priya Nair,Retail Store,B2B
+1127,2024-08-29,Notebook,Stationery,10,250,2500.0,South,Aarav Mehta,Retail Store,B2B
+1128,2025-04-03,Headphones,Electronics,1,3500,3500.0,North,Diya Kapoor,Retail Store,Enterprise
+1129,2024-05-01,Office Chair,Furniture,5,8500,42500.0,Central,Priya Nair,Online,B2C
+1130,2025-03-21,Smartphone,Electronics,2,28000,56000.0,South,Priya Nair,Retail Store,B2C
+1131,2024-01-03,Headphones,Electronics,6,3500,21000.0,Central,Ananya Sharma,Online,Enterprise
+1132,2024-11-26,Smartwatch,Electronics,1,12000,16055.0,East,Vikram Joshi,Retail Store,B2B
+1133,2024-09-08,Smartphone,Electronics,3,28000,84000.0,East,Diya Kapoor,Retail Store,B2B
+1134,2024-09-30,Smartphone,Electronics,1,28000,28000.0,East,Vikram Joshi,Distributor,B2C
+1135,2025-01-24,Smartwatch,Electronics,2,12000,24000.0,West,Sneha Bose,Distributor,B2B
+1136,2024-09-29,Notebook,Stationery,3,250,750.0,East,Rohan Iyer,Online,B2C
+1137,2024-05-20,Pen Set,Stationery,9,450,4050.0,South,Ananya Sharma,Retail Store,Enterprise
+1138,2024-02-08,Smartphone,Electronics,3,28000,84000.0,North,Rohan Iyer,Retail Store,B2C
+1139,2024-05-16,Bookshelf,Furniture,4,6500,26000.0,Central,Diya Kapoor,Online,B2C
+1140,2024-06-18,Desk,Furniture,5,15000,75000.0,West,Ananya Sharma,Retail Store,Enterprise
+1141,2024-06-03,Office Chair,Furniture,3,8500,25500.0,North,Karan Reddy,Distributor,B2B
+1142,2025-03-13,Laptop,Electronics,1,55000,55000.0,East,Diya Kapoor,Distributor,B2B
+1143,2024-11-22,Laptop,Electronics,1,55000,66633.0,West,Sneha Bose,Online,B2C
+1144,2024-12-24,Notebook,Stationery,2,250,636.0,North,Diya Kapoor,Online,B2B
+1145,2024-03-22,Tablet,Electronics,3,32000,96000.0,West,Aarav Mehta,Retail Store,B2B
+1146,2025-02-07,Smartphone,Electronics,1,28000,28000.0,West,Vikram Joshi,Retail Store,Enterprise
+1147,2024-07-11,Smartphone,Electronics,1,28000,28000.0,North,Priya Nair,Retail Store,B2B
+1148,2024-09-12,Smartphone,Electronics,1,28000,28000.0,East,Ananya Sharma,Distributor,B2B
+1149,2025-02-06,Headphones,Electronics,2,3500,7000.0,Central,Sneha Bose,Distributor,Enterprise
+1150,2025-02-08,Notebook,Stationery,11,250,2750.0,West,Vikram Joshi,Retail Store,Enterprise
+1151,2024-08-08,Tablet,Electronics,1,32000,32000.0,North,Ananya Sharma,Distributor,Enterprise
+1152,2025-05-19,Laptop,Electronics,2,55000,110000.0,East,Sneha Bose,Retail Store,Enterprise
+1153,2025-01-01,Notebook,Stationery,2,250,500.0,East,Ananya Sharma,Distributor,B2B
+1154,2025-06-19,Office Chair,Furniture,5,8500,42500.0,South,Sneha Bose,Distributor,B2C
+1155,2024-06-29,Notebook,Stationery,8,250,2000.0,West,Vikram Joshi,Online,B2B
+1156,2025-05-23,Headphones,Electronics,5,3500,17500.0,North,Sneha Bose,Retail Store,B2C
+1157,2025-01-25,Laptop,Electronics,2,55000,110000.0,Central,Karan Reddy,Distributor,Enterprise
+1158,2025-05-25,Laptop,Electronics,2,55000,110000.0,West,Vikram Joshi,Online,B2B
+1159,2024-11-01,Office Chair,Furniture,2,8500,23269.0,Central,Aarav Mehta,Distributor,Enterprise
+1160,2025-05-10,Smartphone,Electronics,2,28000,56000.0,East,Vikram Joshi,Retail Store,Enterprise
+1161,2024-07-31,Smartphone,Electronics,2,28000,56000.0,Central,Ananya Sharma,Online,Enterprise
+1162,2024-07-20,Headphones,Electronics,2,3500,7000.0,East,Diya Kapoor,Distributor,B2C
+1163,2025-04-24,Tablet,Electronics,3,32000,96000.0,South,Priya Nair,Online,B2B
+1164,2024-06-01,Tablet,Electronics,3,32000,96000.0,East,Karan Reddy,Online,B2C
+1165,2024-03-21,Desk,Furniture,7,15000,105000.0,North,Vikram Joshi,Retail Store,Enterprise
+1166,2024-07-16,Office Chair,Furniture,3,8500,25500.0,North,Vikram Joshi,Distributor,B2C
+1167,2024-11-08,Office Chair,Furniture,6,8500,60293.0,East,Aarav Mehta,Online,B2B
+1168,2024-12-05,Smartphone,Electronics,2,28000,78039.0,East,Aarav Mehta,Distributor,B2B
+1169,2024-04-18,Office Chair,Furniture,7,8500,59500.0,North,Aarav Mehta,Distributor,B2C
+1170,2025-01-03,Smartphone,Electronics,2,28000,56000.0,East,Rohan Iyer,Distributor,B2C
+1171,2024-11-10,Smartwatch,Electronics,6,12000,90023.0,,Aarav Mehta,Online,Enterprise
+1172,2024-10-09,Headphones,Electronics,5,3500,17500.0,Central,Ananya Sharma,Retail Store,Enterprise
+1173,2025-04-02,Pen Set,Stationery,12,450,5400.0,North,Sneha Bose,Distributor,Enterprise
+1174,2024-11-08,Smartphone,Electronics,2,28000,74984.0,East,Diya Kapoor,Distributor,Enterprise
+1175,2025-04-08,Smartwatch,Electronics,4,12000,48000.0,West,Aarav Mehta,Online,B2C
+1176,2024-10-09,Headphones,Electronics,5,3500,17500.0,West,Aarav Mehta,Retail Store,B2B
+1177,2024-03-09,Headphones,Electronics,4,3500,14000.0,East,Aarav Mehta,Retail Store,B2C
+1178,2024-07-15,Headphones,Electronics,3,3500,10500.0,East,Diya Kapoor,Retail Store,Enterprise
+1179,2024-05-20,Headphones,Electronics,1,3500,3500.0,West,Priya Nair,Distributor,Enterprise
+1180,2025-02-06,Laptop,Electronics,3,55000,165000.0,Central,Ananya Sharma,Online,B2C
+1181,2025-01-26,Pen Set,Stationery,10,450,4500.0,South,Priya Nair,Online,B2C
+1182,2024-11-20,Smartphone,Electronics,2,28000,78046.0,North,Karan Reddy,Retail Store,B2C
+1183,2024-07-22,Tablet,Electronics,1,32000,32000.0,East,Rohan Iyer,Retail Store,B2C
+1184,2024-06-14,Headphones,Electronics,2,3500,7000.0,South,Rohan Iyer,Distributor,Enterprise
+1185,2024-08-17,Smartphone,Electronics,3,28000,84000.0,West,Rohan Iyer,Online,B2C
+1186,2025-04-27,Smartwatch,Electronics,3,12000,36000.0,South,Priya Nair,Online,B2C
+1187,2024-10-09,Smartwatch,Electronics,6,12000,72000.0,South,Aarav Mehta,Online,B2C
+1188,2025-05-22,Smartphone,Electronics,3,28000,84000.0,South,Karan Reddy,Online,Enterprise
+1189,2024-03-19,Laptop,Electronics,2,55000,110000.0,East,Priya Nair,Distributor,B2B
+1190,2025-02-17,Smartphone,Electronics,2,28000,56000.0,North,Karan Reddy,Online,B2B
+1191,2024-05-16,Headphones,Electronics,7,3500,24500.0,West,Rohan Iyer,Online,B2C
+1192,2024-02-15,Headphones,Electronics,5,3500,17500.0,South,Ananya Sharma,Retail Store,B2C
+1193,2024-02-23,Laptop,Electronics,2,55000,110000.0,South,Rohan Iyer,Distributor,B2B
+1194,2025-01-01,Notebook,Stationery,13,250,3250.0,West,Karan Reddy,Distributor,B2B
+1195,2024-09-04,Headphones,Electronics,3,3500,10500.0,West,Aarav Mehta,Distributor,B2B
+1196,2024-07-30,Smartwatch,Electronics,2,12000,24000.0,Central,Ananya Sharma,Distributor,B2B
+1197,2025-04-24,Desk,Furniture,7,15000,105000.0,West,Vikram Joshi,Distributor,B2B
+1198,2024-10-25,Smartphone,Electronics,1,28000,28000.0,South,Ananya Sharma,Distributor,B2B
+1199,2024-11-09,Headphones,Electronics,6,3500,26861.0,South,Priya Nair,Distributor,B2C
+1200,2024-06-12,Notebook,Stationery,4,250,1000.0,East,Vikram Joshi,Online,B2C
+1201,2025-05-08,Headphones,Electronics,6,3500,21000.0,South,Aarav Mehta,Online,B2B
+1202,2024-10-21,Tablet,Electronics,1,32000,32000.0,North,Sneha Bose,Online,B2C
+1203,2024-07-05,Bookshelf,Furniture,2,6500,13000.0,Central,Diya Kapoor,Online,B2C
+1204,2025-02-23,Smartphone,Electronics,2,28000,56000.0,South,Sneha Bose,Distributor,B2B
+1205,2024-03-03,Desk,Furniture,2,15000,30000.0,East,Diya Kapoor,Online,B2B
+1206,2024-03-28,Smartphone,Electronics,3,28000,84000.0,West,Sneha Bose,Distributor,B2B
+1207,2024-04-30,Office Chair,Furniture,6,8500,51000.0,North,Priya Nair,Retail Store,B2B
+1208,2024-01-21,Smartphone,Electronics,1,28000,28000.0,South,Vikram Joshi,Distributor,B2B
+1209,2024-03-09,Desk,Furniture,3,15000,45000.0,North,Sneha Bose,Distributor,B2C
+1210,2024-03-01,Tablet,Electronics,1,32000,32000.0,South,Sneha Bose,Online,B2B
+1211,2025-01-23,Smartphone,Electronics,3,28000,84000.0,West,Priya Nair,Retail Store,B2B
+1212,2024-04-06,Headphones,Electronics,7,3500,24500.0,North,Karan Reddy,Online,B2B
+1213,2024-02-08,Laptop,Electronics,1,55000,55000.0,North,Priya Nair,Online,B2C
+1214,2025-04-15,Notebook,Stationery,13,250,3250.0,East,Priya Nair,Online,Enterprise
+1215,2024-08-26,Smartwatch,Electronics,5,12000,60000.0,Central,Vikram Joshi,Online,B2C
+1216,2024-02-14,Headphones,Electronics,7,3500,24500.0,North,Vikram Joshi,Online,B2C
+1217,2024-10-15,Tablet,Electronics,2,32000,64000.0,North,Priya Nair,Distributor,B2C
+1218,2024-04-24,Notebook,Stationery,11,250,2750.0,West,Diya Kapoor,Online,B2C
+1219,2024-09-03,Tablet,Electronics,2,32000,64000.0,East,Priya Nair,Distributor,B2C
+1220,2024-12-28,Pen Set,Stationery,9,450,5131.0,North,Priya Nair,Online,Enterprise
+1221,2025-03-24,Smartwatch,Electronics,7,12000,84000.0,Central,Diya Kapoor,Retail Store,Enterprise
+1222,2024-04-02,Tablet,Electronics,1,32000,32000.0,Central,Ananya Sharma,Online,B2B
+1223,2024-10-21,Laptop,Electronics,1,55000,55000.0,South,Aarav Mehta,Distributor,B2B
+1224,2025-03-26,Headphones,Electronics,1,3500,3500.0,South,Aarav Mehta,Distributor,B2B
+1225,2025-06-12,Office Chair,Furniture,6,8500,51000.0,East,Aarav Mehta,Distributor,B2B
+1226,2025-02-19,Headphones,Electronics,5,3500,17500.0,South,Sneha Bose,Online,B2C
+1227,2024-04-02,Office Chair,Furniture,1,8500,8500.0,North,Priya Nair,Online,Enterprise
+1228,2024-07-17,Laptop,Electronics,2,55000,110000.0,Central,Rohan Iyer,Distributor,B2C
+1229,2024-05-18,Headphones,Electronics,7,3500,24500.0,Central,Priya Nair,Retail Store,B2B
+1230,2025-01-18,Desk,Furniture,3,15000,45000.0,South,Ananya Sharma,Retail Store,B2C
+1231,2024-10-18,Headphones,Electronics,1,3500,3500.0,West,Sneha Bose,Online,B2B
+1232,2024-11-28,Laptop,Electronics,2,55000,147525.0,West,Ananya Sharma,Online,Enterprise
+1233,2024-01-03,Laptop,Electronics,3,55000,165000.0,East,Vikram Joshi,Retail Store,Enterprise
+1234,2024-05-01,Headphones,Electronics,3,3500,10500.0,East,Ananya Sharma,Distributor,B2C
+1235,2024-09-12,Smartphone,Electronics,2,28000,56000.0,North,Aarav Mehta,Distributor,B2C
+1236,2024-02-17,Office Chair,Furniture,7,8500,59500.0,North,Sneha Bose,Online,B2C
+1237,2025-04-24,Tablet,Electronics,1,32000,32000.0,South,Sneha Bose,Online,Enterprise
+1238,2025-06-24,Smartwatch,Electronics,4,12000,48000.0,East,Vikram Joshi,Online,Enterprise
+1239,2025-03-17,Notebook,Stationery,14,250,3500.0,North,Ananya Sharma,Distributor,Enterprise
+1240,2025-05-04,Tablet,Electronics,2,32000,64000.0,Central,Karan Reddy,Retail Store,B2C
+1241,2025-03-20,Smartphone,Electronics,2,28000,56000.0,Central,Rohan Iyer,Retail Store,Enterprise
+1242,2025-01-20,Smartphone,Electronics,1,28000,28000.0,West,Diya Kapoor,Distributor,Enterprise
+1243,2025-05-28,Tablet,Electronics,2,32000,64000.0,South,Sneha Bose,Distributor,B2C
+1244,2025-01-03,Headphones,Electronics,6,3500,21000.0,North,Vikram Joshi,Distributor,B2C
+1245,2024-05-08,Office Chair,Furniture,5,8500,42500.0,Central,Ananya Sharma,Online,B2C
+1246,2025-03-12,Smartphone,Electronics,3,28000,84000.0,West,Ananya Sharma,Distributor,Enterprise
+1247,2024-12-05,Smartphone,Electronics,2,28000,67788.0,West,Ananya Sharma,Online,B2B
+1248,2025-02-08,Smartphone,Electronics,2,28000,56000.0,East,Vikram Joshi,Online,B2C
+1249,2024-08-04,Smartwatch,Electronics,6,12000,72000.0,East,Ananya Sharma,Distributor,B2B
+1250,2024-08-17,Headphones,Electronics,5,3500,17500.0,South,Diya Kapoor,Distributor,B2B
+1251,2024-01-27,Tablet,Electronics,2,32000,64000.0,West,Sneha Bose,Distributor,B2B
+1252,2025-04-02,Office Chair,Furniture,5,8500,42500.0,East,Karan Reddy,Distributor,Enterprise
+1253,2025-04-03,Tablet,Electronics,1,32000,32000.0,East,Karan Reddy,Distributor,B2C
+1254,2025-05-22,Tablet,Electronics,3,32000,96000.0,Central,Rohan Iyer,Retail Store,B2C
+1255,2025-03-08,Laptop,Electronics,2,55000,110000.0,West,Ananya Sharma,Distributor,Enterprise
+1256,2024-12-20,Headphones,Electronics,2,3500,9670.0,Central,Karan Reddy,Online,B2C
+1257,2025-06-24,Headphones,Electronics,4,3500,14000.0,East,Rohan Iyer,Retail Store,B2C
+1258,2024-10-02,Laptop,Electronics,1,55000,55000.0,East,Vikram Joshi,Distributor,B2C
+1259,2024-07-09,Headphones,Electronics,4,3500,14000.0,East,Karan Reddy,Distributor,B2B
+1260,2024-04-22,Backpack,Accessories,4,1800,7200.0,South,Sneha Bose,Retail Store,B2B
+1261,2024-07-07,Headphones,Electronics,3,3500,10500.0,South,Rohan Iyer,Distributor,B2C
+1262,2024-03-15,Headphones,Electronics,7,3500,24500.0,Central,Sneha Bose,Online,Enterprise
+1263,2024-06-30,Smartwatch,Electronics,7,12000,84000.0,South,Priya Nair,Distributor,B2B
+1264,2024-07-11,Smartwatch,Electronics,4,12000,48000.0,West,Priya Nair,Retail Store,B2C
+1265,2025-03-05,Smartwatch,Electronics,5,12000,60000.0,South,Sneha Bose,Retail Store,B2B
+1266,2024-07-25,Tablet,Electronics,3,32000,96000.0,West,Ananya Sharma,Retail Store,B2C
+1267,2024-07-02,Notebook,Stationery,13,250,3250.0,South,Priya Nair,Online,B2B
+1268,2025-03-13,Tablet,Electronics,1,32000,32000.0,South,Rohan Iyer,Distributor,B2C
+1269,2024-10-22,Smartwatch,Electronics,5,12000,60000.0,South,Priya Nair,Online,Enterprise
+1270,2025-06-02,Notebook,Stationery,12,250,3000.0,Central,Rohan Iyer,Distributor,Enterprise
+1271,2024-03-13,Office Chair,Furniture,7,8500,59500.0,East,Rohan Iyer,Online,B2C
+1272,2024-09-20,Smartwatch,Electronics,7,12000,84000.0,Central,Priya Nair,Retail Store,Enterprise
+1273,2024-03-04,Headphones,Electronics,4,3500,14000.0,South,Priya Nair,Online,Enterprise
+1274,2024-03-11,Tablet,Electronics,2,32000,64000.0,West,Diya Kapoor,Retail Store,Enterprise
+1275,2025-04-29,Headphones,Electronics,6,3500,21000.0,West,Rohan Iyer,Online,B2C
+1276,2024-12-25,Smartphone,Electronics,3,28000,97623.0,Central,Priya Nair,Retail Store,Enterprise
+1277,2024-01-13,Headphones,Electronics,4,3500,14000.0,West,Karan Reddy,Retail Store,B2C
+1278,2024-06-14,Notebook,Stationery,3,250,750.0,South,Vikram Joshi,Distributor,Enterprise
+1279,2025-03-28,Tablet,Electronics,2,32000,64000.0,South,Ananya Sharma,Retail Store,Enterprise
+1280,2024-12-08,Laptop,Electronics,2,55000,123714.0,South,Aarav Mehta,Distributor,B2C
+1281,2024-03-29,Smartphone,Electronics,2,28000,56000.0,South,Rohan Iyer,Online,Enterprise
+1282,2025-05-17,Smartphone,Electronics,3,28000,84000.0,Central,Aarav Mehta,Online,B2C
+1283,2024-07-19,Smartphone,Electronics,2,28000,,West,Sneha Bose,Retail Store,Enterprise
+1284,2024-08-14,Smartwatch,Electronics,1,12000,12000.0,South,Ananya Sharma,Distributor,Enterprise
+1285,2024-08-11,Headphones,Electronics,1,3500,3500.0,Central,Karan Reddy,Online,B2B
+1286,2024-07-06,Smartphone,Electronics,3,28000,84000.0,South,Priya Nair,Distributor,B2C
+1287,2024-03-12,Smartphone,Electronics,3,28000,84000.0,North,Karan Reddy,Distributor,B2C
+1288,2025-03-26,Laptop,Electronics,1,55000,55000.0,West,Rohan Iyer,Online,B2C
+1289,2025-02-25,Desk,Furniture,6,15000,90000.0,North,Priya Nair,Retail Store,Enterprise
+1290,2024-03-16,Pen Set,Stationery,12,450,5400.0,North,Rohan Iyer,Distributor,B2B
+1291,2024-11-03,Desk,Furniture,6,15000,117164.0,North,Vikram Joshi,Retail Store,B2B
+1292,2025-01-17,Notebook,Stationery,8,250,2000.0,West,Karan Reddy,Online,Enterprise
+1293,2024-10-02,Tablet,Electronics,1,32000,32000.0,West,Karan Reddy,Online,B2C
+1294,2024-09-29,Smartphone,Electronics,1,28000,28000.0,South,Ananya Sharma,Retail Store,Enterprise
+1295,2024-11-23,Laptop,Electronics,2,55000,127848.0,South,Vikram Joshi,Distributor,B2B
+1296,2024-06-04,Headphones,Electronics,1,3500,3500.0,North,Karan Reddy,Distributor,B2C
+1297,2024-10-12,Office Chair,Furniture,7,8500,59500.0,Central,Ananya Sharma,Retail Store,B2B
+1298,2024-06-19,Smartwatch,Electronics,2,12000,24000.0,Central,Priya Nair,Online,Enterprise
+1299,2024-05-22,Smartwatch,Electronics,3,12000,36000.0,North,Sneha Bose,Retail Store,Enterprise
+1300,2025-02-20,Laptop,Electronics,2,55000,110000.0,North,Sneha Bose,Online,B2C
+1301,2024-04-07,Backpack,Accessories,4,1800,7200.0,North,Ananya Sharma,Distributor,B2B
+1302,2024-03-12,Office Chair,Furniture,1,8500,8500.0,East,Priya Nair,Online,Enterprise
+1303,2024-05-18,Desk,Furniture,6,15000,90000.0,East,Vikram Joshi,Online,B2B
+1304,2025-02-27,Smartphone,Electronics,1,28000,28000.0,South,Priya Nair,Online,B2B
+1305,2024-08-20,Desk,Furniture,6,15000,90000.0,North,Rohan Iyer,Distributor,Enterprise
+1306,2024-04-24,Smartphone,Electronics,1,28000,28000.0,South,Vikram Joshi,Distributor,Enterprise
+1307,2024-01-06,Smartphone,Electronics,1,28000,28000.0,East,Ananya Sharma,Retail Store,B2C
+1308,2025-01-05,Smartwatch,Electronics,5,12000,60000.0,West,Sneha Bose,Retail Store,B2C
+1309,2024-02-27,Notebook,Stationery,5,250,1250.0,Central,Sneha Bose,Retail Store,B2B
+1310,2025-05-08,Smartwatch,Electronics,7,12000,84000.0,East,Diya Kapoor,Distributor,B2C
+1311,2024-07-28,Laptop,Electronics,3,55000,165000.0,North,Vikram Joshi,Retail Store,B2C
+1312,2025-01-01,Laptop,Electronics,1,55000,55000.0,West,Vikram Joshi,Distributor,B2C
+1313,2024-09-06,Headphones,Electronics,7,3500,24500.0,South,Aarav Mehta,Retail Store,B2C
+1314,2024-07-13,Smartphone,Electronics,1,28000,28000.0,South,Rohan Iyer,Online,Enterprise
+1315,2024-10-08,Headphones,Electronics,1,3500,3500.0,South,Vikram Joshi,Distributor,B2C
+1316,2024-05-11,Notebook,Stationery,8,250,2000.0,North,Priya Nair,Online,B2C
+1317,2024-05-28,Smartphone,Electronics,2,28000,56000.0,North,Sneha Bose,Online,B2C
+1318,2025-04-25,Smartphone,Electronics,1,28000,28000.0,West,Priya Nair,Online,Enterprise
+1319,2024-10-28,Pen Set,Stationery,5,450,2250.0,North,Karan Reddy,Online,B2C
+1320,2024-04-21,Tablet,Electronics,1,32000,32000.0,West,Vikram Joshi,Distributor,Enterprise
+1321,2024-07-10,Pen Set,Stationery,13,450,5850.0,East,Ananya Sharma,Retail Store,B2C
+1322,2025-05-17,Smartphone,Electronics,1,28000,28000.0,East,Karan Reddy,Online,B2C
+1323,2024-02-25,Tablet,Electronics,3,32000,96000.0,East,Karan Reddy,Retail Store,B2B
+1324,2025-05-28,Smartphone,Electronics,3,28000,84000.0,North,Ananya Sharma,Distributor,B2C
+1325,2025-03-20,Bookshelf,Furniture,4,6500,26000.0,Central,Priya Nair,Retail Store,B2C
+1326,2025-05-09,Smartphone,Electronics,3,28000,84000.0,South,Vikram Joshi,Distributor,B2B
+1327,2024-10-04,Smartwatch,Electronics,7,12000,84000.0,Central,Vikram Joshi,Online,B2B
+1328,2025-03-01,Laptop,Electronics,2,55000,110000.0,Central,Vikram Joshi,Online,B2C
+1329,2024-07-26,Headphones,Electronics,5,3500,17500.0,North,Aarav Mehta,Retail Store,B2C
+1330,2025-05-10,Smartphone,Electronics,2,28000,56000.0,Central,Priya Nair,Distributor,B2C
+1331,2025-05-23,Smartphone,Electronics,1,28000,28000.0,East,Karan Reddy,Online,Enterprise
+1332,2024-02-29,Smartphone,Electronics,3,28000,84000.0,Central,Priya Nair,Retail Store,B2B
+1333,2024-01-26,Headphones,Electronics,2,3500,7000.0,Central,Diya Kapoor,Retail Store,B2C
+1334,2024-05-25,Smartwatch,Electronics,2,12000,24000.0,West,Aarav Mehta,Online,B2C
+1335,2025-01-18,Bookshelf,Furniture,7,6500,45500.0,West,Vikram Joshi,Distributor,Enterprise
+1336,2025-02-22,Office Chair,Furniture,7,8500,59500.0,North,Rohan Iyer,Distributor,Enterprise
+1337,2024-11-12,Headphones,Electronics,4,3500,17240.0,East,Diya Kapoor,Online,Enterprise
+1338,2024-05-07,Headphones,Electronics,5,3500,17500.0,Central,Ananya Sharma,Distributor,Enterprise
+1339,2024-07-08,Smartphone,Electronics,3,28000,84000.0,West,Karan Reddy,Retail Store,B2B
+1340,2024-05-15,Office Chair,Furniture,3,8500,25500.0,East,Vikram Joshi,Online,Enterprise
+1341,2025-05-18,Smartphone,Electronics,3,28000,84000.0,West,Rohan Iyer,Distributor,B2C
+1342,2025-04-02,Smartphone,Electronics,3,28000,84000.0,South,Diya Kapoor,Online,B2B
+1343,2024-06-19,Headphones,Electronics,4,3500,14000.0,Central,Vikram Joshi,Online,B2C
+1344,2025-05-08,Tablet,Electronics,2,32000,64000.0,West,Sneha Bose,Online,Enterprise
+1345,2024-05-25,Headphones,Electronics,2,3500,7000.0,South,Ananya Sharma,Online,B2B
+1346,2025-01-10,Notebook,Stationery,7,250,1750.0,East,Vikram Joshi,Distributor,B2C
+1347,2024-04-05,Laptop,Electronics,1,55000,55000.0,West,Vikram Joshi,Online,B2B
+1348,2025-05-18,Smartphone,Electronics,2,28000,56000.0,East,Priya Nair,Online,B2C
+1349,2025-05-29,Desk,Furniture,3,15000,45000.0,North,Sneha Bose,Distributor,B2C
+1350,2024-09-07,Smartwatch,Electronics,1,12000,12000.0,North,Aarav Mehta,Distributor,B2C
+1351,2024-03-09,Smartwatch,Electronics,7,12000,84000.0,West,Ananya Sharma,Distributor,B2C
+1352,2024-08-24,Office Chair,Furniture,2,8500,17000.0,North,Diya Kapoor,Retail Store,B2C
+1353,2025-01-09,Laptop,Electronics,2,55000,110000.0,North,Aarav Mehta,Retail Store,Enterprise
+1354,2024-04-08,Tablet,Electronics,2,32000,64000.0,East,Rohan Iyer,Online,B2B
+1355,2025-05-17,Pen Set,Stationery,8,450,3600.0,North,Ananya Sharma,Retail Store,B2C
+1356,2024-02-23,Notebook,Stationery,11,250,2750.0,East,Rohan Iyer,Online,Enterprise
+1357,2024-07-05,Headphones,Electronics,5,3500,17500.0,South,Ananya Sharma,Retail Store,B2B
+1358,2024-08-26,Desk,Furniture,7,15000,105000.0,South,Sneha Bose,Online,Enterprise
+1359,2024-10-09,Laptop,Electronics,2,55000,110000.0,West,Sneha Bose,Online,B2C
+1360,2024-09-09,Smartphone,Electronics,3,28000,84000.0,North,Ananya Sharma,Online,B2B
+1361,2024-06-23,Laptop,Electronics,2,55000,110000.0,West,Karan Reddy,Retail Store,Enterprise
+1362,2024-03-11,Smartphone,Electronics,2,28000,56000.0,Central,Sneha Bose,Online,B2B
+1363,2024-08-15,Office Chair,Furniture,7,8500,59500.0,West,Rohan Iyer,Online,B2C
+1364,2024-01-27,Smartphone,Electronics,1,28000,28000.0,West,Karan Reddy,Online,B2C
+1365,2024-08-11,Smartphone,Electronics,2,28000,56000.0,South,Karan Reddy,Retail Store,B2C
+1366,2024-02-03,Headphones,Electronics,7,3500,24500.0,Central,Rohan Iyer,Retail Store,B2C
+1367,2025-01-01,Smartphone,Electronics,2,28000,56000.0,West,Aarav Mehta,Distributor,Enterprise
+1368,2024-04-25,Headphones,Electronics,6,3500,21000.0,North,Sneha Bose,Online,B2C
+1369,2024-10-04,Headphones,Electronics,4,3500,14000.0,South,Sneha Bose,Online,B2C
+1370,2024-05-14,Laptop,Electronics,1,55000,55000.0,West,Rohan Iyer,Retail Store,B2C
+1371,2025-03-16,Headphones,Electronics,3,3500,10500.0,Central,Karan Reddy,Distributor,Enterprise
+1372,2024-07-05,Backpack,Accessories,2,1800,3600.0,West,Diya Kapoor,Retail Store,B2C
+1373,2024-05-23,Smartphone,Electronics,1,28000,28000.0,Central,Vikram Joshi,Distributor,B2B
+1374,2024-01-04,Laptop,Electronics,1,55000,55000.0,South,Vikram Joshi,Retail Store,Enterprise
+1375,2024-12-13,Headphones,Electronics,3,3500,12164.0,West,Karan Reddy,Retail Store,Enterprise
+1376,2025-02-13,Smartphone,Electronics,3,28000,84000.0,East,Ananya Sharma,Retail Store,Enterprise
+1377,2024-01-12,Pen Set,Stationery,4,450,1800.0,East,Diya Kapoor,Distributor,B2B
+1378,2024-11-11,Pen Set,Stationery,2,450,990.0,West,Priya Nair,Online,B2B
+1379,2024-12-26,Headphones,Electronics,2,3500,9069.0,Central,Priya Nair,Online,B2C
+1380,2024-12-28,Laptop,Electronics,2,55000,124743.0,South,Ananya Sharma,Retail Store,B2B
+1381,2024-03-13,Notebook,Stationery,9,250,2250.0,West,Diya Kapoor,Online,B2C
+1382,2024-02-08,Laptop,Electronics,2,55000,110000.0,West,Diya Kapoor,Online,Enterprise
+1383,2025-01-20,Tablet,Electronics,2,32000,64000.0,North,Priya Nair,Retail Store,B2B
+1384,2024-06-04,Desk,Furniture,5,15000,75000.0,West,Karan Reddy,Distributor,B2B
+1385,2024-05-07,Laptop,Electronics,2,55000,110000.0,South,Sneha Bose,Retail Store,B2C
+1386,2024-01-22,Office Chair,Furniture,4,8500,34000.0,Central,Sneha Bose,Online,B2B
+1387,2025-06-13,Bookshelf,Furniture,4,6500,26000.0,East,Vikram Joshi,Online,Enterprise
+1388,2025-03-27,Laptop,Electronics,1,55000,55000.0,Central,Ananya Sharma,Distributor,B2C
+1389,2025-01-30,Headphones,Electronics,6,3500,21000.0,North,Karan Reddy,Distributor,B2C
+1390,2025-06-10,Laptop,Electronics,2,55000,110000.0,West,Aarav Mehta,Online,B2C
+1391,2024-04-18,Notebook,Stationery,3,250,750.0,East,Sneha Bose,Distributor,Enterprise
+1392,2024-09-01,Smartphone,Electronics,3,28000,84000.0,East,Aarav Mehta,Distributor,B2C
+1393,2024-09-07,Laptop,Electronics,3,55000,165000.0,West,Rohan Iyer,Online,B2B
+1394,2025-02-12,Tablet,Electronics,3,32000,96000.0,South,Karan Reddy,Online,Enterprise
+1395,2024-12-09,Smartphone,Electronics,3,28000,102599.0,South,Ananya Sharma,Distributor,B2C
+1396,2024-02-27,Headphones,Electronics,7,3500,24500.0,Central,Vikram Joshi,Online,B2B
+1397,2024-11-21,Headphones,Electronics,4,3500,17887.0,East,Aarav Mehta,Distributor,Enterprise
+1398,2024-07-22,Smartwatch,Electronics,4,12000,48000.0,West,Karan Reddy,Online,Enterprise
+1399,2024-04-11,Notebook,Stationery,7,250,1750.0,East,Karan Reddy,Distributor,B2B
+1400,2024-03-26,Smartwatch,Electronics,1,12000,12000.0,West,Sneha Bose,Distributor,B2B
+1401,2024-07-29,Desk,Furniture,3,15000,45000.0,West,Ananya Sharma,Retail Store,B2C
+1402,2024-10-25,Laptop,Electronics,2,55000,110000.0,Central,Sneha Bose,Online,Enterprise
+1403,2024-07-25,Bookshelf,Furniture,3,6500,19500.0,East,Diya Kapoor,Retail Store,Enterprise
+1404,2025-03-02,Pen Set,Stationery,3,450,1350.0,East,Ananya Sharma,Retail Store,B2C
+1405,2024-08-07,Tablet,Electronics,1,32000,32000.0,North,Rohan Iyer,Distributor,B2C
+1406,2024-09-23,Notebook,Stationery,8,250,2000.0,Central,Sneha Bose,Online,B2C
+1407,2025-02-24,Office Chair,Furniture,4,8500,34000.0,Central,Ananya Sharma,Online,B2B
+1408,2024-04-25,Office Chair,Furniture,6,8500,51000.0,West,Rohan Iyer,Online,Enterprise
+1409,2024-12-13,Headphones,Electronics,3,3500,14494.0,Central,Vikram Joshi,Retail Store,Enterprise
+1410,2024-02-23,Pen Set,Stationery,11,450,4950.0,Central,Rohan Iyer,Online,B2C
+1411,2024-12-13,Smartphone,Electronics,2,28000,78362.0,West,Karan Reddy,Online,Enterprise
+1412,2024-12-23,Headphones,Electronics,1,3500,4256.0,Central,Ananya Sharma,Retail Store,B2C
+1413,2024-08-04,Laptop,Electronics,3,55000,165000.0,South,Vikram Joshi,Retail Store,B2B
+1414,2024-11-25,Pen Set,Stationery,10,450,5594.0,Central,Diya Kapoor,Retail Store,Enterprise
+1415,2024-07-06,Smartphone,Electronics,1,28000,28000.0,South,Sneha Bose,Online,Enterprise
+1416,2025-05-27,Smartwatch,Electronics,4,12000,48000.0,South,Aarav Mehta,Online,Enterprise
+1417,2024-10-18,Laptop,Electronics,3,55000,165000.0,South,Sneha Bose,Distributor,Enterprise
+1418,2025-01-11,Tablet,Electronics,2,32000,64000.0,South,Sneha Bose,Online,Enterprise
+1419,2024-01-31,Smartphone,Electronics,3,28000,84000.0,West,Karan Reddy,Online,Enterprise
+1420,2024-02-08,Pen Set,Stationery,11,450,4950.0,North,Sneha Bose,Retail Store,B2C
+1421,2024-04-17,Smartphone,Electronics,2,28000,56000.0,West,Priya Nair,Retail Store,B2C
+1422,2024-09-09,Smartphone,Electronics,3,28000,84000.0,North,Vikram Joshi,Retail Store,B2C
+1423,2025-01-24,Backpack,Accessories,5,1800,9000.0,West,Ananya Sharma,Retail Store,Enterprise
+1424,2024-12-22,Headphones,Electronics,7,3500,27027.0,South,Aarav Mehta,Retail Store,B2B
+1425,2024-06-03,Desk,Furniture,6,15000,90000.0,North,Priya Nair,Online,Enterprise
+1426,2024-04-26,Smartphone,Electronics,3,28000,84000.0,South,Sneha Bose,Distributor,B2B
+1427,2024-09-15,Laptop,Electronics,2,55000,110000.0,East,Diya Kapoor,Retail Store,B2B
+1428,2025-01-12,Notebook,Stationery,13,250,3250.0,East,Sneha Bose,Distributor,B2C
+1429,2024-01-22,Smartphone,Electronics,2,28000,56000.0,South,Sneha Bose,Distributor,B2C
+1430,2024-07-03,Headphones,Electronics,7,3500,24500.0,Central,Vikram Joshi,Distributor,Enterprise
+1431,2025-03-08,Tablet,Electronics,3,32000,96000.0,North,Diya Kapoor,Online,B2C
+1432,2024-07-15,Laptop,Electronics,3,55000,165000.0,South,Karan Reddy,Distributor,B2C
+1433,2024-05-02,Tablet,Electronics,2,32000,64000.0,East,Rohan Iyer,Retail Store,B2B
+1434,2025-01-30,Headphones,Electronics,6,3500,21000.0,Central,Karan Reddy,Distributor,Enterprise
+1435,2024-05-01,Headphones,Electronics,7,3500,24500.0,West,Vikram Joshi,Distributor,B2B
+1436,2024-01-16,Laptop,Electronics,3,55000,165000.0,Central,Rohan Iyer,Online,B2C
+1437,2024-11-22,Pen Set,Stationery,10,450,5082.0,South,Aarav Mehta,Retail Store,B2B
+1438,2024-09-22,Smartwatch,Electronics,1,12000,12000.0,East,Ananya Sharma,Retail Store,B2B
+1439,2025-04-09,Laptop,Electronics,1,55000,55000.0,West,Diya Kapoor,Retail Store,B2C
+1440,2024-06-19,Smartphone,Electronics,1,28000,28000.0,Central,Rohan Iyer,Online,B2C
+1441,2024-11-10,Notebook,Stationery,12,250,3303.0,North,Sneha Bose,Distributor,Enterprise
+1442,2024-08-19,Office Chair,Furniture,1,8500,8500.0,West,Sneha Bose,Online,B2C
+1443,2025-06-01,Backpack,Accessories,3,1800,5400.0,Central,Karan Reddy,Online,B2B
+1444,2025-01-01,Laptop,Electronics,2,55000,110000.0,South,Diya Kapoor,Retail Store,Enterprise
+1445,2025-05-09,Laptop,Electronics,3,55000,165000.0,Central,Diya Kapoor,Distributor,B2B
+1446,2024-02-04,Smartwatch,Electronics,3,12000,36000.0,Central,Diya Kapoor,Retail Store,B2C
+1447,2024-08-20,Bookshelf,Furniture,4,6500,26000.0,North,Rohan Iyer,Distributor,Enterprise
+1448,2024-10-01,Smartwatch,Electronics,6,12000,72000.0,South,Sneha Bose,Distributor,Enterprise
+1449,2024-09-09,Headphones,Electronics,4,3500,14000.0,North,Karan Reddy,Retail Store,Enterprise
+1450,2024-06-16,Laptop,Electronics,3,55000,165000.0,Central,Priya Nair,Distributor,B2C
+1451,2025-03-19,Laptop,Electronics,3,55000,165000.0,Central,Priya Nair,Distributor,Enterprise
+1452,2024-03-25,Tablet,Electronics,2,32000,64000.0,North,Aarav Mehta,Online,B2C
+1453,2024-12-17,Headphones,Electronics,7,3500,29579.0,East,Diya Kapoor,Distributor,Enterprise
+1454,2025-04-10,Smartphone,Electronics,1,28000,28000.0,East,Vikram Joshi,Distributor,B2C
+1455,2024-12-12,Headphones,Electronics,4,3500,16496.0,North,Karan Reddy,Online,B2B
+1456,2024-10-22,Desk,Furniture,2,15000,30000.0,Central,Karan Reddy,Online,Enterprise
+1457,2025-02-04,Smartphone,Electronics,2,28000,56000.0,West,Aarav Mehta,Retail Store,B2B
+1458,2024-05-13,Smartphone,Electronics,1,28000,28000.0,East,Aarav Mehta,Online,B2C
+1459,2024-06-16,Laptop,Electronics,3,55000,165000.0,East,Vikram Joshi,Online,Enterprise
+1460,2024-05-25,Laptop,Electronics,3,55000,165000.0,North,Sneha Bose,Online,B2B
+1461,2024-06-01,Smartphone,Electronics,1,28000,28000.0,Central,Aarav Mehta,Retail Store,Enterprise
+1462,2024-08-08,Tablet,Electronics,2,32000,64000.0,East,Vikram Joshi,Distributor,B2B
+1463,2024-02-11,Office Chair,Furniture,3,8500,25500.0,East,Aarav Mehta,Retail Store,Enterprise
+1464,2024-02-14,Headphones,Electronics,1,3500,3500.0,Central,Diya Kapoor,Retail Store,B2B
+1465,2024-10-13,Laptop,Electronics,3,55000,165000.0,South,Diya Kapoor,Retail Store,B2B
+1466,2024-11-24,Smartphone,Electronics,1,28000,35880.0,West,Vikram Joshi,Online,B2B
+1467,2024-07-27,Desk,Furniture,4,15000,60000.0,East,Aarav Mehta,Online,Enterprise
+1468,2025-06-08,Smartwatch,Electronics,7,12000,84000.0,West,Diya Kapoor,Online,B2C
+1469,2024-01-08,Smartphone,Electronics,1,28000,28000.0,East,Ananya Sharma,Distributor,B2C
+1470,2024-04-26,Laptop,Electronics,2,55000,110000.0,East,Rohan Iyer,Online,B2B
+1471,2024-09-24,Laptop,Electronics,1,55000,55000.0,Central,Diya Kapoor,Online,Enterprise
+1472,2025-05-01,Smartphone,Electronics,3,28000,84000.0,Central,Vikram Joshi,Online,B2C
+1473,2024-03-29,Headphones,Electronics,5,3500,17500.0,South,Sneha Bose,Distributor,B2B
+1474,2024-01-13,Smartphone,Electronics,1,28000,28000.0,South,Vikram Joshi,Retail Store,Enterprise
+1475,2024-04-08,Headphones,Electronics,2,3500,7000.0,South,Rohan Iyer,Retail Store,B2B
+1476,2025-04-11,Smartphone,Electronics,3,28000,84000.0,North,Sneha Bose,Distributor,B2B
+1477,2024-07-01,Smartphone,Electronics,3,28000,84000.0,North,Rohan Iyer,Retail Store,Enterprise
+1478,2024-05-23,Laptop,Electronics,1,55000,55000.0,East,Ananya Sharma,Retail Store,Enterprise
+1479,2024-01-07,Notebook,Stationery,14,250,3500.0,East,Diya Kapoor,Retail Store,B2B
+1480,2024-08-02,Notebook,Stationery,3,250,750.0,Central,Priya Nair,Online,Enterprise
+1481,2025-06-21,Headphones,Electronics,3,3500,10500.0,East,Priya Nair,Retail Store,Enterprise
+1482,2024-03-18,Smartphone,Electronics,1,28000,28000.0,East,Diya Kapoor,Online,B2C
+1483,2024-11-23,Smartwatch,Electronics,6,12000,98019.0,East,Vikram Joshi,Online,B2B
+1484,2024-07-18,Smartwatch,Electronics,7,12000,84000.0,West,Rohan Iyer,Distributor,Enterprise
+1485,2024-10-09,Smartphone,Electronics,3,28000,84000.0,North,Rohan Iyer,Retail Store,Enterprise
+1486,2024-05-02,Headphones,Electronics,1,3500,3500.0,East,Diya Kapoor,Online,B2B
+1487,2025-01-17,Smartphone,Electronics,1,28000,28000.0,North,Rohan Iyer,Online,Enterprise
+1488,2024-04-25,Smartwatch,Electronics,6,12000,72000.0,Central,Karan Reddy,Distributor,Enterprise
+1489,2024-02-19,Notebook,Stationery,9,250,2250.0,South,Vikram Joshi,Distributor,B2C
+1490,2024-09-03,Smartphone,Electronics,2,28000,56000.0,East,Priya Nair,Distributor,B2B
+1491,2024-09-12,Smartphone,Electronics,1,28000,28000.0,West,Aarav Mehta,Online,B2B
+1492,2024-08-23,Laptop,Electronics,3,55000,165000.0,North,Karan Reddy,Retail Store,B2C
+1493,2024-01-14,Headphones,Electronics,5,3500,17500.0,East,Priya Nair,Retail Store,B2B
+1494,2024-04-03,Headphones,Electronics,1,3500,3500.0,Central,Sneha Bose,Online,B2B
+1495,2025-04-29,Desk,Furniture,3,15000,45000.0,South,Diya Kapoor,Online,Enterprise
+1496,2025-05-17,Headphones,Electronics,2,3500,7000.0,South,Sneha Bose,Online,Enterprise
+1497,2024-11-20,Smartphone,Electronics,2,28000,65961.0,East,Aarav Mehta,Online,B2B
+1498,2024-09-21,Headphones,Electronics,1,3500,3500.0,East,Sneha Bose,Retail Store,B2C
+1499,2024-06-05,Office Chair,Furniture,7,8500,59500.0,East,Priya Nair,Online,B2C
+1500,2024-04-06,Office Chair,Furniture,7,8500,59500.0,North,Ananya Sharma,Online,B2C

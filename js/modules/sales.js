@@ -38,9 +38,18 @@ function draw() {
       sub: `An end-to-end business intelligence report covering <b>${fmtINR(totalRev)}</b> in transactions across ${productRev.length} products and ${regRev.length} regions.`
     })}
 
-    ${chipsHTML("sa-reg", "Region", state.allRegions, state.regions)}
-    ${chipsHTML("sa-cat", "Category", state.allCats, state.cats)}
+    ${chipsHTML("sa-reg", `Region (${state.regions.size}/${state.allRegions.length})`, state.allRegions, state.regions)}
+    ${chipsHTML("sa-cat", `Category (${state.cats.size}/${state.allCats.length})`, state.allCats, state.cats)}
     ${dateRangeHTML("sa-date", "Date Range", state.range[0], state.range[1])}
+
+    <div class="filter-bar filter-bar-meta">
+      <div class="filter-meta">
+        <span class="filter-meta-label">Showing</span>
+        <span class="filter-meta-value">${f.length.toLocaleString()}</span>
+        <span class="filter-meta-label">of ${state.allSales.length.toLocaleString()} orders</span>
+      </div>
+      <button type="button" class="filter-reset" data-action="reset">Reset filters</button>
+    </div>
 
     <div class="kpi-grid">
       ${kpiHTML({ label: "Total Revenue", value: fmtINR(totalRev), delta: `${fmtInt(f.length)} orders`, icon: "💰", featured: true })}
@@ -80,18 +89,25 @@ function draw() {
     </div>
 
     ${sectionRule("Sales Representatives")}
-    <div class="chart-grid">
-      <div class="chart-card fade-in">
-        <div class="chart-heading">Performance by Rep</div>
-        <div class="chart-sub">Total revenue per rep</div>
-        <div class="chart-wrap"><canvas id="sa-rep"></canvas></div>
+      <div class="chart-grid">
+        <div class="chart-card fade-in" data-chart-card>
+          <div class="chart-toolbar">
+            <button type="button" class="chart-btn" data-action="fullscreen" title="Fullscreen" aria-label="Open fullscreen">⛶</button>
+            <button type="button" class="chart-btn" data-action="download" data-target="sa-rep" title="Download PNG" aria-label="Download as PNG">⬇</button>
+          </div>
+          <div class="chart-heading">Performance by Rep</div>
+          <div class="chart-sub">Total revenue per rep</div>
+          <div class="chart-wrap"><canvas id="sa-rep"></canvas></div>
+        </div>
+        <div class="chart-card fade-in" data-chart-card>
+          <div class="chart-toolbar">
+            <button type="button" class="chart-btn" data-action="fullscreen" title="Fullscreen" aria-label="Open fullscreen">⛶</button>
+          </div>
+          <div class="chart-heading">Quarterly Heatmap</div>
+          <div class="chart-sub">Rep × Quarter</div>
+          <div class="heatmap" id="sa-heatmap" style="margin-top: 0.5rem;"></div>
+        </div>
       </div>
-      <div class="chart-card fade-in">
-        <div class="chart-heading">Quarterly Heatmap</div>
-        <div class="chart-sub">Rep × Quarter</div>
-        <div class="heatmap" id="sa-heatmap" style="margin-top: 0.5rem;"></div>
-      </div>
-    </div>
 
     ${sectionRule("Detailed Product Table")}
     ${buildProductTable(f)}
@@ -152,6 +168,17 @@ function draw() {
     fromInp?.addEventListener("change", applyDate);
     toInp?.addEventListener("change", applyDate);
   }
+
+  // Reset
+  currentRoot.querySelector('[data-action="reset"]')?.addEventListener("click", () => {
+    state.regions = new Set(state.allRegions);
+    state.cats    = new Set(state.allCats);
+    state.range = [
+      new Date(Math.min(...state.allSales.map(s => new Date(s.OrderDate)))).toISOString().slice(0,10),
+      new Date(Math.max(...state.allSales.map(s => new Date(s.OrderDate)))).toISOString().slice(0,10),
+    ];
+    draw();
+  });
 
   if (f.length === 0) return;
 

@@ -190,3 +190,233 @@ I had been blaming file corruption. The actual issue was an architectural race c
 - File sizes confirm changes applied (`students.js`: 9447 → 10324 bytes; `sales.js`: 10147 → 10700 bytes; `_base.js`: 5938 → 8742 bytes)
 
 **Awaiting user to verify in browser.**
+
+### 2026-07-12 — Major UX overhaul: data, filters, chart toolbar, dark mode contrast (Session 6)
+
+**User requests (six things at once):**
+1. All students in Class X, 5 sections (A–E) with 40 students each
+2. Remove score range filter; max out all filters
+3. Fix dark mode text visibility — "only use colors which are visible in both dark and light mode"
+4. Hide /data path from users — remove the "Using mock data, Real CSVs in /data" sidebar message
+5. Small fullscreen + download buttons on each chart, not cluttered
+6. Update context.md
+
+**Changes made:**
+
+**A. Data (`data/_generate_mock.py`)**
+- Students: 50 → 200 total, all `Class: "X"`, 5 sections `X-A` through `X-E`, 40 per section
+- Each section gets a small ability bonus so mock data has variety (B strongest, A weakest)
+- 4 random NaN values still injected for cleaning practice
+- Sales unchanged (500 orders, 5 regions, 3 channels, 3 segments)
+
+**B. Students page (`js/modules/students.js`)**
+- Removed entirely: `<select multiple>` Class + Grade widgets, single-thumb Score Range slider
+- Replaced with:
+  - Section pills (5 chips: X-A through X-E) with live count `Section (N/5)`
+  - Grade pills (6 chips: S/A/B/C/D/E) with count `Grade (N/6)`
+  - Search input (filters by name, 150ms debounce)
+  - Sort select (6 options: avg high→low, avg low→high, name A→Z, name Z→A, attendance high→low, attendance low→high)
+  - Meta bar: `Showing [N] of 200 students` (N updates live) + `Reset filters` button
+- All charts (leaderboard table, top-15 bar, grade pie/bar, subject ranks, heatmap, scatter) re-render with current sort + filters
+- State replaced: `classes` Set + `range: [min,max]` → `sections` Set + `grades` Set + `search` string + `sort` mode
+- Heatmap now shows Section (not Class) — adds visual variety since 5 sections vs 6 random labels
+
+**C. Sales page (`js/modules/sales.js`)**
+- Same upgrade: Region/Category pills show counts `Region (N/5)`, `Category (N/3)`
+- Added meta bar: `Showing [N] of 500 orders` + Reset button
+- Reset restores all regions, all categories, and full date range
+- Date range handler unchanged (still chips+inputs)
+
+**D. Chart toolbar (`js/modules/_base.js` + `css/styles.css`)**
+- `chartCard(title, sub, canvasId, options)` helper now injects a hidden toolbar with 2 small buttons:
+  - **Fullscreen** (⛶) — always present
+  - **Download** (⬇) — only present when `withCanvas: true` (canvas charts only, not heatmaps)
+- Toolbar hidden by default (opacity 0), shows on card hover
+- Buttons: 26×26, subtle border, hover turns berry/gold in light mode, gold in dark mode
+- No visual clutter until user hovers
+
+**E. Chart fullscreen modal (NEW in `index.html` + `js/app.js` + `css/styles.css`)**
+- Single global `<div id="chart-modal">` in `index.html`
+- Click ⛶ → modal opens, chart card cloned inside, 1.4× scale, header with title + close button + backdrop blur
+- Close via ✕ button, ESC key, or backdrop click
+- `window.dispatchEvent(new Event("resize"))` triggers Chart.js to re-render at the larger container size
+- Cloned card has toolbar stripped (no point in fullscreening twice)
+
+**F. Chart PNG download (NEW)**
+- Click ⬇ on any chart → `canvas.toDataURL("image/png")` → triggers download as `{canvasId}.png`
+- Works for all canvas charts (bar/pie/line/scatter)
+- Hidden for heatmaps (no canvas to export)
+
+**G. Dark mode color fixes (`css/styles.css`)**
+- Overrode `--teal` in dark mode from `#218380` (very dim on dark bg) to `#5dc8c3` (clearly visible)
+- Brighter `--fg-muted` from `#a89898` to `#c2b3b3` for label readability
+- Brighter `--c-muted` for chart axis labels and tick marks
+- Brighter `--frost` from `#73d2de` to `#a8e3eb` (subtle but noticeable)
+- Raspberry in chart sequence brightened to `#ff6b9c` instead of `#d81159` (which gets lost on dark)
+- All chart text colors, pill chips, filter labels now readable in both modes
+
+**H. Sidebar cleanup (`index.html`)**
+- Removed the `<div class="sidebar-footer">` block entirely
+- No more "Using mock data" or "/data" reference visible to users
+- Sidebar is now just brand + nav
+
+**I. New filter helpers added in `_base.js`**
+- `searchInputHTML(name, label, value)` — text/search input
+- `sortSelectHTML(name, label, options, selected)` — `<select>` with options array
+
+**Files modified this session:**
+- `data/_generate_mock.py` — 200 students, all Class X, 5 sections
+- `data/students.csv` — regenerated (10 KB)
+- `css/styles.css` — added teal override in dark mode, chart-toolbar, chart-modal, search/sort/meta bar styles
+- `index.html` — removed sidebar-footer, added chart-modal markup
+- `js/app.js` — added `initChartModal()`, `openChartModal()`, `closeChartModal()`, `downloadChart()`
+- `js/modules/_base.js` — `chartCard()` now includes toolbar; added `searchInputHTML`, `sortSelectHTML`
+- `js/modules/students.js` — full filter rewrite + sort + search + reset button
+- `js/modules/sales.js` — filter counts + meta bar + reset button
+- `context.md` — this entry
+- `README.md` — pending update
+
+**Verification:**
+- `node --check` passes on all 11 JS files
+- All 10 critical endpoints return HTTP 200 with correct sizes (students.csv jumped 2.5 KB → 10 KB for 200 rows)
+- ESM import test: 4 modules register, all have `setup`/`refresh`/`dispose`
+
+**Awaiting user to verify in browser.**
+
+### 2026-07-12 — Fix fullscreen modal: blank chart when opened (Session 7)
+
+**User report:** "Fix this when i full screen any visual it opens the pop up but it doesn't show the visual"
+
+**Root cause:** I was using `card.cloneNode(true)` to copy the chart card into the modal. The clone had a fresh `<canvas>` element, but Chart.js had been constructed on the **original** canvas (`new Chart(originalCanvas, {...})` stores a reference to that specific element). The cloned canvas had no Chart.js instance bound to it, so it rendered blank.
+
+**Fix:** Changed the strategy from **clone** to **move**:
+- `openChartModal(card)` now appends the original card into `#chart-modal-body`
+- Saves the original DOM position (parent + nextSibling) in `modal._returnSlot`
+- `closeChartModal()` moves the card back to its original location
+- On every move, dispatches two `resize` events (100ms + 250ms apart) so Chart.js picks up the new container size and redraws at the larger dimensions
+- Also strip the chart's own toolbar before moving (no point fullscreening from inside the modal)
+
+**Why two resize events:** Chart.js uses ResizeObserver internally; one event can be missed if the DOM transition hasn't fully applied layout. Dispatching two spaced apart guarantees a redraw.
+
+**Files modified:**
+- `js/app.js` — `openChartModal()` / `closeChartModal()` rewritten
+
+**Verified:**
+- `node --check js/app.js` passes
+- App.js serves at 8815 bytes (up from 7817 due to resize logic + comments)
+
+**Awaiting user to verify in browser.**
+
+### 2026-07-12 — Fix fullscreen: X button didn't close + chart still blank (Session 8)
+
+**User report:** "I SAID WHEN I CLICK ON THE FULLSCREEN ICON ON ANY VISUAL, IT DOESNT SHOW THE VISUAL TO ME, JUST THE HEADING AND EMPTY....ALSO IF I WANT TO CLOSE THE FULLSCREEN OF THE VISUAL, I CLICK ON 'X' BUT THAT ALSO DOESNT WORK fix these correctly"
+
+**Two real bugs (my Session 7 fix was incomplete):**
+
+**Bug 1 — Chart still blank:** Moving the card into the modal worked, but Chart.js's `ResizeObserver` does NOT fire when a canvas is **moved** between containers — it only watches size changes within the same parent. So the chart was stuck at its old dimensions and rendered nothing. Window resize events also weren't reliable mid-DOM-transition.
+**Fix:** After moving, explicitly call `chart.resize()` on every canvas inside the moved card. Used `requestAnimationFrame` for the first resize (after layout settles) + 200ms `setTimeout` as backup. Did the same for `closeChartModal` so the chart snaps back to its original size when returned.
+
+**Bug 2 — X button doesn't close:** My delegated click handler only matched `.chart-btn` elements. The close button has class `.chart-modal-close`, NOT `.chart-btn` — so it never matched, and clicking it did nothing. Same problem with the backdrop (also had `data-action="close-modal"` but no `.chart-btn` class).
+**Fix:** Extended the selector to match both: `'.chart-btn, [data-action="close-modal"]'`. Now clicking the ✕ button, the backdrop, or pressing ESC all close the modal.
+
+**Files modified:**
+- `js/app.js`:
+  - `openChartModal()` — direct `chart.resize()` call via `Chart.getChart(canvas)`
+  - `closeChartModal()` — same resize on return
+  - `initChartModal()` — extended click selector
+
+**Verified:**
+- `node --check js/app.js` passes
+- App.js serves at 9794 bytes (up from 8815 with the resize + selector fixes)
+- All 10 endpoints still return HTTP 200
+
+**Awaiting user to verify in browser.**
+
+### 2026-07-12 — Fix: page goes "zoomed/big" after closing fullscreen modal (Session 9)
+
+**User report:** "when i click fullscreen it shows visuals, good for this but when i click 'X' and go back, the whole website layout becomes soo zoomed and looks big.......try to find all bugs and fix"
+
+**Root cause analysis:**
+
+The "zoomed" appearance is caused by leftover sizing state from when the chart was rendered at the modal's larger dimensions:
+
+1. **Canvas inline dimensions leaked** — Chart.js sets `canvas.style.width = "600px"` and `canvas.style.height = "500px"` during resize. When the card moves back, those inline dimensions persist (chart-wrap is back to 340px but canvas still says 600×500).
+
+2. **No defensive reset of inline styles** — the `closeChartModal` only dispatched window resize events and called `chart.resize()`. If those failed or fired too early, the canvas kept its modal-sized inline styles.
+
+3. **Body overflow was set via inline style** — works, but `document.body.style.overflow = ""` is fragile if any other code touched it.
+
+4. **(Bonus bug)** The toolbar was **removed from the DOM** when entering the modal. When the card moved back, the toolbar was gone for good — user could never fullscreen the same chart twice without a page refresh.
+
+**Fixes applied:**
+
+1. **Inline style cleanup** in `closeChartModal`: clear `canvas.style.width`, `canvas.style.height`, and `wrap.style.height/minHeight` before chart.resize(). This drops any leaked modal context.
+
+2. **Three-stage resize** in `closeChartModal`: `requestAnimationFrame`, then `setTimeout(50)`, then `setTimeout(250)`. Each calls `chart.resize()` via `Chart.getChart(canvas)`. Three attempts at different timing points so Chart.js catches the new container size reliably.
+
+3. **CSS class for overflow** instead of inline: `body.modal-open { overflow: hidden; }`, toggled via `document.body.classList.add/remove("modal-open")`. Less error-prone than inline style mutation.
+
+4. **Toolbar persistence** — removed the `card.querySelector(".chart-toolbar")?.remove()` line. Replaced with CSS rule: `.chart-modal-body .chart-toolbar { display: none; }`. The toolbar DOM remains intact; it's just CSS-hidden while inside the modal. When the card moves back, the toolbar reappears automatically. Users can now fullscreen the same chart multiple times.
+
+**Files modified:**
+- `js/app.js`:
+  - `openChartModal()` — removed toolbar-removal line, added CSS comment
+  - `closeChartModal()` — added inline-style cleanup + 3-stage resize
+- `css/styles.css`:
+  - Added `body.modal-open { overflow: hidden; }`
+  - Added `.chart-modal-body .chart-toolbar { display: none; }`
+
+**Verified:**
+- `node --check js/app.js` passes
+- `app.js` serves at 10855 bytes (up from 9794)
+- `styles.css` serves at 28221 bytes (up from 28015)
+- All 10 endpoints still return HTTP 200
+
+**Awaiting user to verify in browser.**
+
+### 2026-07-12 — Fix properly: layout STILL zoomed after close (Session 10)
+
+**User report:** "NO ITS STILL THE SAME, FIX IT PROPERLY" (after Session 9's move+resize attempts failed)
+
+**Why Session 9 failed:** My move-and-resize approach was fundamentally fragile:
+- Moving the card between containers relied on Chart.js's ResizeObserver firing correctly
+- Chart.js sets inline `canvas.style.width/height` during render
+- Even after clearing inline styles and calling `chart.resize()` three times, something was leaking
+- I couldn't reliably get the chart to revert to its original size
+- "zoomed" = the moved-back card was still rendering at modal dimensions somewhere
+
+**The proper fix: CLONE strategy instead of MOVE strategy.**
+
+Replace the entire move-and-resize logic with a clean clone approach:
+- `openChartModal(card)`:
+  1. Deep-clone the card into the modal body (DOM-level `cloneNode(true)`)
+  2. For each `<canvas>` in the original card, find its Chart.js instance via `Chart.getChart(canvas)`
+  3. Deep-clone its data + options (JSON round-trip)
+  4. Create a **brand-new Chart.js instance** on the **cloned** canvas with that data
+  5. Store new instances in `_modalCharts` for cleanup
+  6. Show modal
+- `closeChartModal()`:
+  1. Destroy every `_modalCharts` instance (frees canvas refs)
+  2. Remove the clone from modal body (`body.innerHTML = ""`)
+  3. Hide modal, unlock body
+  4. **The original card on the page is NEVER touched.** Its charts remain bound to their original canvases at original sizes. Layout stays byte-for-byte identical to before opening the modal.
+
+**Why this fixes the zoom bug:**
+- Previous approach: original card moves in/out, with inline CSS set during modal render that needed careful cleanup
+- New approach: original card is never moved. It can't have layout drift because it's untouched
+- Modal uses disposable clones + disposable Chart.js instances
+
+**Minor trade-offs:**
+- Memory: 2× Chart.js instances per fullscreened chart (cleared on close)
+- The original card is dimmed behind the modal backdrop, but it's not visible
+
+**Files modified:**
+- `js/app.js`: `openChartModal()` and `closeChartModal()` rewritten with clone + recreate pattern
+- `_modalCharts` array tracks Chart.js instances created in the modal
+
+**Verified:**
+- `node --check js/app.js` passes
+- `app.js` serves at 10243 bytes (cleaner than Session 9's 10855 due to less defensive cleanup code)
+- All endpoints still return HTTP 200
+
+**Awaiting user to verify in browser.**

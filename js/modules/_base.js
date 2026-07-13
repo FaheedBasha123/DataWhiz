@@ -28,12 +28,19 @@ export function sectionRule(label, sub = "") {
     </div>`;
 }
 
-export function chartCard(title, sub, canvasId) {
+export function chartCard(title, sub, canvasId, { withCanvas = true } = {}) {
+  const body = withCanvas
+    ? `<div class="chart-wrap"><canvas id="${canvasId}"></canvas></div>`
+    : `<div class="chart-wrap"><div id="${canvasId}"></div></div>`;
   return `
-    <div class="chart-card fade-in">
+    <div class="chart-card fade-in" data-chart-card>
+      <div class="chart-toolbar">
+        <button type="button" class="chart-btn" data-action="fullscreen" title="Fullscreen" aria-label="Open fullscreen">⛶</button>
+        ${withCanvas ? `<button type="button" class="chart-btn" data-action="download" data-target="${canvasId}" title="Download PNG" aria-label="Download as PNG">⬇</button>` : ""}
+      </div>
       <div class="chart-heading">${title}</div>
       <div class="chart-sub">${sub}</div>
-      <div class="chart-wrap"><canvas id="${canvasId}"></canvas></div>
+      ${body}
     </div>`;
 }
 
@@ -140,6 +147,25 @@ export function dateRangeHTML(name, label, fromVal, toVal) {
         <span class="range-sep">→</span>
         <input type="date" data-role="to" value="${escAttr(toVal)}" aria-label="To date">
       </div>
+    </div>`;
+}
+
+/** Search input that filters as user types (caller handles wiring + filtering) */
+export function searchInputHTML(name, label, value = "") {
+  return `
+    <div class="filter">
+      <label>${label}</label>
+      <input type="search" class="filter-search" data-filter="${escAttr(name)}" value="${escAttr(value)}" placeholder="Type to search..." autocomplete="off" />
+    </div>`;
+}
+
+/** Sort dropdown */
+export function sortSelectHTML(name, label, options, selected) {
+  const opts = options.map(o => `<option value="${escAttr(o.value)}" ${o.value === selected ? "selected" : ""}>${escAttr(o.label)}</option>`).join("");
+  return `
+    <div class="filter">
+      <label>${label}</label>
+      <select class="filter-sort" data-filter="${escAttr(name)}">${opts}</select>
     </div>`;
 }
 

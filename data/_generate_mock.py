@@ -7,31 +7,46 @@ DATA = Path(__file__).parent
 np.random.seed(42)
 
 # ============== STUDENTS ==============
-first = ["Rahul","Aman","Priya","Riya","Arjun","Sneha","Vikram","Ananya","Rohan","Diya","Karan","Isha","Aditya","Meera","Sahil","Tanya","Nikhil","Pooja","Harsh","Kavya","Manish","Ritu","Saurabh","Nidhi","Akash","Shruti","Varun","Neha","Ayush","Simran","Deepak","Aditi","Gaurav","Shreya","Mohit","Ankita","Yash","Palak","Rakesh","Swati","Abhishek","Megha","Siddharth","Tanvi","Chirag","Jiya","Aakash","Muskan","Bharat","Komal"]
-last = ["Sharma","Verma","Patel","Kumar","Singh","Gupta","Reddy","Iyer","Nair","Khan","Das","Joshi","Mehta","Bose","Rao","Chopra","Malhotra","Saxena","Mukherjee","Banerjee"]
-subjects = ["Mathematics","Physics","Chemistry","English","Computer Science"]
+first = ["Rahul","Aman","Priya","Riya","Arjun","Sneha","Vikram","Ananya","Rohan","Diya","Karan","Isha","Aditya","Meera","Sahil","Tanya","Nikhil","Pooja","Harsh","Kavya","Manish","Ritu","Saurabh","Nidhi","Akash","Shruti","Varun","Neha","Ayush","Simran","Deepak","Aditi","Gaurav","Shreya","Mohit","Ankita","Yash","Palak","Rakesh","Swati","Abhishek","Megha","Siddharth","Tanvi","Chirag","Jiya","Aakash","Muskan","Bharat","Komal","Aarav","Vivaan","Aditya","Vihaan","Arjun","Sai","Reyansh","Ayaan","Krishna","Ishaan","Atharv","Advik","Pranav","Aditya","Aadhya","Anaya","Diya","Myra","Aaradhya","Saanvi","Anika","Pari","Aanya","Ananya","Ira","Anvi","Anaya","Kiara","Aadhya","Anjali","Sneha","Suhana","Nitya","Pihu","Riya","Aaradhya","Maryam","Kavya","Vanya","Apoorva","Aarna","Anika","Anaya","Drishti","Ishita","Khushi","Nandini","Srishti","Tanya","Tanvi","Aarna","Anvi","Aaradhya","Aadhya","Suhana","Myra","Anika","Pari","Aanya","Pihu","Riya","Saanvi","Anaya","Kiara","Aadhya","Anjali","Suhana","Nitya","Pihu","Maryam","Aarna","Anvi","Srishti","Tanya","Aarna","Anvi","Anaya","Drishti","Ishita","Khushi","Nandini","Srishti","Tanya","Tanvi"]
+last = ["Sharma","Verma","Patel","Kumar","Singh","Gupta","Reddy","Iyer","Nair","Khan","Das","Joshi","Mehta","Bose","Rao","Chopra","Malhotra","Saxena","Mukherjee","Banerjee","Mehra","Kapoor","Bhat","Bajaj","Agarwal","Saxena","Pandit","Bhatt","Tiwari","Trivedi","Sastry","Iyengar","Ranganathan","Subramanian","Deshpande","Kulkarni","Joshi","Patil","Mhatre","Sawant","Naik","Rao","Shenoy","Kamath","Hegde","Bhat","Acharya","Pai","Shanbhag","Kini","Dharwadkar","Wagh","Jadhav","Deshmukh","Gaikwad","Salunkhe","Bhosale","Kadam","Pawar","Jagtap","Mane","Kumbhar","Barge","Patil","Gavali","Kharat","Sathe","Kale","Gore","Desai","Mane","Patil","Sawant","Naik","Shenoy","Kamath","Hegde","Bhat","Acharya","Pai","Shanbhag","Kini","Dharwadkar","Wagh","Jadhav","Deshmukh","Gaikwad","Salunkhe","Bhosale","Kadam","Pawar","Jagtap","Mane","Kumbhar","Barge","Patil","Gavali","Kharat","Sathe","Kale","Gore","Desai"]
+subjects = ["Mathematics", "Physics", "Chemistry", "English", "Computer Science"]
+
+sections = ["A", "B", "C", "D", "E"]
+students_per_section = 40
+n_students = students_per_section * len(sections)  # 200
 
 rows = []
-for i in range(50):
+for i in range(n_students):
+    section = sections[i // students_per_section]  # 0-39 → A, 40-79 → B, etc.
     name = f"{np.random.choice(first)} {np.random.choice(last)}"
-    base = np.random.normal(72, 12)
+    # Vary base ability across sections a bit (B has slight edge in this mock)
+    section_bonus = {"A": -3, "B": 4, "C": 0, "D": -1, "E": 2}[section]
+    base = np.random.normal(72 + section_bonus, 12)
+    math     = int(np.clip(base + np.random.normal(0, 8), 35, 99))
+    physics  = int(np.clip(base + np.random.normal(0, 9), 35, 99))
+    chem     = int(np.clip(base + np.random.normal(0, 8), 35, 99))
+    english  = int(np.clip(base + np.random.normal(2, 6), 35, 99))
+    cs       = int(np.clip(base + np.random.normal(3, 10), 35, 99))
+    attend   = int(np.clip(np.random.normal(82, 10), 40, 100))
     rows.append({
-        "StudentID": f"STU{1000+i}",
-        "Name": name,
-        "Mathematics": int(np.clip(base + np.random.normal(0, 8), 35, 99)),
-        "Physics": int(np.clip(base + np.random.normal(0, 9), 35, 99)),
-        "Chemistry": int(np.clip(base + np.random.normal(0, 8), 35, 99)),
-        "English": int(np.clip(base + np.random.normal(2, 6), 35, 99)),
-        "Computer Science": int(np.clip(base + np.random.normal(3, 10), 35, 99)),
-        "Attendance": int(np.clip(np.random.normal(82, 10), 40, 100)),
-        "Class": np.random.choice(["X-A","X-B","X-C","XI-A","XI-B","XII-A"]),
+        "StudentID":   f"STU{1000 + i}",
+        "Name":        name,
+        "Mathematics": math,
+        "Physics":     physics,
+        "Chemistry":   chem,
+        "English":     english,
+        "Computer Science": cs,
+        "Attendance":  attend,
+        "Class":       "X",
+        "Section":     f"X-{section}",
     })
 df = pd.DataFrame(rows)
-# inject a few NaN
-for _ in range(3):
-    df.loc[np.random.randint(0, 50), np.random.choice(subjects)] = np.nan
+# inject a few NaN values (3-4) for cleaning practice
+for _ in range(4):
+    df.loc[np.random.randint(0, n_students), np.random.choice(subjects)] = np.nan
+
 df.to_csv(DATA / "students.csv", index=False)
-print(f"[OK] students.csv  {len(df)} rows")
+print(f"[OK] students.csv  {len(df)} rows ({students_per_section} per section x {len(sections)} sections, all Class X)")
 
 # ============== SALES ==============
 products = {
@@ -83,7 +98,6 @@ for oid in range(1001, 1501):
     })
 
 sdf = pd.DataFrame(sales)
-# inject 2 NaN
 sdf.loc[np.random.randint(0, 500), "Sales"] = np.nan
 sdf.loc[np.random.randint(0, 500), "Region"] = np.nan
 sdf.to_csv(DATA / "sales.csv", index=False)
