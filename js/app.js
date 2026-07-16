@@ -1,5 +1,5 @@
-﻿// app.js — Boot orchestrator
-// FIXED boot order: data loads BEFORE router activates any view, so modules
+﻿// app.js - Boot orchestrator
+// Fixed boot order: data loads before router activates any view, so modules
 // never receive null data. Setup errors are surfaced visibly (no more silent fails).
 
 import { loadStudents, loadSales } from "./data.js";
@@ -13,9 +13,7 @@ import "./modules/students.js";
 import "./modules/sales.js";
 import "./modules/insights.js";
 
-// ============================================================
-//  Build the sidebar nav + section placeholders from the registry
-// ============================================================
+// Build the sidebar nav + section placeholders from the registry
 function buildNav() {
   const modules = list();
   const navRoot = document.querySelector(".nav");
@@ -37,12 +35,10 @@ function buildNav() {
   modules.forEach(m => registerView(m.id));
 }
 
-// ============================================================
-//  Render the active module into its view section
-// ============================================================
+// Render the active module into its view section
 let activeModule = null;
 let data = null;
-let pendingView = null; // view to activate once data is ready
+let pendingView = null;
 
 function activate(id) {
   if (!data) {
@@ -66,7 +62,7 @@ function activate(id) {
   }
 
   activeModule = mod;
-  root.innerHTML = ""; // clear before re-setup
+  root.innerHTML = "";
 
   if (typeof mod.setup === "function") {
     try {
@@ -88,9 +84,7 @@ function refreshActive() {
   }
 }
 
-// ============================================================
-//  Boot — fixed order: theme → nav → DATA → router
-// ============================================================
+// Boot - fixed order: theme → nav → Data → router
 async function boot() {
   initTheme();
   buildNav();
@@ -145,25 +139,18 @@ async function boot() {
 
 boot();
 
-// ============================================================
-//  Chart fullscreen modal — global handler
-//  Strategy: CLONE the original chart-card into the modal + recreate each
-//  Chart.js instance on the cloned canvases. The original card stays in place
-//  completely untouched, so closing the modal never disturbs the layout.
+// Chart fullscreen modal - global handler
+// Strategy: Clone the original chart-card into the modal + recreate each Chart.js instance on the cloned canvases. The original card stays in place completely untouched, so closing the modal never disturbs the layout.
 //
-//  Why clone instead of move:
-//    - Chart.js binds to the canvas element it was constructed on. Moving the
-//      canvas between containers leaves the chart bound to the original DOM node,
-//      and ResizeObserver doesn't always fire reliably across container moves.
-//    - Cloning creates fresh canvases. We pair each clone-canvas with the original
-//      chart's data + options and build a brand-new Chart instance. This works
-//      100% of the time because we're not asking Chart.js to track a DOM move.
+// Why clone instead of move:
+//  - Chart.js binds to the canvas element it was constructed on. Moving the canvas between containers leaves the chart bound to the original DOM node, and ResizeObserver doesn't always fire reliably across container moves.
+//  - Cloning creates fresh canvases. We pair each clone-canvas with the original chart's data + options and build a brand-new Chart instance. This works 100% of the time because we're not asking Chart.js to track a DOM move.
 // ============================================================
-let _modalCharts = []; // Chart.js instances created inside the modal — destroyed on close
+let _modalCharts = []; // Chart.js instances created inside the modal - destroyed on close
 
 function openChartModal(card) {
   const modal = document.getElementById("chart-modal");
-  const body  = document.getElementById("chart-modal-body");
+  const body = document.getElementById("chart-modal-body");
   const title = document.getElementById("chart-modal-title");
   if (!modal || !body || body.firstElementChild) return;
 
@@ -180,15 +167,15 @@ function openChartModal(card) {
   // matching new instance on the cloned canvas. Deep-clone data + options so the
   // two instances are fully independent.
   const originals = card.querySelectorAll("canvas");
-  const clones    = clone.querySelectorAll("canvas");
+  const clones = clone.querySelectorAll("canvas");
   originals.forEach((origCanvas, i) => {
     const inst = window.Chart && window.Chart.getChart && window.Chart.getChart(origCanvas);
     const cloneCanvas = clones[i];
     if (!inst || !cloneCanvas) return;
     try {
       const newInst = new window.Chart(cloneCanvas, {
-        type:    inst.config.type,
-        data:    JSON.parse(JSON.stringify(inst.data)),
+        type: inst.config.type,
+        data: JSON.parse(JSON.stringify(inst.data)),
         options: JSON.parse(JSON.stringify(inst.options)),
       });
       _modalCharts.push(newInst);
@@ -203,7 +190,7 @@ function openChartModal(card) {
 
   // Trigger resize on the new modal charts after layout settles
   const resizeModalCharts = () => {
-    _modalCharts.forEach(c => { try { c.resize(); } catch {} });
+    _modalCharts.forEach(c => { try { c.resize(); } catch { } });
   };
   requestAnimationFrame(resizeModalCharts);
   setTimeout(resizeModalCharts, 200);
@@ -211,11 +198,11 @@ function openChartModal(card) {
 
 function closeChartModal() {
   const modal = document.getElementById("chart-modal");
-  const body  = document.getElementById("chart-modal-body");
+  const body = document.getElementById("chart-modal-body");
   if (!modal) return;
 
   // Destroy every modal chart instance (frees memory + releases canvas refs)
-  _modalCharts.forEach(c => { try { c.destroy(); } catch {} });
+  _modalCharts.forEach(c => { try { c.destroy(); } catch { } });
   _modalCharts = [];
 
   // Remove the cloned card from the modal body
@@ -225,9 +212,7 @@ function closeChartModal() {
   modal.style.display = "none";
   document.body.classList.remove("modal-open");
 
-  // The original card on the page is completely untouched. No resize calls
-  // needed there — its charts are still bound to their original canvases at
-  // original sizes. Layout stays exactly as it was before opening the modal.
+  // The original card on the page is completely untouched. No resize calls needed there - its charts are still bound to their original canvases at original sizes. Layout stays exactly as it was before opening the modal.
 }
 
 function downloadChart(canvasId) {

@@ -1,4 +1,4 @@
-﻿// charts.js — Themed Chart.js wrappers
+﻿// charts.js - Themed Chart.js wrappers
 // Reads theme colors from CSS variables so charts adapt to light/dark mode.
 
 const FONT_SERIF = "'Playfair Display', Georgia, serif";
@@ -50,7 +50,7 @@ function baseOpts(extra = {}) {
   };
 }
 
-// ---------- bar ----------
+// bar
 export function bar(canvas, labels, values, { horizontal = false, color = null } = {}) {
   const t = themeColors();
   const fill = color ? Array(labels.length).fill(color) : t.berr;
@@ -73,7 +73,7 @@ export function bar(canvas, labels, values, { horizontal = false, color = null }
   });
 }
 
-// ---------- pie / donut ----------
+// pie/donut 
 export function pie(canvas, labels, values, { valuePrefix = "", valueSuffix = "" } = {}) {
   const t = themeColors();
   const valueFmt = valuePrefix || valueSuffix
@@ -116,7 +116,7 @@ export function pie(canvas, labels, values, { valuePrefix = "", valueSuffix = ""
   });
 }
 
-// ---------- line ----------
+// line
 export function line(canvas, labels, values, { valuePrefix = "Rs.", fill = true } = {}) {
   const t = themeColors();
   const trace = {
@@ -148,7 +148,7 @@ export function line(canvas, labels, values, { valuePrefix = "Rs.", fill = true 
   });
 }
 
-// ---------- scatter (no line) ----------
+// scatter (no line)
 export function scatter(canvas, points, { xLabel = "", yLabel = "" } = {}) {
   const t = themeColors();
   return new Chart(canvas, {
@@ -172,7 +172,7 @@ export function scatter(canvas, points, { xLabel = "", yLabel = "" } = {}) {
   });
 }
 
-// ---------- heatmap (CSS grid + lerp gradient) ----------
+// heatmap (CSS grid + lerp gradient)
 export function heatmap(container, rows, cols, data) {
   const t = themeColors();
   // Find min/max for color scale
@@ -225,7 +225,7 @@ export function heatmap(container, rows, cols, data) {
     data[i].forEach(v => {
       const cell = document.createElement("div");
       cell.className = "heatmap-cell";
-      if (typeof v !== "number") { cell.textContent = "—"; container.appendChild(cell); return; }
+      if (typeof v !== "number") { cell.textContent = "-"; container.appendChild(cell); return; }
       const norm = (v - mn) / range;
       const bg = mix(low, high, norm);
       cell.style.background = bg;

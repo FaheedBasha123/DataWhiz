@@ -1,4 +1,4 @@
-// js/modules/insights.js — Cross-project synthesis + downloads
+// js/modules/insights.js - Cross-project synthesis + downloads
 import { register } from "../registry.js";
 import {
   kpiHTML, sectionRule, callout,
@@ -22,10 +22,10 @@ register({
       ${mastheadHTML({
         eyebrow: `<span class="live-dot"></span>Cross-Project Synthesis`,
         title: "Insights",
-        sub: "A synthesis of student performance and sales intelligence — the patterns that quietly shape outcomes in both worlds."
+        sub: "A synthesis of student performance and sales intelligence - the patterns that quietly shape outcomes in both worlds."
       })}
 
-      <div class="pull-quote">Performance is rarely a single thing — it is the quiet sum of attendance, effort, and the room you find yourself in.</div>
+      <div class="pull-quote">Performance is rarely a single thing - it is the quiet sum of attendance, effort, and the room you find yourself in.</div>
 
       ${sectionRule("Five Insights That Matter")}
 
@@ -38,7 +38,7 @@ register({
         <div class="article-card fade-in">
           <div class="article-eyebrow">Insight · 02</div>
           <div class="article-title">The middle is where most outcomes live</div>
-          <div class="article-body">Most students cluster in the B/C grades — just as most sales orders cluster around mid-tier products. The extremes are visible, but the middle carries the weight.</div>
+          <div class="article-body">Most students cluster in the B/C grades - just as most sales orders cluster around mid-tier products. The extremes are visible, but the middle carries the weight.</div>
         </div>
         <div class="article-card fade-in">
           <div class="article-eyebrow">Insight · 03</div>
@@ -48,7 +48,7 @@ register({
         <div class="article-card fade-in">
           <div class="article-eyebrow">Insight · 04</div>
           <div class="article-title">Cleaning is half the work</div>
-          <div class="article-body">Both datasets had <b>missing values</b> requiring imputation — a reminder that the most time in real-world analytics is spent preparing data, not just visualising it.</div>
+          <div class="article-body">Both datasets had <b>missing values</b> requiring imputation - a reminder that the most time in real-world analytics is spent preparing data, not just visualising it.</div>
         </div>
         <div class="article-card fade-in">
           <div class="article-eyebrow">Insight · 05</div>
@@ -67,7 +67,7 @@ register({
       </div>
 
       ${callout("Methodology",
-        `All charts use the same five-color palette and adapt automatically between light and dark themes via CSS variables. CSV cleaning (mean/median imputation for missing values) is applied at load time in <code>js/data.js</code>. All computation runs in the browser — no server, no build step.`
+        `All charts use the same five-color palette and adapt automatically between light and dark themes via CSS variables. CSV cleaning (mean/median imputation for missing values) is applied at load time in <code>js/data.js</code>. All computation runs in the browser - no server, no build step.`
       )}
 
       ${sectionRule("Downloads")}

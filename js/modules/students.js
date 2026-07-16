@@ -1,4 +1,4 @@
-// js/modules/students.js — Student Performance analysis
+// js/modules/students.js - Student Performance analysis
 import { register } from "../registry.js";
 import { bar, pie, scatter, heatmap } from "../charts.js";
 import {
@@ -63,7 +63,7 @@ function draw() {
     ${mastheadHTML({
       eyebrow: `<span class="live-dot"></span>Live Data · ${state.allStudents.length} students`,
       title: "Student Performance",
-      sub: "Marks across five subjects, grade distribution, and how attendance correlates with results — cleaned, analysed, and visualised."
+      sub: "Marks across five subjects, grade distribution, and how attendance correlates with results - cleaned, analysed, and visualised."
     })}
 
     <div class="filter-bar">
@@ -158,11 +158,11 @@ function draw() {
       ${articleCard("Insight · 01", `${top.Name} sets the standard`,
         `The top scorer averages <b>${fmtNum(top.Average)}</b>, with a Grade <b>${top.Grade}</b>. The top 5 are spread across sections, suggesting talent is distributed rather than concentrated.`)}
       ${articleCard("Insight · 02", "Subject difficulty is uneven",
-        `<b>${weak.s}</b> (${fmtNum(weak.avg)}) is the hardest while <b>${strong.s}</b> (${fmtNum(strong.avg)}) is the strongest — a gap of <b>${fmtNum(strong.avg - weak.avg)}</b> marks worth addressing.`)}
+        `<b>${weak.s}</b> (${fmtNum(weak.avg)}) is the hardest while <b>${strong.s}</b> (${fmtNum(strong.avg)}) is the strongest - a gap of <b>${fmtNum(strong.avg - weak.avg)}</b> marks worth addressing.`)}
       ${articleCard("Insight · 03", `Attendance correlates at r = ${corr.toFixed(2)}`,
-        corr > 0.5 ? "A clear signal: students who attend more perform meaningfully better." : "A moderate signal — attendance helps, but other factors matter too.")}
+        corr > 0.5 ? "A clear signal: students who attend more perform meaningfully better." : "A moderate signal - attendance helps, but other factors matter too.")}
       ${articleCard("Insight · 04", "Cleaning is half the work",
-        "Both datasets had missing values requiring imputation — a reminder that real-world analytics is mostly data preparation.")}
+        "Both datasets had missing values requiring imputation - a reminder that real-world analytics is mostly data preparation.")}
     </div>
 
     ${footerHTML("Student Performance")}

@@ -1,4 +1,4 @@
-﻿// router.js — Hash-based navigation for module views
+﻿// router.js - Hash-based navigation for module views
 let views = [];
 
 export function registerView(id) {

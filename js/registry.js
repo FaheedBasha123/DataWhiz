@@ -1,8 +1,8 @@
-// js/registry.js — Module registry for extensible sub-projects
+// js/registry.js - Module registry for extensible sub-projects
 // To add a new sub-project (e.g. scoreboard):
 //   1. Create js/modules/scoreboard.js
 //   2. Import it in js/app.js:  import "./modules/scoreboard.js";
-//   3. Done — sidebar nav and view section auto-generate.
+//   3. Done - sidebar nav and view section auto-generate.
 
 const _modules = [];
 

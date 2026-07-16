@@ -1,4 +1,4 @@
-"""Generate realistic mock CSVs as default (real datasets are in *_real.csv backups)."""
+""" Mock CSVs as default (real datasets are in *_real.csv backups)."""
 import pandas as pd
 import numpy as np
 from pathlib import Path
@@ -6,7 +6,7 @@ from pathlib import Path
 DATA = Path(__file__).parent
 np.random.seed(42)
 
-# ============== STUDENTS ==============
+# Students
 first = ["Rahul","Aman","Priya","Riya","Arjun","Sneha","Vikram","Ananya","Rohan","Diya","Karan","Isha","Aditya","Meera","Sahil","Tanya","Nikhil","Pooja","Harsh","Kavya","Manish","Ritu","Saurabh","Nidhi","Akash","Shruti","Varun","Neha","Ayush","Simran","Deepak","Aditi","Gaurav","Shreya","Mohit","Ankita","Yash","Palak","Rakesh","Swati","Abhishek","Megha","Siddharth","Tanvi","Chirag","Jiya","Aakash","Muskan","Bharat","Komal","Aarav","Vivaan","Aditya","Vihaan","Arjun","Sai","Reyansh","Ayaan","Krishna","Ishaan","Atharv","Advik","Pranav","Aditya","Aadhya","Anaya","Diya","Myra","Aaradhya","Saanvi","Anika","Pari","Aanya","Ananya","Ira","Anvi","Anaya","Kiara","Aadhya","Anjali","Sneha","Suhana","Nitya","Pihu","Riya","Aaradhya","Maryam","Kavya","Vanya","Apoorva","Aarna","Anika","Anaya","Drishti","Ishita","Khushi","Nandini","Srishti","Tanya","Tanvi","Aarna","Anvi","Aaradhya","Aadhya","Suhana","Myra","Anika","Pari","Aanya","Pihu","Riya","Saanvi","Anaya","Kiara","Aadhya","Anjali","Suhana","Nitya","Pihu","Maryam","Aarna","Anvi","Srishti","Tanya","Aarna","Anvi","Anaya","Drishti","Ishita","Khushi","Nandini","Srishti","Tanya","Tanvi"]
 last = ["Sharma","Verma","Patel","Kumar","Singh","Gupta","Reddy","Iyer","Nair","Khan","Das","Joshi","Mehta","Bose","Rao","Chopra","Malhotra","Saxena","Mukherjee","Banerjee","Mehra","Kapoor","Bhat","Bajaj","Agarwal","Saxena","Pandit","Bhatt","Tiwari","Trivedi","Sastry","Iyengar","Ranganathan","Subramanian","Deshpande","Kulkarni","Joshi","Patil","Mhatre","Sawant","Naik","Rao","Shenoy","Kamath","Hegde","Bhat","Acharya","Pai","Shanbhag","Kini","Dharwadkar","Wagh","Jadhav","Deshmukh","Gaikwad","Salunkhe","Bhosale","Kadam","Pawar","Jagtap","Mane","Kumbhar","Barge","Patil","Gavali","Kharat","Sathe","Kale","Gore","Desai","Mane","Patil","Sawant","Naik","Shenoy","Kamath","Hegde","Bhat","Acharya","Pai","Shanbhag","Kini","Dharwadkar","Wagh","Jadhav","Deshmukh","Gaikwad","Salunkhe","Bhosale","Kadam","Pawar","Jagtap","Mane","Kumbhar","Barge","Patil","Gavali","Kharat","Sathe","Kale","Gore","Desai"]
 subjects = ["Mathematics", "Physics", "Chemistry", "English", "Computer Science"]
@@ -48,7 +48,7 @@ for _ in range(4):
 df.to_csv(DATA / "students.csv", index=False)
 print(f"[OK] students.csv  {len(df)} rows ({students_per_section} per section x {len(sections)} sections, all Class X)")
 
-# ============== SALES ==============
+# Sales
 products = {
     "Laptop":      {"price": 55000, "category": "Electronics",  "weight": 0.15},
     "Smartphone":  {"price": 28000, "category": "Electronics",  "weight": 0.20},

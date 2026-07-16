@@ -1,6 +1,5 @@
-﻿// data.js — CSV loading + cleaning
-// Loads ./data/students.csv and ./data/sales.csv via PapaParse, then
-// applies the same cleaning logic as the Python version:
+﻿// data.js - CSV loading + cleaning
+// Loads ./data/students.csv and ./data/sales.csv via PapaParse, then applies the same cleaning logic as the Python version:
 //   - mean imputation for missing subject marks
 //   - median for missing sales, "Unknown" for missing region
 //   - derived columns: Average, Total, Grade, Month, Year, Quarter
@@ -33,7 +32,7 @@ export function median(arr) {
   return s.length % 2 ? s[m] : (s[m - 1] + s[m]) / 2;
 }
 
-// ---------- fetch + parse ----------
+// fetch + parse
 async function fetchCSV(path) {
   const res = await fetch(path);
   if (!res.ok) throw new Error(`Failed to fetch ${path}: ${res.status}`);
@@ -41,7 +40,7 @@ async function fetchCSV(path) {
   return Papa.parse(text, { header: true, dynamicTyping: true, skipEmptyLines: true }).data;
 }
 
-// ---------- students ----------
+// students
 export async function loadStudents() {
   const rows = await fetchCSV("data/students.csv");
   // mean-impute each subject
@@ -64,7 +63,7 @@ export async function loadStudents() {
   return rows;
 }
 
-// ---------- sales ----------
+// sales
 export async function loadSales() {
   const rows = await fetchCSV("data/sales.csv");
   const parsed = [];

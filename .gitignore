@@ -1,27 +1,11 @@
-# Local-only / personal docs (not pushed to GitHub)
 guide.md
-
-# Python
+context.md
 __pycache__/
 *.pyc
 *.pyo
 serve.log
 serve_err.log
-
-# OS
-.DS_Store
-Thumbs.db
-
-# Editors
 .vscode/
 .idea/
 *.swp
 *.swo
-
-# Node (none used, but defensive)
-node_modules/
-package-lock.json
-
-# Environment
-.env
-.env.local

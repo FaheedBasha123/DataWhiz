@@ -1,4 +1,4 @@
-// js/modules/sales.js — Sales Data analysis
+// js/modules/sales.js - Sales Data analysis
 import { register } from "../registry.js";
 import { bar, pie, line, heatmap } from "../charts.js";
 import {
@@ -18,11 +18,11 @@ function draw() {
   const totalRev = f.reduce((s, r) => s + r.Sales, 0);
   const avgOrder = f.length ? totalRev / f.length : 0;
   const productRev = groupSum(f, "Product");
-  const bestProduct = productRev.reduce((a, b) => (a.value > b.value ? a : b), { label: "—", value: 0 });
+  const bestProduct = productRev.reduce((a, b) => (a.value > b.value ? a : b), { label: "-", value: 0 });
   const catRev = groupSum(f, "Category");
-  const bestCategory = catRev.reduce((a, b) => (a.value > b.value ? a : b), { label: "—", value: 0 });
+  const bestCategory = catRev.reduce((a, b) => (a.value > b.value ? a : b), { label: "-", value: 0 });
   const regRev = groupSum(f, "Region");
-  const bestRegion = regRev.reduce((a, b) => (a.value > b.value ? a : b), { label: "—", value: 0 });
+  const bestRegion = regRev.reduce((a, b) => (a.value > b.value ? a : b), { label: "-", value: 0 });
 
   // tear down previous charts
   Object.values(charts).forEach(c => { try { c.destroy(); } catch {} });
@@ -115,19 +115,19 @@ function draw() {
     ${sectionRule("Insights")}
     <div class="chart-grid">
       ${articleCard("Insight · 01", `${bestProduct.label} drives the catalog`,
-        `<b>${bestProduct.label}</b> alone brings in <b>${fmtINR(bestProduct.value)}</b> (${(bestProduct.value/totalRev*100 || 0).toFixed(1)}% of revenue) — a clear star product.`)}
+        `<b>${bestProduct.label}</b> alone brings in <b>${fmtINR(bestProduct.value)}</b> (${(bestProduct.value/totalRev*100 || 0).toFixed(1)}% of revenue) - a clear star product.`)}
       ${articleCard("Insight · 02", `${bestCategory.label} is the strongest category`,
-        `The <b>${bestCategory.label}</b> category outperforms, while the <b>${bestRegion.label}</b> region is the top market — both worth prioritising.`)}
+        `The <b>${bestCategory.label}</b> category outperforms, while the <b>${bestRegion.label}</b> region is the top market - both worth prioritising.`)}
       ${articleCard("Insight · 03", `Average order stands at ${fmtINR(avgOrder)}`,
         `With <b>${fmtInt(f.length)}</b> orders across <b>${productRev.length}</b> products, the business shows healthy diversity.`)}
       ${articleCard("Insight · 04", "Seasonal patterns emerge",
-        "Monthly trends show November–December spikes — a holiday tail worth inventory planning around.")}
+        "Monthly trends show November–December spikes - a holiday tail worth inventory planning around.")}
     </div>
 
     ${footerHTML("Sales Analysis")}
   `;
 
-  // Filter handlers — chip toggles for Region + Category
+  // Filter handlers - chip toggles for Region + Category
   currentRoot.querySelector('[data-filter="sa-reg"]')?.addEventListener("click", e => {
     const chip = e.target.closest(".chip");
     if (!chip) return;

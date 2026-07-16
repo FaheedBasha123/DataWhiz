@@ -1,4 +1,4 @@
-﻿// theme.js — Light/dark mode toggle (sidebar is static now, no collapse logic)
+﻿// theme.js - Light/dark mode toggle (sidebar is static now, no collapse logic)
 const KEY_THEME = "dw_theme";
 
 export function getTheme() { return localStorage.getItem(KEY_THEME) || "light"; }

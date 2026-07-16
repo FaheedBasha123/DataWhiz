@@ -1,4 +1,4 @@
-// js/modules/_base.js — shared HTML builders + utilities for all modules
+// js/modules/_base.js - shared HTML builders + utilities for all modules
 
 export const SUBJECTS = ["Mathematics", "Physics", "Chemistry", "English", "Computer Science"];
 export const GRADE_BANDS = [
@@ -7,9 +7,7 @@ export const GRADE_BANDS = [
   { letter: "D", min: 50 }, { letter: "E", min: 0  },
 ];
 
-// ============================================================
-//  HTML builders
-// ============================================================
+// HTML builders
 export function kpiHTML({ label, value, delta = "", icon = "", featured = false, negative = false }) {
   return `
     <div class="kpi-card ${featured ? "featured" : ""} fade-in">
@@ -74,7 +72,7 @@ export function mastheadHTML({ eyebrow = "", title = "", sub = "" }) {
 export function footerHTML(moduleLabel = "") {
   return `
     <div class="app-footer">
-      <div>Crafted with vanilla JavaScript, Chart.js &amp; PapaParse</div>
+      <div> </div>
       <div class="meta">© ${new Date().getFullYear()} · DataWhiz${moduleLabel ? " · " + moduleLabel : ""}</div>
     </div>`;
 }
@@ -88,15 +86,14 @@ export function filterBar(filters) {
     </div>`).join("")}</div>`;
 }
 
-// ============================================================
-//  Filter controls — chips + dual range
-// ============================================================
+
+// Filter controls - chips + dual range
 function escAttr(s) {
   return String(s).replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/'/g, "&#39;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 }
 
 /**
- * Pill toggle chips — always-visible multi-select.
+ * Pill toggle chips - always-visible multi-select.
  * `name` is the filter key; `options` is an array of values; `selected` is the Set of currently-picked ones.
  * Returns the wrapper HTML; consumer wires click handlers that read .chip.checked inside.
  */
@@ -113,7 +110,7 @@ export function chipsHTML(name, label, options, selected) {
 }
 
 /**
- * Two-side number range — type exact min and max values, no scratching a slider.
+ * Two-side number range - type exact min and max values, no scratching a slider.
  * `[min, max]` is the absolute domain, `[curMin, curMax]` is current selection.
  */
 export function rangeDualHTML(name, label, [absMin, absMax], [curMin, curMax]) {
@@ -124,7 +121,7 @@ export function rangeDualHTML(name, label, [absMin, absMax], [curMin, curMax]) {
       <label>${label}</label>
       <div class="filter-range" data-filter="${escAttr(name)}">
         <input type="number" inputmode="numeric" min="${absMin}" max="${absMax}" value="${curMin}" data-role="min" aria-label="${escAttr(label)} minimum">
-        <span class="range-sep">—</span>
+        <span class="range-sep">-</span>
         <input type="number" inputmode="numeric" min="${absMin}" max="${absMax}" value="${curMax}" data-role="max" aria-label="${escAttr(label)} maximum">
       </div>
       <div class="range-track" aria-hidden="true"><div class="range-fill" style="left:${leftPct}%;width:${fillPct}%"></div></div>
@@ -135,9 +132,7 @@ export function resetButtonHTML() {
   return `<div class="filter-actions"><button type="button" class="filter-reset" data-action="reset-filters">Reset</button></div>`;
 }
 
-/**
- * Two-side date range — two native date inputs side-by-side.
- */
+// Two-side date range - two native date inputs side-by-side.
 export function dateRangeHTML(name, label, fromVal, toVal) {
   return `
     <div class="filter">
@@ -150,7 +145,7 @@ export function dateRangeHTML(name, label, fromVal, toVal) {
     </div>`;
 }
 
-/** Search input that filters as user types (caller handles wiring + filtering) */
+// Search input that filters as user types (caller handles wiring + filtering)
 export function searchInputHTML(name, label, value = "") {
   return `
     <div class="filter">
@@ -159,7 +154,7 @@ export function searchInputHTML(name, label, value = "") {
     </div>`;
 }
 
-/** Sort dropdown */
+// Sort dropdown
 export function sortSelectHTML(name, label, options, selected) {
   const opts = options.map(o => `<option value="${escAttr(o.value)}" ${o.value === selected ? "selected" : ""}>${escAttr(o.label)}</option>`).join("");
   return `
@@ -179,9 +174,7 @@ export function tableHTML(headers, rows, { top = -1 } = {}) {
     </table>`;
 }
 
-// ============================================================
 //  Stats helpers
-// ============================================================
 export function mean(arr) {
   const nums = arr.filter(v => typeof v === "number" && !isNaN(v));
   return nums.length ? nums.reduce((s, v) => s + v, 0) / nums.length : 0;
@@ -215,23 +208,19 @@ export function corrPearson(xs, ys) {
   return num / Math.sqrt(dx * dy || 1);
 }
 
-// ============================================================
-//  Formatters
-// ============================================================
+// Formatters
 export function fmtINR(n) {
-  if (n == null || isNaN(n)) return "—";
+  if (n == null || isNaN(n)) return "-";
   const abs = Math.abs(n);
   if (abs >= 1e7) return `\u20B9${(n/1e7).toFixed(2)}Cr`;
   if (abs >= 1e5) return `\u20B9${(n/1e5).toFixed(2)}L`;
   if (abs >= 1e3) return `\u20B9${(n/1e3).toFixed(1)}K`;
   return `\u20B9${Math.round(n)}`;
 }
-export function fmtNum(n, d = 1) { return n == null ? "—" : Number(n).toFixed(d); }
-export function fmtInt(n) { return n == null ? "—" : Math.round(n).toLocaleString("en-IN"); }
+export function fmtNum(n, d = 1) { return n == null ? "-" : Number(n).toFixed(d); }
+export function fmtInt(n) { return n == null ? "-" : Math.round(n).toLocaleString("en-IN"); }
 
-// ============================================================
-//  CSV download
-// ============================================================
+// CSV download
 export function downloadCSV(name, rows) {
   if (!rows.length) return;
   const headers = Object.keys(rows[0]);

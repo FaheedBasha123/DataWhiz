@@ -4,7 +4,7 @@ import socketserver
 import os
 from pathlib import Path
 
-PORT = 8766
+PORT = 9999
 DIR = Path(__file__).parent
 
 

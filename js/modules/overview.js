@@ -1,4 +1,4 @@
-// js/modules/overview.js — Dashboard landing page
+// js/modules/overview.js - Dashboard landing page
 import { register } from "../registry.js";
 import { pie, line } from "../charts.js";
 import {
@@ -31,14 +31,14 @@ register({
       ${mastheadHTML({
         eyebrow: `<span class="live-dot"></span>Live · ${today}`,
         title: "DataWhiz",
-        sub: "A unified view of student performance and sales intelligence — clean data, clean visuals, clear insight."
+        sub: "A unified view of student performance and sales intelligence - clean data, clean visuals, clear insight."
       })}
 
       <div class="kpi-grid">
-        ${kpiHTML({ label: "Students",        value: students.length,    delta: "Active enrollment",                 icon: "🎓", featured: true })}
-        ${kpiHTML({ label: "Average Mark",    value: fmtNum(avgMark),     delta: `Top: ${fmtNum(top.Average)} (${top.Name})`, icon: "📊" })}
-        ${kpiHTML({ label: "Total Revenue",   value: fmtINR(totalRev),    delta: `${sales.length.toLocaleString()} orders`,  icon: "💰" })}
-        ${kpiHTML({ label: "Top Category",    value: bestCategory.label,  delta: `Top: ${bestProduct.label}`,              icon: "🏆" })}
+        ${kpiHTML({ label: "Students",        value: students.length,    delta: "Active enrollment",                 icon: "🎓", featured: true})}
+        ${kpiHTML({ label: "Average Mark",    value: fmtNum(avgMark),     delta: `Top: ${fmtNum(top.Average)} (${top.Name})`, icon: "📊",  featured: true})}
+        ${kpiHTML({ label: "Total Revenue",   value: fmtINR(totalRev),    delta: `${sales.length.toLocaleString()} orders`,  icon: "💰",  featured: true})}
+        ${kpiHTML({ label: "Top Category",    value: bestCategory.label,  delta: `Top: ${bestProduct.label}`,              icon: "🏆",  featured: true})}
       </div>
 
       ${sectionRule("At a Glance")}
