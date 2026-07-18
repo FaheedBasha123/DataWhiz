@@ -3,7 +3,7 @@ import { register } from "../registry.js";
 import { bar, pie, scatter, heatmap } from "../charts.js";
 import {
   SUBJECTS, kpiHTML, sectionRule, chartCard, callout, articleCard,
-  mastheadHTML, footerHTML, tableHTML,
+  mastheadHTML, tableHTML,
   chipsHTML, searchInputHTML, sortSelectHTML,
   mean, median, unique, gradeFor, corrPearson,
   fmtNum, fmtInt,
@@ -164,8 +164,6 @@ function draw() {
       ${articleCard("Insight · 04", "Cleaning is half the work",
         "Both datasets had missing values requiring imputation - a reminder that real-world analytics is mostly data preparation.")}
     </div>
-
-    ${footerHTML("Student Performance")}
   `;
 
   wireFilters();

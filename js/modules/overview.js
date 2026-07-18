@@ -2,7 +2,7 @@
 import { register } from "../registry.js";
 import { pie, line } from "../charts.js";
 import {
-  kpiHTML, sectionRule, chartCard, callout, mastheadHTML, footerHTML,
+  kpiHTML, sectionRule, chartCard, callout, mastheadHTML,
   mean, groupSum, fmtINR, fmtNum,
 } from "./_base.js";
 
@@ -53,8 +53,6 @@ register({
       ${callout("How the numbers were prepared",
         `All data shown here is the result of careful cleaning, thoughtful aggregation, and visualisation choices that prioritise clarity. Missing values are imputed with column means (students) and medians (sales). Grades follow the standard <b>S / A / B / C / D / E</b> scale anchored at 90, 80, 70, 60, and 50.`
       )}
-
-      ${footerHTML("Overview")}
     `;
 
     const gradeDist = ["S","A","B","C","D","E"].map(g => ({ g, n: students.filter(s => s.Grade === g).length }));

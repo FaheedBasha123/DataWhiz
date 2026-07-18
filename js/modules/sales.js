@@ -3,7 +3,7 @@ import { register } from "../registry.js";
 import { bar, pie, line, heatmap } from "../charts.js";
 import {
   kpiHTML, sectionRule, chartCard, callout, articleCard,
-  mastheadHTML, footerHTML, tableHTML,
+  mastheadHTML, tableHTML,
   chipsHTML, dateRangeHTML,
   unique, groupSum, fmtINR, fmtInt,
 } from "./_base.js";
@@ -123,8 +123,6 @@ function draw() {
       ${articleCard("Insight · 04", "Seasonal patterns emerge",
         "Monthly trends show November–December spikes - a holiday tail worth inventory planning around.")}
     </div>
-
-    ${footerHTML("Sales Analysis")}
   `;
 
   // Filter handlers - chip toggles for Region + Category

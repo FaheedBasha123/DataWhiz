@@ -69,14 +69,6 @@ export function mastheadHTML({ eyebrow = "", title = "", sub = "" }) {
     </div>`;
 }
 
-export function footerHTML(moduleLabel = "") {
-  return `
-    <div class="app-footer">
-      <div> </div>
-      <div class="meta">© ${new Date().getFullYear()} · DataWhiz${moduleLabel ? " · " + moduleLabel : ""}</div>
-    </div>`;
-}
-
 export function filterBar(filters) {
   // filters = [{ id, label, control: HTML string }]
   return `<div class="filter-bar">${filters.map(f => `

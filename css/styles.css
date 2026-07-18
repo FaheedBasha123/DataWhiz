@@ -57,7 +57,7 @@ Vintage Berry #8f2d56 - Teal #218380 - Frosted Blue #73d2de
   --bg-input: #251420;
   --bg-sidebar: #1a0a14;
   --bg-featured: #1d1019;
-  --bg-featured-hover: #ffbc42;
+  --bg-featured-hover: #65646372;
 
   --teal: #5dc8c3;
   /* brighter teal for dark mode */
@@ -621,11 +621,30 @@ pre {
 }
 
 /* Article/Callout/Pull Quote */
-.article-grid {
+.insight-groups {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.2rem;
+  gap: 1.3rem;
   margin: 1.3rem 0;
+}
+
+.insight-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.insight-group-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--fg-primary);
+  letter-spacing: -0.01em;
+}
+
+.insight-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.2rem;
 }
 
 .article-card {
@@ -664,6 +683,18 @@ pre {
   font-size: 0.88rem;
   color: var(--fg-muted);
   line-height: 1.6;
+}
+
+@media (max-width: 960px) {
+  .insight-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .insight-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .callout {
@@ -735,17 +766,20 @@ pre {
 
 .filter label {
   display: block;
+  font-size: 0.7rem; 
   font-size: 0.66rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--fg-muted);
   font-weight: 600;
-  margin-bottom: 0.4rem;
+  margin-top: 0.8rem; 
+  margin-bottom: 0.6rem; 
 }
 
 .filter select,
 .filter input {
   width: 100%;
+  max-width: 160px;
   padding: 0.55rem 0.7rem;
   background: var(--bg-input);
   border: 1px solid var(--line);
@@ -766,7 +800,7 @@ pre {
 .filter-chips {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.35rem;
+  gap: 0.5rem;
   margin-top: 0.3rem;
 }
 
@@ -1117,22 +1151,6 @@ pre {
 [data-theme="dark"] .btn.outline:hover {
   background: var(--fg-primary);
   color: var(--bg-app);
-}
-
-/* Footer */
-.app-footer {
-  text-align: center;
-  padding: 2rem 1rem 1rem;
-  color: var(--fg-muted);
-  font-size: 0.76rem;
-  margin-top: 2.5rem;
-  border-top: 1px solid var(--line);
-}
-
-.app-footer .meta {
-  opacity: 0.7;
-  margin-top: 0.3rem;
-  font-size: 0.7rem;
 }
 
 /* Animations */
