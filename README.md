@@ -72,14 +72,8 @@ copy data\students_real.csv data\students.csv
 copy data\sales_real.csv   data\sales.csv
 ```
 
-**Mac/Linux:**
-```bash
-tbh idk, figure it out (i use windows)
-```
-
-
 If column names differ from the mock schema, edit the cleaning logic in `js/data.js`.
 
 ## License
 
-**Free**: Do whatever you want, if it helps you out, you owe me a thanks. If it makes you rich, you owe me a treat.
+**Free**: Do whatever you want
